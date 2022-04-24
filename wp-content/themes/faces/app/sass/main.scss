@@ -1,0 +1,22 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+//@import "libs/slick";
+//@import "libs/select2";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+@import "includes/header";
+@import "includes/footer";
+
+
+body,
+html {
+  position: relative;
+  //font-family: 'Roboto',"Helvetica Neue",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,sans-serif;
+  scroll-behavior: smooth;
+  //color: #121212;
+}
