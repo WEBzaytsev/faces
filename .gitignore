@@ -24,4 +24,7 @@ wp-content/themes/*
 wp-content/plugins/*
 
 !wp-content/themes/faces/
+!wp-content/themes/faces/package-lock.json
+!wp-content/themes/faces/composer.lock
 wp-content/themes/faces/node_modules/
+wp-content/themes/faces/vendor/
