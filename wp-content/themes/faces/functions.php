@@ -7,9 +7,9 @@
  * @package faces
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( '_FACES_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_FACES_VERSION', '1.0.0' );
 }
 
 /**
@@ -138,10 +138,16 @@ add_action( 'widgets_init', 'faces_widgets_init' );
  * Enqueue scripts and styles.
  */
 function faces_scripts() {
-	wp_enqueue_style( 'faces-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'faces-style', get_stylesheet_uri(), array(), _FACES_VERSION );
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/dist/css/main.css', array(), _FACES_VERSION );
 	wp_style_add_data( 'faces-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'faces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'faces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _FACES_VERSION, true );
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), _FACES_VERSION, true );
+    wp_localize_script('main-script', 'js_settings', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'home_url' => get_home_url(),
+    ));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
