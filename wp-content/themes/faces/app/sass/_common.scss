@@ -1,0 +1,278 @@
+body,
+html {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  font-family: 'Manrope',"Helvetica Neue",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,sans-serif;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-f {
+  position: fixed;
+}
+
+.z-modal {
+  z-index: 100;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.max-width-100 {
+  max-width: 100%;
+}
+
+.width-fit-content {
+  width: fit-content;
+}
+
+.max-height-100 {
+  max-height: 100%;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.half-width {
+  width: calc(50% - 10px);
+}
+
+.scroll{
+  overflow: scroll;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-auto{
+  flex: auto;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.border-bottom-white-1 {
+  border-bottom: 1px solid #fff;
+}
+
+/*.border-radius-2 {
+  border-radius: 2px;
+}*/
+
+.border50 {
+  border-radius: 50%;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.letter-spacing-002 {
+  letter-spacing: 0.02em;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.line-height-27 {
+  line-height: 27px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font700 {
+  font-weight: 700;
+}
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.header-grey-bg {
+  background-color: $header-grey;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.transition {
+  @include transition-ease;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cursor-default{
+  cursor: default;
+}
+
+.unselect {
+  user-select: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.ws-nowrap {
+  white-space: nowrap;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}

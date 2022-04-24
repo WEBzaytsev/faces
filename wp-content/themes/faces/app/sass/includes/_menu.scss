@@ -1,0 +1,17 @@
+.menu {
+  max-width: 495px;
+
+  @include response-to(large) {
+    max-width: 400px;
+  }
+
+  &__item {
+
+    &_link {
+
+      &:hover {
+
+      }
+    }
+  }
+}

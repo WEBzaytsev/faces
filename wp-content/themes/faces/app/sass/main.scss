@@ -11,12 +11,6 @@
 
 @import "includes/header";
 @import "includes/footer";
+@import "includes/menu";
 
-
-body,
-html {
-  position: relative;
-  //font-family: 'Roboto',"Helvetica Neue",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,sans-serif;
-  scroll-behavior: smooth;
-  //color: #121212;
-}
+@import "common";

@@ -1,0 +1,83 @@
+.header {
+  backdrop-filter: blur(50px);
+  padding: 24px 0 30px;
+
+  &__menu {
+    flex: 0 0 58.4%;
+
+    @include response-to(large) {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__button {
+    margin-right: 15px;
+    width: 314px;
+    color: rgba(#fff, .85);
+    padding: 17px 0;
+    font-size: 23.55px;
+    line-height: 32px;
+    text-shadow: 0.654167px 0.654167px 0.654167px rgba(0, 0, 0, 0.25);
+    background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%),
+    radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%),
+    #B000DB;
+    box-shadow: 2.6px 24.9px 40.5px rgba(0, 0, 0, 0.5);
+    border-radius: 71px;
+
+    &:hover {
+      box-shadow: 0 10px 40.5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__langs {
+
+    &_item {
+      letter-spacing: 0.06em;
+      margin-right: 16px;
+
+      &:first-of-type {
+
+        &:before {
+          cursor: default;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -8px;
+          position: absolute;
+          content: '';
+          background-color: #fff;
+          display: block;
+          width: 1px;
+          height: 15px;
+        }
+      }
+
+      &:after {
+        background-image: url('../../img/triangle.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: none;
+        content: '';
+        height: 8px;
+        width: 21px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.active {
+        font-weight: 700;
+        color: #B000DB;
+
+        &:after {
+          display: block;
+        }
+
+        .header__langs_item-img {
+          display: block;
+        }
+      }
+    }
+  }
+}
