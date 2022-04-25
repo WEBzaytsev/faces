@@ -184,3 +184,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Create custom post types
+ */
+require get_template_directory() . '/includes/custom-post-type.php';
+
+add_action( 'init', 'bloggers_create_post_type');
+add_action( 'init', 'cases_create_post_type');
+
