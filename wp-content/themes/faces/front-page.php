@@ -31,6 +31,8 @@
         <p class="first-section__bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta non a, mi ut in rutrum. Pretium justo, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta non a, mi ut in rutrum. Pretium justo,</p>
 
     </div>
+
+    <div class="second-section"></div>
 </main>
 
 <?php get_footer(); ?>
