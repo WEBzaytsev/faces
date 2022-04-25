@@ -45,6 +45,12 @@ function scripts() {
         .pipe(gulp.dest('dist/js'));
 }
 
+function images() {
+    return gulp.src('app/img/**/*')
+        .pipe(webpack(webpackConfig))
+        .pipe(gulp.dest('dist/img'));
+}
+
 function watch() {
     browserSync.init({
         server: {
@@ -63,7 +69,7 @@ gulp.task('styles', styles);
 gulp.task('watch', watch);
 
 let build = gulp.series(clean,
-    gulp.parallel(gulp.series(styles), scripts)
+    gulp.parallel(gulp.series(styles, images), scripts)
 );
 
 gulp.task('build', build);
