@@ -148,4 +148,40 @@
       }
     }
   }
+
+  .our-bloggers {
+    height: 1427px;
+
+    &__caption {
+      top: 347px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__1 {
+      width: 500px;
+      left: -37px;
+      top: 0;
+    }
+
+    &__2 {
+      width: 453px;
+      bottom: 150px;
+      left: 275px;
+    }
+
+    &__3 {
+      width: 453px;
+      bottom: 335px;
+      right: 174px;
+      z-index: 2;
+    }
+
+    &__4 {
+      z-index: 1;
+      width: 341px;
+      right: 0;
+      top: 153px;
+    }
+  }
 }

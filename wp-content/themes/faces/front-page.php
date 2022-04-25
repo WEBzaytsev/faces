@@ -43,6 +43,25 @@
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
+
+    <div class="pos-r full-width container our-bloggers">
+        <p class="font-tenor pos-a text-center uppercase text-60 line-height-1 width-fit-content mx-auto our-bloggers__caption">наши <br>блогеры</p>
+        <?php $bloggers_photos = get_field('bloggers-photo');
+        if (isset($bloggers_photos)) :
+            foreach ($bloggers_photos as $key=>$bloggers_photo) :
+
+                if ($key >= 4) {
+                    break;
+                }
+
+                $css_class = sprintf('block border-70 pos-a our-bloggers__%s', $key + 1);
+                $img_src = $bloggers_photo['img']['url']; ?>
+                <img src="<?php esc_attr_e($img_src, 'faces'); ?>"
+                     class="<?php esc_attr_e($css_class, 'faces'); ?>"
+                     alt="img">
+            <?php endforeach;
+        endif; ?>
+    </div>
 </main>
 
 <?php get_footer(); ?>
