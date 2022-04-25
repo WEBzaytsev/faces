@@ -141,6 +141,7 @@ function faces_scripts() {
 	wp_enqueue_style( 'faces-style', get_stylesheet_uri(), array(), _FACES_VERSION );
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/dist/css/main.css', array(), _FACES_VERSION );
     wp_enqueue_style( 'font-manrope', 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap', array(), _FACES_VERSION );
+    wp_enqueue_style( 'font-tenor', 'https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap', array(), _FACES_VERSION );
 	wp_style_add_data( 'faces-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'faces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _FACES_VERSION, true );

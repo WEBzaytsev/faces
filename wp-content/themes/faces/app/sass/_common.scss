@@ -1,7 +1,7 @@
 body,
 html {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   background-color: #000;
   font-family: 'Manrope',"Helvetica Neue",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,sans-serif;
   scroll-behavior: smooth;
@@ -275,4 +275,54 @@ figure img {
 
 .object-fit-cover {
   object-fit: cover;
+}
+
+.page-title {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 100px;
+  line-height: 100.5%;
+  letter-spacing: -0.005em;
+}
+
+.round-animate-btn {
+  width: 304px;
+  height: 304px;
+  border: 1.34118px solid $primary-color;
+  filter: drop-shadow(0px 3.57647px 3.57647px rgba(0, 0, 0, 0.25));
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    display: block;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    width: 230px;
+    height: 230px;
+    border: 0.432332px solid #B000DB;
+    filter: drop-shadow(0px 3.45865px 3.45865px rgba(0, 0, 0, 0.25));
+  }
+
+  &:after {
+    width: 264px;
+    height: 264px;
+    border: 0.868421px solid #B000DB;
+    filter: drop-shadow(0px 3.47368px 3.47368px rgba(0, 0, 0, 0.25));
+  }
+
+  span {
+    font-family: 'Tenor Sans', sans-serif;
+    width: 208px;
+    height: 208px;
+    background: radial-gradient(63.11% 63.11% at 31.97% 19.67%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #B000DB;
+    box-shadow: 5.40046px 51.3044px 83.7071px rgba(0, 0, 0, 0.5);
+    font-size: 26.2531px;
+    line-height: 144%;
+  }
 }
