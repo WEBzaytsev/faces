@@ -12,6 +12,13 @@
         margin-right: 96px;
 
         span {
+          width: 53px;
+          height: 66px;
+          display: block;
+          background-image: url('../../img/page-title-s.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
           left: calc(100% + 42px);
           top: 50%;
           transform: translateY(-50%);
