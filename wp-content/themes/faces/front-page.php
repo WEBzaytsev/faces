@@ -29,6 +29,19 @@
     </div>
 
     <div class="second-section"></div>
+
+    <?php $theses = get_field('theses');
+
+    if (isset($theses)) : ?>
+        <div class="container flex flex-col theses">
+            <?php foreach ($theses as $theses_item) : ?>
+                <div class="pos-r theses__item">
+                    <p class="font-tenor theses__item_caption"><?php esc_html_e($theses_item['caption'], 'faces'); ?></p>
+                    <p class="theses__item_text"><?php esc_html_e($theses_item['text'], 'faces'); ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

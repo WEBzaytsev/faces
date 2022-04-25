@@ -86,5 +86,61 @@
 
   .second-section {
     height: 938px;
+    margin-bottom: 359px;
+  }
+
+  .theses {
+    margin-bottom: 532px;
+
+    &__item {
+      max-width: calc(50% + 25px);
+      width: 100%;
+      padding-right: 70px;
+
+      &:before {
+        position: absolute;
+        top: 2px;
+        content: '';
+        background-color: $primary-color;
+        border-radius: 50%;
+        display: block;
+        width: 50px;
+        height: 50px;
+        right: 0;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 118px;
+      }
+
+      &:nth-of-type(odd) {
+        padding-left: 70px;
+        padding-right: 0;
+        text-align: right;
+        margin-left: auto;
+
+        &:before {
+          left: 0;
+          right: unset;
+        }
+
+        .theses__item_text {
+          padding-left: 50px;
+          padding-right: unset;
+        }
+      }
+
+      &_caption {
+        margin-bottom: 53px;
+        font-size: 50px;
+        line-height: 100.5%;
+      }
+
+      &_text {
+        padding-right: 50px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
   }
 }
