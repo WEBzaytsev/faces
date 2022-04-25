@@ -17,7 +17,8 @@
             <div class="pos-a border50 flex-center round-animate-btn">
                 <span class="border50 pointer text-center flex-center uppercase">обсудить проект</span>
             </div>
-            <a href="#" class="pos-a uppercase text-center flex-center transition border50 first-section__cases">наши <br>кейсы
+            <a href="#" class="pos-a uppercase text-center flex-center transition border50 first-section__cases">наши
+                <br>кейсы
                 <span class="pos-a first-section__cases_arr">
                     <?php get_template_part('/vector-images/cases-arr'); ?>
                 </span>

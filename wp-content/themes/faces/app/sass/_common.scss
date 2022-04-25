@@ -181,6 +181,10 @@ figure img {
   border-radius: 50%;
 }
 
+.border-70 {
+  border-radius: 70px;
+}
+
 .text-12 {
   font-size: 12px;
 }
@@ -197,8 +201,16 @@ figure img {
   font-size: 20px;
 }
 
+.text-60 {
+  font-size: 60px;
+}
+
 .line-height-27 {
   line-height: 27px;
+}
+
+.line-height-1 {
+  line-height: 100%;
 }
 
 .text-center {
@@ -277,8 +289,11 @@ figure img {
   object-fit: cover;
 }
 
-.page-title {
+.font-tenor {
   font-family: 'Tenor Sans', sans-serif;
+}
+
+.page-title {
   font-size: 100px;
   line-height: 100.5%;
   letter-spacing: -0.005em;
