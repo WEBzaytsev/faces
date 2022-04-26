@@ -13,7 +13,7 @@
 
 <header class="header-grey-bg border-bottom-white-1 header">
     <div class="container flex align-center full-width">
-        <a href="#"
+        <a href="<?php esc_attr_e(get_home_url(), 'faces'); ?>"
            class="header__logo">
             <?php get_template_part('/vector-images/logo'); ?>
         </a>
