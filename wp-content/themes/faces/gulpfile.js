@@ -46,8 +46,7 @@ function scripts() {
 }
 
 function images() {
-    return gulp.src('app/img/**/*')
-        .pipe(webpack(webpackConfig))
+    return gulp.src('app/img/*')
         .pipe(gulp.dest('dist/img'));
 }
 
