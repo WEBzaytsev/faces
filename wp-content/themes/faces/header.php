@@ -18,26 +18,19 @@
             <?php get_template_part('/vector-images/logo'); ?>
         </a>
 
-        <nav class="full-width flex justify-center header__menu" id="top-menu">
-            <ul class="flex align-center full-width justify-between menu">
-                <li class="menu__item">
-                    <a href="<?php echo get_home_url() . '/о-нас'; ?>"
-                       class="text-20 line-height-27 letter-spacing-002 transition">О нас</a>
-                </li>
-                <li class="menu__item">
-                    <a href="<?php echo get_home_url() . '/кейсы'; ?>"
-                       class="text-20 line-height-27 letter-spacing-002 transition">Кейсы</a>
-                </li>
-                <li class="menu__item">
-                    <a href="<?php echo get_home_url() . '/наши-блогеры'; ?>"
-                       class="text-20 line-height-27 letter-spacing-002 transition">Наши блогеры</a>
-                </li>
-                <li class="menu__item">
-                    <a href="<?php echo get_home_url() . '/контакты'; ?>"
-                       class="text-20 line-height-27 letter-spacing-002 transition">Контакты</a>
-                </li>
-            </ul>
-        </nav>
+        <?php if (has_nav_menu('header-menu')) :
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'header-menu',
+                    'menu_id' => 'main-menu',
+                    'container' => 'nav',
+                    'container_class' => 'full-width flex justify-center header__menu',
+                    'menu_class' => 'flex align-center full-width justify-between menu',
+                )
+            ); ?>
+        <?php endif; ?>
+
+        <!--TODO: link classes: "text-20 line-height-27 letter-spacing-002 transition" -->
 
         <a href="#"
            class="block text-center font700 transition header__button">
