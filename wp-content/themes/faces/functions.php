@@ -208,6 +208,15 @@ add_action( 'init', 'bloggers_create_post_type');
 add_action( 'init', 'cases_create_post_type');
 
 /**
+ * Create custom taxonomies
+ */
+
+require get_template_directory() . '/includes/custom-taxonomy.php';
+
+add_action( 'init', 'bloggers_register_taxonomy');
+add_action( 'init', 'cases_register_taxonomy');
+
+/**
  * Set ACF JSON
  */
 require get_template_directory() . '/includes/acf-json-settings.php';
