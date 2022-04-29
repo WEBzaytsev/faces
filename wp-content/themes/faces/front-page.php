@@ -5,9 +5,20 @@
         <h1 class="uppercase page-title"><?php the_field('page-caption'); ?></h1>
 
         <div class="pos-r full-width">
+            <?php
+            $video_settings = get_field('video') ?? null;
+            $video_poster = $video_settings['poster']['url'] ?? null;
+            $video_source_type = $video_settings['source'] ?? null;
+            $video_source = $video_source_type == 'frame' ? $video_settings['frame'] : $video_settings['link'];
+            ?>
             <div class="mx-auto pos-r first-section__circle">
-                <div class="hidden border50 pos-a first-section__circle_wrap">
-                    <div class="first-section__circle_image"></div>
+                <div class="hidden border50 hidden pos-a first-section__circle_wrap">
+                    <div class="first-section__circle_image"
+                         style="background-image:url('<?php esc_attr_e($video_poster, 'faces'); ?>');">
+                        <?php if ($video_source_type == 'frame') : ?>
+                            <?php echo $video_source ?? ''; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
                 <?php get_template_part('/vector-images/round-text'); ?>
             </div>
@@ -45,10 +56,11 @@
     <?php endif; ?>
 
     <div class="pos-r full-width container our-bloggers">
-        <p class="font-tenor pos-a text-center uppercase text-60 line-height-1 width-fit-content mx-auto our-bloggers__caption">наши <br>блогеры</p>
+        <p class="font-tenor pos-a text-center uppercase text-60 line-height-1 width-fit-content mx-auto our-bloggers__caption">
+            наши <br>блогеры</p>
         <?php $bloggers_photos = get_field('bloggers-photo');
         if (isset($bloggers_photos)) :
-            foreach ($bloggers_photos as $key=>$bloggers_photo) :
+            foreach ($bloggers_photos as $key => $bloggers_photo) :
 
                 if ($key >= 4) {
                     break;
