@@ -2,19 +2,44 @@
   background-repeat: no-repeat;
   background-size: 1725px;
   background-image: url('../../img/home-first-bg-img.svg'),
-                    url('../../img/home-four-bg-img.svg');
-  background-position: left 684px, right 4175px;
+  url('../../img/home-four-bg-img.svg');
+  background-position: left 350px, right 4050px;
+
+  @include response-to(large) {
+    background-size: 1159px;
+    background-position: left 300px, right 4050px;
+  }
+
+  @include response-to(medium) {
+    background-size: 901px;
+    background-position: -333px 590px, right 4050px;
+  }
 
   .first-section {
-    margin-top: 115px;
-    margin-bottom: 38px;
+    margin-bottom: 101px;
+
+    @include response-to(large) {
+      margin-bottom: 35px;
+    }
 
     .page-title {
       margin-bottom: 125px;
 
+      @include response-to(huge) {
+        margin-bottom: 140px;
+      }
+
+      @include response-to(small) {
+        margin-bottom: 50px;
+      }
+
       &_s {
         display: inline-block;
         margin-right: 96px;
+
+        @include response-to(large) {
+          margin-right: 50px;
+        }
 
         span {
           width: 53px;
@@ -24,21 +49,48 @@
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
-          left: calc(100% + 42px);
+          left: calc(100% + 25px);
           top: 50%;
           transform: translateY(-50%);
+
+          @include response-to(large) {
+            width: 27px;
+            height: 33px;
+            left: calc(100% + 14px);
+          }
         }
       }
 
       &_bottom {
         margin-left: 235px;
         display: block;
+
+        @include response-to(medium) {
+          margin-left: 0;
+        }
       }
     }
 
     &__circle {
       width: 1010px;
       height: 1010px;
+
+      @include response-to(huge) {
+        width: 850px;
+        height: 850px;
+      }
+
+      @include response-to(large) {
+        width: 493px;
+        height: 493px;
+      }
+
+      @include response-to(small) {
+        margin-bottom: 135px;
+        width: 323px;
+        height: 323px;
+        margin-left: -12px;
+      }
 
       &_wrap {
         width: 848px;
@@ -47,40 +99,107 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #aaa;
+
+        @include response-to(huge) {
+          width: 700px;
+          height: 700px;
+        }
+
+        @include response-to(large) {
+          width: 426px;
+          height: 426px;
+        }
+
+        @include response-to(small) {
+          width: 282px;
+          height: 282px;
+        }
       }
 
       &_image {
         height: 100%;
 
-        iframe {
+        iframe,
+        video {
           min-width: 100% !important;
           min-height: 100% !important;
         }
       }
     }
 
+    &__round-text {
+      width: 100%;
+      height: 100%;
+      animation-name: round-text;
+      animation-iteration-count: infinite;
+      animation-duration: 40s;
+      animation-timing-function: linear;
+    }
+
     &__left-top-text {
-      font-size: 22px;
-      line-height: 30px;
       top: -20px;
       right: 0;
       max-width: 431px;
+
+      @include response-to(huge) {
+        max-width: 362px;
+      }
+
+      @include response-to(large) {
+        bottom: calc(100% + 10px);
+        top: unset;
+      }
     }
 
     .round-animate-btn {
       top: -35px;
       left: -4px;
+
+      @include response-to(small) {
+        top: 245px;
+        left: unset;
+        right: -20px;
+      }
     }
 
     &__cases {
       bottom: 32px;
-      right: 0;
       width: 240px;
       height: 240px;
 
-      background: linear-gradient(56.89deg, rgba(176, 0, 219, 0.7) -33.86%, rgba(176, 0, 219, 0) 64.18%);
-      font-size: 34.4828px;
-      line-height: 115%;
+      &:before {
+        position: absolute;
+        z-index: 0;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(56.89deg, rgba(176, 0, 219, 0.7) -33.86%, rgba(176, 0, 219, 0) 64.18%);
+        transition: linear .7s;
+        transform: rotate(0deg);
+      }
+
+      &:hover {
+
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+
+      @include response-to(large) {
+        width: 185px;
+        height: 185px;
+        bottom: -94px;
+        right: 59px;
+      }
+
+      @include response-to(small) {
+        right: unset;
+        bottom: unset;
+        width: 240px;
+        height: 240px;
+      }
 
       &_arr {
         left: 50%;
@@ -91,25 +210,169 @@
 
     &__bottom-text {
       margin-top: 112px;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 30px;
-      max-width: 738px;
+
+      @media(min-width: 767px) {
+        max-width: 738px;
+      }
+
+      @include response-to(large) {
+        margin-top: 154px;
+        max-width: 618px;
+      }
+
+      @include response-to(small) {
+        margin-top: 100px;
+      }
     }
   }
 
-  .second-section {
-    height: 938px;
+  .cases {
     margin-bottom: 359px;
+    cursor: grab;
+
+    @include response-to(large) {
+      margin-bottom: 332px;
+    }
+
+    @include response-to(medium) {
+      margin-bottom: 130px;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .slick-list {
+      overflow: unset;
+    }
+
+    &__item {
+      border-left: 1px solid #fff;
+      height: auto;
+
+      &_inner {
+        padding: 51px 59px 24px;
+
+        @include response-to(large) {
+          padding: 31px 35px 50px;
+        }
+
+        @include response-to(small) {
+          padding: 25px 0 8px 30px;
+        }
+      }
+
+      &_img {
+        background-color: rgba($primary-color, .7);
+        margin-bottom: 77px;
+        width: 447px;
+        height: 447px;
+
+        @include response-to(large) {
+          width: 286px;
+          height: 286px;
+          margin-bottom: 47px;
+        }
+
+        @include response-to(small) {
+          width: 224px;
+          height: 224px;
+          margin-bottom: 38px;
+        }
+      }
+
+      &_title {
+        margin-bottom: 43px;
+
+        @include response-to(large) {
+          margin-bottom: 30px;
+        }
+
+        @include response-to(small) {
+          margin-bottom: 21px;
+        }
+      }
+
+      &:nth-of-type(even) {
+
+        .cases__item_title {
+          order: 0;
+        }
+
+        .cases__item_desc {
+          order: 1;
+          margin-bottom: 77px;
+
+          @include response-to(large) {
+            margin-bottom: 48px;
+          }
+
+          @include response-to(small) {
+            margin-bottom: 35px;
+          }
+        }
+
+        .cases__item_img {
+          order: 2;
+          margin-bottom: 0;
+        }
+      }
+
+      &_link {
+        transform: rotate(270deg) translate(-420px, -100px);
+        width: fit-content;
+
+        @include response-to(large) {
+          transform: rotate(270deg) translate(-270px, -50px);
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          height: 3px;
+          max-width: 100%;
+          width: 100%;
+          display: block;
+          background-color: $primary-color;
+          bottom: -3px;
+          left: 50%;
+          transform: translateX(-50%);
+          @include transition-ease;
+        }
+
+        &:hover {
+
+          &:before {
+            max-width: 0;
+          }
+        }
+      }
+    }
   }
 
   .theses {
     margin-bottom: 532px;
 
+    @include response-to(large) {
+      margin-bottom: 85px;
+    }
+
     &__item {
       max-width: calc(50% + 25px);
       width: 100%;
       padding-right: 70px;
+
+      @include response-to(large) {
+        max-width: 66%;
+        padding-right: 62px;
+      }
+
+      @include response-to(small) {
+        max-width: unset;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       &:before {
         position: absolute;
@@ -121,10 +384,24 @@
         width: 50px;
         height: 50px;
         right: 0;
+
+        @include response-to(large) {
+          width: 40px;
+          height: 40px;
+        }
+
+        @include response-to(small) {
+          width: 25px;
+          height: 25px;
+        }
       }
 
       &:not(:last-of-type) {
         margin-bottom: 118px;
+
+        @include response-to(medium) {
+          margin-bottom: 70px;
+        }
       }
 
       &:nth-of-type(odd) {
@@ -132,6 +409,20 @@
         padding-right: 0;
         text-align: right;
         margin-left: auto;
+
+        @include response-to(large) {
+          padding-left: 62px;
+          padding-right: 0;
+        }
+
+        @include response-to(small) {
+          padding-left: 0;
+
+          .theses__item_caption {
+            padding-right: 0;
+            padding-left: 35px;
+          }
+        }
 
         &:before {
           left: 0;
@@ -141,56 +432,328 @@
         .theses__item_text {
           padding-left: 50px;
           padding-right: unset;
+
+          @include response-to(large) {
+            padding-left: 32px;
+            padding-right: unset;
+          }
+
+          @include response-to(small) {
+            padding-left: 0;
+          }
         }
       }
 
       &_caption {
         margin-bottom: 53px;
-        font-size: 50px;
-        line-height: 100.5%;
+
+        @include response-to(large) {
+          margin-bottom: 40px;
+        }
+
+        @include response-to(small) {
+          margin-bottom: 14px;
+          padding-right: 35px;
+        }
       }
 
       &_text {
         padding-right: 50px;
-        font-size: 22px;
-        line-height: 30px;
+
+        @include response-to(large) {
+          padding-right: 32px;
+        }
+
+        @include response-to(small) {
+          padding-right: 0;
+        }
       }
     }
   }
 
   .our-bloggers {
     height: 1427px;
+    margin-bottom: 175px;
+
+    @include response-to(large) {
+      height: 1360px;
+      margin-bottom: 160px;
+    }
+
+    @include response-to(small) {
+      height: auto;
+
+      .slick-list {
+        overflow: unset;
+      }
+    }
 
     &__caption {
       top: 347px;
-      left: 50%;
-      transform: translateX(-50%);
+
+      @include response-to(large) {
+        top: 500px;
+      }
+    }
+
+    &__wrap {
+      height: 100%;
+    }
+
+    &__item {
+      background-size: cover;
+      background-position: center;
+
+      @include response-to(small) {
+        border-radius: 38px;
+      }
+
+      &_info {
+        opacity: 0;
+        padding: 0 10.15% 16.7%;
+        background: linear-gradient(0deg, rgba(176, 0, 219, 0.3), rgba(176, 0, 219, 0.3));
+
+        @include response-to(small) {
+          opacity: 1;
+          padding: 48px 25px 36px;
+          background: unset;
+        }
+      }
+
+      &:hover {
+
+        .our-bloggers__item_info {
+          opacity: 1;
+        }
+      }
+
+      &_name {
+        margin-bottom: 20px;
+
+        @include response-to(small) {
+          margin-bottom: 15px;
+
+          &:before {
+            z-index: 0;
+            position: absolute;
+            content: '';
+            width: 275px;
+            height: 275px;
+            border-radius: 50%;
+            top: -48px;
+            right: -13px;
+            background: rgba(168, 1, 209, 0.5);
+          }
+        }
+      }
+
+      &_desc {
+
+        @include response-to(small) {
+          max-height: 46px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
 
     &__1 {
       width: 500px;
+      height: 629px;
       left: -37px;
       top: 0;
+
+      @include response-to(large) {
+        width: 369px;
+        left: 100px;
+        height: 465px;
+      }
     }
 
     &__2 {
       width: 453px;
+      height: 570px;
       bottom: 150px;
       left: 275px;
+
+      @include response-to(large) {
+        width: 310px;
+        height: 391px;
+        left: 130px;
+        bottom: 270px;
+      }
     }
 
     &__3 {
       width: 453px;
+      height: 570px;
       bottom: 335px;
       right: 174px;
       z-index: 2;
+
+      @include response-to(large) {
+        width: 271px;
+        right: 120px;
+        height: 340px;
+        bottom: 415px;
+      }
     }
 
     &__4 {
       z-index: 1;
       width: 341px;
       right: 0;
+      height: 430px;
       top: 153px;
+
+      @include response-to(large) {
+        width: 200px;
+        right: 20px;
+        height: 250px;
+        top: 412px;
+      }
     }
+
+    &__1,
+    &__2,
+    &__3,
+    &__4 {
+
+      @include response-to(small) {
+        width: 250px;
+        height: 312px;
+        position: relative;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+      }
+    }
+
+    &__all {
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:before {
+        width: 100%;
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: $primary-color;
+        height: 3px;
+        bottom: -13px;
+      }
+    }
+  }
+
+  .partners {
+    margin-bottom: 51px;
+
+    &__title {
+      background: linear-gradient(56.89deg, rgba(176, 0, 219, 0.7) -33.86%, rgba(176, 0, 219, 0) 64.18%);
+      width: 406px;
+      height: 406px;
+      min-width: 406px;
+      min-height: 406px;
+
+      @include response-to(large) {
+        width: 185px;
+        height: 185px;
+        min-width: 185px;
+        min-height: 185px;
+        margin-bottom: 70px;
+      }
+    }
+
+    &__list {
+      margin-left: 108px;
+      cursor: grab;
+      max-width: calc(100% - 514px);
+      width: 100%;
+
+      .slick-track {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__item {
+      max-width: 250px;
+      max-height: 110px;
+
+      @include response-to(large) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 73px;
+
+        @include response-to(large) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .last-block {
+    max-width: 850px;
+    padding-top: 890px;
+    padding-bottom: 820px;
+
+    @include response-to(large) {
+      padding-top: 800px;
+      padding-bottom: 800px;
+    }
+
+    @include response-to(small) {
+      padding: 256px 37px 232px;
+    }
+
+    &__caption {
+      margin-bottom: 75px;
+
+      @include response-to(small) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &.active {
+
+      .last-block__circle {
+        transform: translate(-50%, -50%) scale(5);
+
+        @include response-to(small) {
+          transform: translate(-50%, -50%) scale(3.5);
+        }
+      }
+    }
+
+    &__circle {
+      transition: all ease-out .7s;
+      background-color: $primary-color;
+      width: 416px;
+      height: 416px;
+
+      &.active {
+        transform: translate(-50%, -50%) scale(4);
+      }
+
+      @include response-to(small) {
+        width: 191px;
+        height: 191px;
+      }
+    }
+  }
+}
+
+@keyframes round-text {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -146,10 +146,12 @@ function faces_scripts() {
 	wp_style_add_data( 'faces-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'faces-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _FACES_VERSION, true );
-	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/dist/js/main.js', array('jquery'), _FACES_VERSION, true );
+	wp_enqueue_script( 'slick-slider', get_template_directory_uri() . '/dist/libs/js/slick.min.js', array('jquery'), _FACES_VERSION, true );
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/dist/js/main.js', array('slick-slider'), _FACES_VERSION, true );
     wp_localize_script('main-script', 'js_settings', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'home_url' => get_home_url(),
+        'current_page' => getPage(),
     ));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -221,3 +223,10 @@ add_action( 'init', 'cases_register_taxonomy');
  */
 require get_template_directory() . '/includes/acf-json-settings.php';
 
+function getPage() {
+    if (is_front_page()) {
+        return 'home';
+    }
+
+    return false;
+}

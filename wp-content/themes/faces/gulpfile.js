@@ -17,6 +17,7 @@ let webpackConfig = {
     },
     entry: {
         main: './app/js/main.js',
+        // slick: './app/js/slick.min.js',
         // register: './app/js/register.js',
     },
     module: {
@@ -50,6 +51,11 @@ function images() {
         .pipe(gulp.dest('dist/img'));
 }
 
+function libs() {
+    return gulp.src('app/libs/**/*')
+        .pipe(gulp.dest('dist/libs'));
+}
+
 function watch() {
     browserSync.init({
         server: {
@@ -68,7 +74,9 @@ gulp.task('styles', styles);
 gulp.task('watch', watch);
 
 let build = gulp.series(clean,
-    gulp.parallel(gulp.series(styles, images), scripts)
+    gulp.parallel(
+        gulp.series(styles, images, libs),
+        scripts)
 );
 
 gulp.task('build', build);

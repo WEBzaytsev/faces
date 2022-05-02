@@ -1,15 +1,26 @@
-jQuery(document).ready(() => {
+'use strict';
 
-    (function ($) {
-        const langs = [...document.querySelectorAll('.header__langs_item')];
+const settings = js_settings;
 
-        langs.forEach(l => l.addEventListener('click', switchLangs));
+const $ = jQuery;
 
-        function switchLangs(e) {
-            e.preventDefault();
-            langs.forEach(l => {
-                l.classList.toggle('active');
-            })
-        }
-    })(jQuery);
+import {mobileMenu} from "./commonFunctions";
+import {homePage} from "./pages/homePage";
+
+$(document).ready(function () {
+
+    console.log()
+
+    mobileMenu($('.mob-menu-btn'));
+
+    let pageClass;
+
+    switch (settings.current_page) {
+        case 'home':
+            pageClass = new homePage($);
+            break;
+    }
+
+    pageClass.init();
+
 });
