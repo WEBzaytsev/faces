@@ -223,10 +223,24 @@ add_action( 'init', 'cases_register_taxonomy');
  */
 require get_template_directory() . '/includes/acf-json-settings.php';
 
+/**
+ * Get current page
+ */
 function getPage() {
     if (is_front_page()) {
         return 'home';
+    } elseif (get_the_ID() == 47) {
+        return  'cases';
     }
 
     return false;
 }
+
+/**
+ * Ajax queries
+ */
+
+add_action( 'wp_ajax_ajax_cases', 'ajax_cases_function' );
+add_action( 'wp_ajax_nopriv_ajax_cases', 'ajax_cases_function' );
+
+require get_template_directory() . '/includes/ajax-cases-function.php';

@@ -1,0 +1,19 @@
+.filters {
+  margin-top: 115px;
+
+  &__item {
+    border: 1px solid #fff;
+    border-radius: 100px;
+    width: 290px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 14px 13px 13px;
+    background-color: #000;
+
+    &.active,
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

@@ -16,7 +16,6 @@ export const homePage = function ($) {
     this.toCasesButton = $('.first-section__cases');
 
     this.lastBlockAnimation = () => {
-        console.log(this.lastBlockTop, this.lastBlockBottom, window.pageYOffset);
         if (window.pageYOffset > this.lastBlockTop - 200
             && window.pageYOffset < this.lastBlockBottom - 600) {
             this.lastBlock.addClass('active');

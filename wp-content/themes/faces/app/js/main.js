@@ -1,5 +1,7 @@
 'use strict';
 
+import {casesPage} from "./pages/casesPage";
+
 const settings = js_settings;
 
 const $ = jQuery;
@@ -17,7 +19,10 @@ $(document).ready(function () {
 
     switch (settings.current_page) {
         case 'home':
-            pageClass = new homePage($);
+            pageClass = new homePage($, settings);
+            break;
+        case 'cases':
+            pageClass = new casesPage($, settings);
             break;
     }
 

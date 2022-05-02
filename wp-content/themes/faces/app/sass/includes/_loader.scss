@@ -1,0 +1,121 @@
+.loader {
+  @include transition-ease;
+  opacity: 0;
+  z-index: -1000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include flex-center();
+  background-color: transparent;
+
+  &-inner {
+    width: 217px;
+    height: 217px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  &-animate {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+
+    & div {
+      left: 98.735px;
+      top: 42.315px;
+      position: absolute;
+      animation: loader-animate linear 2.127659574468085s infinite;
+      background: #b000db;
+      width: 19.53px;
+      height: 19.53px;
+      border-radius: 9.765px / 9.765px;
+      transform-origin: 9.765px 66.185px;
+
+      &:nth-child(1) {
+        transform: rotate(0deg);
+        animation-delay: -1.9342359767891684s;
+        background: #b000db;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(32.72727272727273deg);
+        animation-delay: -1.7408123791102514s;
+        background: #b000db;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(65.45454545454545deg);
+        animation-delay: -1.5473887814313347s;
+        background: #b000db;
+      }
+
+      &:nth-child(4) {
+        transform: rotate(98.18181818181819deg);
+        animation-delay: -1.3539651837524178s;
+        background: #b000db;
+      }
+
+      &:nth-child(5) {
+        transform: rotate(130.9090909090909deg);
+        animation-delay: -1.1605415860735009s;
+        background: #b000db;
+      }
+
+      &:nth-child(6) {
+        transform: rotate(163.63636363636363deg);
+        animation-delay: -0.9671179883945842s;
+        background: #b000db;
+      }
+
+      &:nth-child(7) {
+        transform: rotate(196.36363636363637deg);
+        animation-delay: -0.7736943907156674s;
+        background: #b000db;
+      }
+
+      &:nth-child(8) {
+        transform: rotate(229.0909090909091deg);
+        animation-delay: -0.5802707930367504s;
+        background: #b000db;
+      }
+
+      &:nth-child(9) {
+        transform: rotate(261.8181818181818deg);
+        animation-delay: -0.3868471953578337s;
+        background: #b000db;
+      }
+
+      &:nth-child(10) {
+        transform: rotate(294.54545454545456deg);
+        animation-delay: -0.19342359767891684s;
+        background: #b000db;
+      }
+
+      &:nth-child(11) {
+        transform: rotate(327.27272727272725deg);
+        animation-delay: 0s;
+        background: #b000db;
+      }
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    z-index: 10000;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
