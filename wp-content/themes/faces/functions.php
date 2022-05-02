@@ -231,6 +231,8 @@ function getPage() {
         return 'home';
     } elseif (get_the_ID() == 47) {
         return  'cases';
+    } elseif (get_the_ID() == 43) {
+        return  'bloggers';
     }
 
     return false;
@@ -242,5 +244,8 @@ function getPage() {
 
 add_action( 'wp_ajax_ajax_cases', 'ajax_cases_function' );
 add_action( 'wp_ajax_nopriv_ajax_cases', 'ajax_cases_function' );
-
 require get_template_directory() . '/includes/ajax-cases-function.php';
+
+add_action( 'wp_ajax_ajax_bloggers', 'ajax_bloggers_function' );
+add_action( 'wp_ajax_nopriv_ajax_bloggers', 'ajax_bloggers_function' );
+require get_template_directory() . '/includes/ajax-bloggers-function.php';

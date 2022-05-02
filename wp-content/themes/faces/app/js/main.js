@@ -8,6 +8,7 @@ const $ = jQuery;
 
 import {mobileMenu} from "./commonFunctions";
 import {homePage} from "./pages/homePage";
+import {bloggersPage} from "./pages/bloggersPage";
 
 $(document).ready(function () {
 
@@ -23,6 +24,9 @@ $(document).ready(function () {
             break;
         case 'cases':
             pageClass = new casesPage($, settings);
+            break;
+        case 'bloggers':
+            pageClass = new bloggersPage($, settings);
             break;
     }
 
