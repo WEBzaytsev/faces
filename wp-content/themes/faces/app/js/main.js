@@ -9,6 +9,7 @@ const $ = jQuery;
 import {mobileMenu} from "./commonFunctions";
 import {homePage} from "./pages/homePage";
 import {bloggersPage} from "./pages/bloggersPage";
+import {aboutPage} from "./pages/aboutPage";
 
 $(document).ready(function () {
 
@@ -16,7 +17,7 @@ $(document).ready(function () {
 
     mobileMenu($('.mob-menu-btn'));
 
-    let pageClass;
+    let pageClass = null;
 
     switch (settings.current_page) {
         case 'home':
@@ -28,8 +29,13 @@ $(document).ready(function () {
         case 'bloggers':
             pageClass = new bloggersPage($, settings);
             break;
+        case 'about':
+            pageClass = new aboutPage($, settings);
+            break;
     }
 
-    pageClass.init();
+    if (pageClass) {
+        pageClass.init();
+    }
 
 });

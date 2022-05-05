@@ -1,0 +1,144 @@
+.bloggers-page {
+  padding-bottom: 163px;
+
+  .blogger {
+    flex: 0 0 31%;
+    margin-bottom: 250px;
+
+    &__inner {
+      transform: scale(1);
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.12);
+
+        .blogger__inner_btn {
+          opacity: 1;
+        }
+
+        .blogger__inner_bottom {
+          border-color: $primary-color;
+        }
+      }
+
+      &_soc-icon {
+
+        circle {
+          fill: #fff;
+        }
+
+        path {
+          fill: $primary-color;
+        }
+
+        &:hover {
+
+          circle {
+            fill: $primary-color;
+          }
+
+          path {
+            fill: #fff;
+          }
+        }
+      }
+
+      &_top {
+        height: 443px;
+      }
+
+      &_img {
+        height: 100%;
+        margin-left: auto;
+        width: fit-content;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      &_nickname {
+        transform: rotate(-90deg) translate(264px, -190px);
+        letter-spacing: 0.07em;
+        color: #FFF4F4;
+        font-weight: 700;
+        font-size: 39.0046px;
+        line-height: 46px;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      &_name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 40.9548px;
+        line-height: 48px;
+        margin-bottom: 30px;
+      }
+
+      &_bg {
+        height: 68.5%;
+        border-radius: 70px 70px 0 0;
+      }
+
+      &_btn {
+        opacity: 0;
+        font-family: 'Roboto', sans-serif;
+        top: 422px;
+        padding: 11px 23px 15px;
+        background: #000000;
+        border-radius: 43px;
+      }
+
+      &_bottom {
+        padding: 30px 26px 67px;
+        background: linear-gradient(180deg, rgba(176, 0, 219, 0.2) 0%, rgba(176, 0, 219, 0) 66.38%);
+        border-radius: 0 0 70px 70px;
+        border: 1px solid transparent;
+      }
+
+      &_socials {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+
+      &_social {
+
+        &:not(:last-of-type) {
+          margin-right: 45px;
+        }
+      }
+    }
+
+    &:nth-of-type(3n+1) {
+
+      .blogger__inner_bg {
+        background-color: #6000DB;
+      }
+    }
+
+    &:nth-of-type(3n+2) {
+
+      .blogger__inner_bg {
+        background-color: #D93EFF;
+      }
+    }
+
+    &:nth-of-type(3n+3) {
+
+      .blogger__inner_bg {
+        background-color: #ED1F69;
+      }
+    }
+  }
+
+  .round-animate-btn {
+    bottom: 100px;
+    right: -50px;
+
+    @include response-to(huge) {
+      right: 0;
+    }
+  }
+}
+

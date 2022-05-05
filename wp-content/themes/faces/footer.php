@@ -34,7 +34,7 @@
                    class="footer__item_link">
                     <?php esc_html_e(sprintf('+%s', get_field('phone', 'option')), 'faces'); ?>
                 </a>
-                <a href="<?php esc_attr_e(sprintf('mailto:%s', get_field('email', 'option')), 'faces'); ?>"
+                <a href="<?php echo esc_url(sprintf('mailto:%s', get_field('email', 'option')), 'faces'); ?>"
                    class="footer__item_link">
                     <?php esc_html_e(get_field('email', 'option'), 'faces'); ?>
                 </a>
@@ -52,7 +52,7 @@
 
                 if (isset($socials)) :
                     foreach ($socials as $social) : ?>
-                        <a href="<?php esc_attr_e($social['link'], 'faces'); ?>" class="footer__item_link">
+                        <a href="<?php echo esc_url($social['link'], 'faces'); ?>" class="footer__item_link">
                             <?php esc_html_e($social['title'], 'faces'); ?>
                         </a>
                     <?php endforeach;

@@ -13,7 +13,7 @@
 <div class="full-width page">
     <header class="pos-f full-width z-modal header-grey-bg border-bottom-white-1 header">
         <div class="container flex align-center md-justify-between full-width">
-            <a href="<?php esc_attr_e(get_home_url(), 'faces'); ?>"
+            <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"
                class="header__logo">
                 <?php $logo = get_field('logo', 'option'); ?>
                 <img src="<?php esc_attr_e($logo['url'], 'faces'); ?>"
@@ -24,7 +24,7 @@
             <div class="pos-r full-width md-width-fit-content md-block header__mob-wrap">
 
                 <div class="flex md-none full-width justify-between header__mob-container">
-                    <a href="<?php esc_attr_e(get_home_url(), 'faces'); ?>"
+                    <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"
                        class="none md-block header__logo">
                         <?php $logo = get_field('logo', 'option'); ?>
                         <img src="<?php esc_attr_e($logo['url'], 'faces'); ?>"
@@ -51,18 +51,38 @@
                         </span>
                     </a>
 
-                    <div class="flex-center ml-auto huge-m-0 header__langs">
-                        <span class="text-20 large-text-16 mr-16 large-mr-8 line-height-27 huge-line-height-22 pointer transition pos-r header__langs_item active">Ru</span>
-                        <span class="text-20 large-text-16 line-height-27 large-line-height-22 pointer transition pos-r header__langs_item">En</span>
-                    </div>
+                    <?php $languages_list = apply_filters('wpml_active_languages', null);
 
-                    <?php
+                    if ($languages_list) :
+
+                        $active_lang = array_filter($languages_list, function ($v, $k) {
+                            return $v['active'] == "1";
+                        }, ARRAY_FILTER_USE_BOTH);
+                        $active_lang = reset($active_lang); ?>
+                        <div class="flex-center ml-auto huge-m-0 header__langs">
+                            <a href="<?php echo esc_url($active_lang['url']); ?>"
+                               class="text-20 large-text-16 mr-16 large-mr-8 line-height-27 huge-line-height-22 pointer transition pos-r capitalize header__langs_item active">
+                                <?php esc_html_e($active_lang['code']); ?>
+                            </a>
+                            <?php foreach ($languages_list as $item) :
+                                if (!$item['active']) : ?>
+                                    <a href="<?php echo esc_url(($item['url'])); ?>"
+                                       class="text-20 large-text-16 line-height-27 large-line-height-22 pointer transition pos-r capitalize header__langs_item">
+                                        <?php esc_html_e($item['code']); ?>
+                                    </a>
+                                <?php endif;
+                            endforeach; ?>
+
+                        </div>
+
+                    <?php endif;
+
                     $socials = get_field('social', 'option');
 
                     if (isset($socials)) : ?>
                         <div class="header__social none flex flex-wrap md-block">
                             <?php foreach ($socials as $social) : ?>
-                                <a href="<?php esc_attr_e($social['link'], 'faces'); ?>"
+                                <a href="<?php echo esc_url($social['link'], 'faces'); ?>"
                                    class="text-18 line-height-25 header__social_item">
                                     <?php esc_html_e($social['title'], 'faces'); ?>
                                 </a>
@@ -77,4 +97,3 @@
             </div>
         </div>
     </header>
-

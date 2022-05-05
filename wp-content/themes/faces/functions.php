@@ -233,6 +233,8 @@ function getPage() {
         return  'cases';
     } elseif (get_the_ID() == 43) {
         return  'bloggers';
+    } elseif (get_the_ID() == 45) {
+        return  'about';
     }
 
     return false;

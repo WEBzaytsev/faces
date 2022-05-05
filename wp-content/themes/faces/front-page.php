@@ -2,7 +2,7 @@
 
 <main class="home-page">
     <div class="container pos-r first-section">
-        <h1 class="uppercase huge-text-center sm-text-left font-tenor page-title"><?php the_field('page-caption'); ?></h1>
+        <h1 class="uppercase huge-text-center sm-text-left font-tenor page-title"><?php echo __(get_field('page-caption'), 'faces'); ?></h1>
 
         <div class="pos-r full-width">
             <?php
@@ -36,7 +36,7 @@
             </p>
 
             <div class="pos-a border50 flex-center round-animate-btn">
-                <span class="border50 pointer text-center flex-center uppercase">обсудить проект</span>
+                <span class="border50 font-tenor text-26 large-text-16 pointer text-center flex-center uppercase">обсудить проект</span>
             </div>
             <a href="#"
                class="pos-a text-34 sm-text-35 line-height115 large-text-22 right-0 uppercase text-center flex-center transition border50 sm-pos-r sm-mx-auto first-section__cases">
@@ -87,7 +87,7 @@
                 </div>
             <?php endforeach; ?>
             <div class="cases__item cases__item-last">
-                <a href="<?php esc_attr_e(get_home_url() . '/kejsy/', 'faces'); ?>"
+                <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
                    class="font-tenor block pos-r line-height-1 text-45 large-text-25 cases__item_link">Смотреть все кейсы</a>
             </div>
         </div>
@@ -137,7 +137,7 @@
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
-        <a href="<?php esc_attr_e(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
+        <a href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
            class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content bottom-0 sm-none our-bloggers__all">Все блогеры</a>
     </div>
 
@@ -158,7 +158,7 @@
             <?php if (isset($partners_list)) : ?>
                 <div class="flex align-center large-justify-between large-flex large-flex-wrap partners__list">
                     <?php foreach ($partners_list as $partner) : ?>
-                        <a href="<?php esc_attr_e($partner['link'], 'faces'); ?>"
+                        <a href="<?php echo esc_url($partner['link'], 'faces'); ?>"
                            class="flex-center partners__item">
                             <img src="<?php esc_attr_e($partner['logo']['url'], 'faces'); ?>"
                                  alt="img">

@@ -258,12 +258,20 @@ figure img {
   font-size: 22px;
 }
 
+.text-26 {
+  font-size: 26px;
+}
+
 .text-30 {
   font-size: 30px;
 }
 
 .text-34 {
   font-size: 34px;
+}
+
+.text-36 {
+  font-size: 36px;
 }
 
 .text-45 {
@@ -274,8 +282,16 @@ figure img {
   font-size: 50px;
 }
 
+.text-55 {
+  font-size: 55px;
+}
+
 .text-60 {
   font-size: 60px;
+}
+
+.text-70 {
+  font-size: 70px;
 }
 
 .line-height-21 {
@@ -292,6 +308,14 @@ figure img {
 
 .line-height-30 {
   line-height: 30px;
+}
+
+.line-height-49 {
+  line-height: 49px;
+}
+
+.line-height-82 {
+  line-height: 82px;
 }
 
 .line-height115 {
@@ -779,7 +803,6 @@ figure img {
     height: 208px;
     background: radial-gradient(63.11% 63.11% at 31.97% 19.67%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #B000DB;
     box-shadow: 5.40046px 51.3044px 83.7071px rgba(0, 0, 0, 0.5);
-    font-size: 26.2531px;
     line-height: 144%;
 
     &:before {
@@ -798,7 +821,6 @@ figure img {
     @include response-to(large) {
       width: 126px;
       height: 126px;
-      font-size: 15.9764px;
       line-height: 144%;
       box-shadow: 3.28646px 31.2214px 50.9402px rgba(0, 0, 0, 0.5);
     }

@@ -6,6 +6,17 @@
   }
 
   li {
+    
+    &.current-menu-item {
+      
+      a {
+        color: $primary-color;
+        
+        @include response-to(medium) {
+          color: #fff;
+        }
+      }
+    }
 
     &:first-of-type,
     &:nth-of-type(4) {

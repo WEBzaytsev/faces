@@ -1,6 +1,7 @@
 .cases {
 
   &-page {
+    padding-bottom: 84px;
 
     .case {
       border-radius: 70px 70px 0 0;
@@ -38,6 +39,15 @@
           background-size: contain;
           background-position: center;
         }
+      }
+    }
+
+    .round-animate-btn {
+      bottom: -68px;
+      right: -50px;
+
+      @include response-to(huge) {
+        right: 0;
       }
     }
   }

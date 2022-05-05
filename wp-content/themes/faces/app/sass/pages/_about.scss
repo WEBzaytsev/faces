@@ -1,0 +1,128 @@
+.about-page {
+  margin-bottom: 224px;
+
+  &__content {
+    margin-top: 115px;
+    margin-bottom: 130px;
+    max-width: 1160px;
+
+    &_center {
+      margin-top: 144px;
+      margin-bottom: 168px;
+    }
+
+    &_quote {
+      padding-left: 130px;
+      flex: 0 0 51.5%;
+
+      &:before,
+      &:after {
+        position: absolute;
+        color: $primary-color;
+        letter-spacing: 0.01em;
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 251px;
+        line-height: 109%;
+      }
+
+      &:before {
+        content: '”';
+        left: 0;
+        top: -100px;
+      }
+
+      &:after {
+        content: '“';
+        right: 120px;
+        bottom: -220px;
+      }
+    }
+
+    &_side-text {
+      flex: 0 0 40%;
+      margin-right: 60px;
+    }
+  }
+
+  &__slider {
+    max-width: 790px;
+    height: 558px;
+    margin-bottom: 180px;
+
+    .slick-list {
+      overflow: unset;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+    &_item {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      //width: 478px!important;
+      height: 464px;
+      border-radius: 70px;
+      @include transition-ease;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        opacity: 1;
+        @include transition-ease;
+        background: linear-gradient(0deg, rgba(62, 3, 77, 0.3), rgba(62, 3, 77, 0.3));
+      }
+
+      &.slick-active {
+        height: 558px;
+        margin-left: -115px;
+        margin-right: -115px;
+        z-index: 2;
+        transform: translateX(58px);
+        //width: 790px!important;
+
+        &:after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__virtual-tour {
+    margin-bottom: 243px;
+    height: 82px;
+
+    &_wrap {
+
+      p {
+
+        &:not(:last-of-type) {
+          margin-right: 64px;
+        }
+      }
+    }
+  }
+
+  &__frame {
+
+    &_window {
+      height: 696px;
+      background-color: #aaa;
+    }
+
+    .round-animate-btn {
+      right: -50px;
+      bottom: -114px;
+
+      @include response-to(huge) {
+        right: 0;
+      }
+    }
+  }
+}
