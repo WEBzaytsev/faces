@@ -29,7 +29,9 @@
                 <?php endif; ?>
             </div>
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">Как с нами связаться</p>
+                <p class="color-primary line-height-25 text-18 footer__item_caption">
+                    <?php esc_html_e('Как с нами связаться', 'faces'); ?>
+                </p>
                 <a href="tel:<?php esc_attr_e(sprintf('+%s', get_field('phone', 'option')), 'faces'); ?>"
                    class="footer__item_link">
                     <?php esc_html_e(sprintf('+%s', get_field('phone', 'option')), 'faces'); ?>
@@ -40,13 +42,17 @@
                 </a>
             </div>
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">Где нас найти</p>
+                <p class="color-primary line-height-25 text-18 footer__item_caption">
+                    <?php esc_html_e('Где нас найти', 'faces'); ?>
+                </p>
                 <p class="footer__item_link">
                     <?php esc_html_e(get_field('address', 'option'), 'faces'); ?>
                 </p>
             </div>
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">Мы в соцсетях</p>
+                <p class="color-primary line-height-25 text-18 footer__item_caption">
+                    <?php esc_html_e('Мы в соцсетях', 'faces'); ?>
+                </p>
                 <?php
                 $socials = get_field('social', 'option');
 
@@ -69,12 +75,16 @@
                          alt="img">
                 </figure>
             <?php endif; ?>
-            <p class="line-height-25 text-18">@FACES2022. Все права защищены</p>
+            <p class="line-height-25 text-18">
+                <?php esc_html_e('@FACES2022. Все права защищены', 'faces'); ?>
+            </p>
         </div>
     </div>
 </footer>
 </div>
-<div class="pos-f flex justify-center top-0 bottom-0 left-0 right-0 modal"
+<div class="pos-f flex justify-center top-0 bottom-0 left-0 right-0 modal case"
+     data-close="true"></div>
+<div class="pos-f flex justify-center top-0 bottom-0 left-0 right-0 modal work-offer"
      data-close="true"></div>
 <?php wp_footer(); ?>
 
