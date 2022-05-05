@@ -1,14 +1,37 @@
 'use strict';
 
-import {modalWindow} from "../modalWindow";
+import {checkWidth} from "../commonFunctions";
 
 export const FiltersClass = function ($, settings, parent, action) {
     const self = this;
     this.mainSettings = settings;
     this.filters = $('.filters__item');
+    this.filtersWrap = $('.filters');
     this.activeFilter = $('.filters__item.active');
     this.blockFilters = false;
     this.contentWrap = $('.posts-content');
+    this.isMobile = checkWidth();
+
+    this.filterSlider = () => {
+        if (self.isMobile || self.filters.length < 4) {
+            return;
+        }
+
+        if (self.filtersWrap.hasClass('flex')) {
+            self.filtersWrap.removeClass('flex');
+        }
+
+        this.filtersWrap.slick({
+            slidesToShow: 4,
+            variableWidth: true,
+            infinite: false,
+            swipeToSlide: true,
+            cssEase: 'linear',
+            prevArrow: '',
+            nextArrow: '',
+            outerEdgeLimit: false,
+        })
+    }
 
     this.filterHandler = function () {
 
@@ -47,7 +70,7 @@ export const FiltersClass = function ($, settings, parent, action) {
                 cat: cat || 'all',
             },
             type: 'POST',
-            beforeSend: function( xhr ){
+            beforeSend: function(){
                 self.blockFilters = true;
                 self.contentWrap.html(`<div class="loader active">
                             <div class="loader-inner">
@@ -79,9 +102,19 @@ export const FiltersClass = function ($, settings, parent, action) {
         });
     }
 
+    this.showFilters = () => {
+        if (self.filtersWrap.hasClass('none')) {
+            self.filtersWrap.removeClass('none');
+        }
+    }
+
     this.init = () => {
+        this.filterSlider();
+
         this.filters.each(function () {
             $(this).on('click', self.filterHandler);
-        })
+        });
+
+        this.showFilters();
     }
 }

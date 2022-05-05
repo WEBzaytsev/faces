@@ -11,7 +11,7 @@ $all_cats = $category_slug == 'cases' ? 'кейсы' : 'блогеры';
 
 if (isset($categories)) : ?>
 
-<div class="flex align-center filters">
+<div class="flex align-center pos-r filters none">
     <span class="pointer unselect text-center text-18 line-height-21 transition filters__item<?php esc_attr_e($current_cat == 'all' ? ' active' : ''); ?>"
           data-cat="">
         <?php esc_html_e(sprintf('Все %s', $all_cats), 'faces'); ?>

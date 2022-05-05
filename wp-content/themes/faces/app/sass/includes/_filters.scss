@@ -1,7 +1,29 @@
 .filters {
   margin-top: 115px;
-  overflow-x: auto;
 
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    content: '';
+    width: calc((100vw - 100%) / 2);
+  }
+
+  &:before {
+    left: calc((100vw - 100%) / -2);
+    background-image: linear-gradient(90deg, rgba(#000, .9) 35%, rgba(#000, 0));
+  }
+
+  &:after {
+    right: calc((100vw - 100%) / -2);
+    background-image: linear-gradient(270deg, rgba(#000, .9) 35%, rgba(#000, 0));
+  }
+
+  .slick-list {
+    overflow: unset;
+  }
 
   @include response-to(large) {
     margin-top: 80px;
@@ -19,6 +41,14 @@
     white-space: nowrap;
     padding: 14px 13px 13px;
     background-color: #000;
+
+    @include response-to(huge) {
+      width: 250px;
+    }
+
+    @include response-to(large) {
+      width: 200px;
+    }
 
     &:not(:last-of-type) {
       margin-right: 25px;
