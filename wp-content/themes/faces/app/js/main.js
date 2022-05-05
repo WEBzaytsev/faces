@@ -10,10 +10,9 @@ import {mobileMenu} from "./commonFunctions";
 import {homePage} from "./pages/homePage";
 import {bloggersPage} from "./pages/bloggersPage";
 import {aboutPage} from "./pages/aboutPage";
+import {modalWindow} from "./modalWindow";
 
 $(document).ready(function () {
-
-    console.log()
 
     mobileMenu($('.mob-menu-btn'));
 
@@ -36,6 +35,15 @@ $(document).ready(function () {
 
     if (pageClass) {
         pageClass.init();
+    }
+
+    const modalBtns = $('[data-modal]');
+
+    if (modalBtns.length) {
+        modalBtns.each(function () {
+            const modals = new modalWindow($, settings, $(this));
+            modals.init();
+        })
     }
 
 });

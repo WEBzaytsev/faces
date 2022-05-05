@@ -44,9 +44,10 @@ get_header(); ?>
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="pos-a z-1 border50 flex-center round-animate-btn">
-                <span class="border50 pointer text-center flex-center text-26 font-tenor uppercase">Хочу <br>в вашу <br>команду</span>
-            </div>
+            <?php get_template_part('/template-parts/work-offer-btn', null, array(
+                'classes' => 'text-26',
+                'text' => 'Хочу <br>в вашу <br>команду',
+            )); ?>
         </div>
 
         <?php
@@ -55,7 +56,8 @@ get_header(); ?>
         if (isset($socials)) : ?>
             <div class="flex align-center contacts-page__socials">
                 <?php foreach ($socials as $social) : ?>
-                    <a href="<?php echo esc_url($social['link'], 'faces'); ?>" class="color-primary pos-r text-18 line-height-25 contacts-page__socials_item">
+                    <a href="<?php echo esc_url($social['link'], 'faces'); ?>"
+                       class="color-primary pos-r text-18 line-height-25 contacts-page__socials_item">
                         <?php esc_html_e($social['title'], 'faces'); ?>
                     </a>
                 <?php endforeach; ?>

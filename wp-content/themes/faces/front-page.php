@@ -35,9 +35,10 @@
                 <?php the_field('text-top-right'); ?>
             </p>
 
-            <div class="pos-a border50 flex-center round-animate-btn">
-                <span class="border50 font-tenor text-26 large-text-16 pointer text-center flex-center uppercase">обсудить проект</span>
-            </div>
+            <?php get_template_part('/template-parts/work-offer-btn', null, array(
+                'classes' => 'text-26 large-text-16',
+                'text' => 'обсудить проект',
+            )); ?>
             <a href="#"
                class="pos-a text-34 sm-text-35 line-height115 large-text-22 right-0 uppercase text-center flex-center transition border50 sm-pos-r sm-mx-auto first-section__cases">
                 <span class="pos-r z-2">наши

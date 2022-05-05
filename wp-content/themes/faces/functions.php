@@ -251,3 +251,8 @@ require get_template_directory() . '/includes/ajax-cases-function.php';
 add_action( 'wp_ajax_ajax_bloggers', 'ajax_bloggers_function' );
 add_action( 'wp_ajax_nopriv_ajax_bloggers', 'ajax_bloggers_function' );
 require get_template_directory() . '/includes/ajax-bloggers-function.php';
+
+// modal windows
+add_action( 'wp_ajax_ajax_modal', 'ajax_modal' );
+add_action( 'wp_ajax_nopriv_ajax_modal', 'ajax_modal' );
+require get_template_directory() . '/includes/modal-window.php';

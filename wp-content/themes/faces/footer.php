@@ -74,6 +74,8 @@
     </div>
 </footer>
 </div>
+<div class="pos-f flex justify-center top-0 bottom-0 left-0 right-0 modal"
+     data-close="true"></div>
 <?php wp_footer(); ?>
 
 </body>

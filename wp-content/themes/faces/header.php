@@ -44,12 +44,12 @@
                         ); ?>
                     <?php endif; ?>
 
-                    <a href="#"
-                       class="block font700 header__button md-none">
-                        <span class="z-1 block transition pos-r text-center header__button_inner">
-                            Давайте поработаем
+                    <span data-modal="work-offer"
+                          class="block font700 pointer pos-r purple-button md-none">
+                        <span class="z-1 block transition pos-r text-center purple-button_inner">
+                            <?php esc_html_e('Давайте поработаем', 'faces'); ?>
                         </span>
-                    </a>
+                    </span>
 
                     <?php $languages_list = apply_filters('wpml_active_languages', null);
 

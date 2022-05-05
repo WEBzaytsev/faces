@@ -314,6 +314,10 @@ figure img {
   line-height: 49px;
 }
 
+.line-height-70 {
+  line-height: 70px;
+}
+
 .line-height-82 {
   line-height: 82px;
 }
@@ -324,6 +328,10 @@ figure img {
 
 .line-height-1 {
   line-height: 100%;
+}
+
+.line-height144 {
+  line-height: 144%;
 }
 
 .text-center {
@@ -344,6 +352,10 @@ figure img {
 
 .color-white {
   color: #fff;
+}
+
+.color-black {
+  color: #000;
 }
 
 .bg-white {
@@ -830,4 +842,44 @@ figure img {
 .posts-content {
   margin-top: 135px;
   min-height: 300px;
+}
+
+.purple-button {
+  box-shadow: 2.6px 24.9px 40.5px rgba(0, 0, 0, 0.5);
+  border-radius: 71px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 71px;
+    z-index: 0;
+    background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%),
+    radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%),
+    #FFFFFF;
+  }
+
+  &_inner {
+    color: rgba(#fff, .85);
+    padding: 16px 0;
+    font-size: 22.4976px;
+    line-height: 32px;
+    text-shadow: 0.654167px 0.654167px 0.654167px rgba(0, 0, 0, 0.25);
+    border-radius: 71px;
+    width: 100%;
+    background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%),
+    radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%),
+    #B000DB;
+  }
+
+  &:hover {
+
+    .purple-button_inner {
+      background: transparent;
+      color: $primary-color;
+    }
+  }
 }
