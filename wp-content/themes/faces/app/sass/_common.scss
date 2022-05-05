@@ -1,7 +1,6 @@
 body,
 html {
   position: relative;
-  background-color: #000;
   font-family: 'Manrope', "Helvetica Neue", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, sans-serif;
   color: #fff;
 }
@@ -18,6 +17,8 @@ html {
 
 body {
   padding-top: 121px;
+  background-color: #000;
+  background-image: url('../img/bg.png');
 }
 
 div.page {
