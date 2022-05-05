@@ -67,6 +67,56 @@
 
       &_field {
         margin-bottom: 20px;
+
+        &.radio {
+          margin-bottom: 50px;
+
+          input {
+            display: none;
+
+            &:checked + span {
+
+              &:before {
+                content: '';
+              }
+            }
+          }
+
+          label {
+
+            &:not(:last-of-type) {
+              margin-right: 30px;
+            }
+
+            span {
+              padding-left: 30px;
+
+              &:after,
+              &:before {
+                position: absolute;
+                transform: translateY(-50%);
+                display: block;
+                top: 50%;
+                border-radius: 50%;
+              }
+
+              &:after {
+                content: '';
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #313131;
+              }
+
+              &:before {
+                left: 4px;
+                background-color: $primary-color;
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
       }
 
       &_input {
@@ -84,8 +134,19 @@
         }
       }
 
+      &_note {
+        font-size: 14px;
+        line-height: 19px;
+        margin-top: 23px;
+        max-width: 340px;
+      }
+
       .purple-button {
         width: 300px;
+      }
+
+      textarea {
+        height: 140px;
       }
     }
   }
