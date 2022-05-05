@@ -15,7 +15,18 @@
 
 export function checkWidth() {
     const mobileWidth = 767;
-    return mobileWidth > document.documentElement.clientWidth;
+    const tabletWidth = 1023;
+    const windowWidth = document.documentElement.clientWidth
+
+    if (mobileWidth > windowWidth ) {
+        return 'mobile';
+    }
+
+    if (tabletWidth > windowWidth ) {
+        return 'tablet';
+    }
+
+    return 'desktop'
 }
 
 export function switchClass(element, cssClass) {

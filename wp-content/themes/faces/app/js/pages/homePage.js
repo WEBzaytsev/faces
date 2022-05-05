@@ -4,7 +4,7 @@ import {checkWidth} from "../commonFunctions";
 
 export const homePage = function ($) {
     const self = this;
-    this.isMobile = checkWidth();
+    this.currentWidth = checkWidth();
     this.bloggers = $('.our-bloggers__wrap');
     this.partners = $('.partners__list');
     this.lastBlock = $('.last-block');
@@ -25,7 +25,7 @@ export const homePage = function ($) {
     }
 
     this.bloggersSlider = () => {
-        if (!self.isMobile || !self.bloggers.length) {
+        if (self.currentWidth !== 'mobile' || !self.bloggers.length) {
             return;
         }
 
@@ -83,7 +83,7 @@ export const homePage = function ($) {
             return;
         }
 
-        if (!self.isMobile) {
+        if (self.currentWidth !== 'mobile') {
             self.partners.slick({
                 variableWidth: true,
                 infinite: false,

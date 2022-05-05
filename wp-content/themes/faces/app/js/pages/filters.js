@@ -10,10 +10,10 @@ export const FiltersClass = function ($, settings, parent, action) {
     this.activeFilter = $('.filters__item.active');
     this.blockFilters = false;
     this.contentWrap = $('.posts-content');
-    this.isMobile = checkWidth();
+    this.currentWidth = checkWidth();
 
     this.filterSlider = () => {
-        if (self.isMobile || self.filters.length < 4) {
+        if (self.currentWidth !== 'desktop' || self.filters.length < 4) {
             return;
         }
 
