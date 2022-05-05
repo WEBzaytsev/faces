@@ -15,15 +15,21 @@
         "php": ">=5.6"
     },
     "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^v0.7.2",
         "wptrt/wpthemereview": "^0.2.1",
-        "php-parallel-lint/php-parallel-lint": "^1.2.0",
-        "wp-cli/i18n-command": "^2.2.5"
+        "php-parallel-lint/php-parallel-lint": "^v1.3.2",
+        "wp-cli/i18n-command": "^v2.3.0",
+        "wp-cli/wp-cli": "^v2.6.0"
     },
     "scripts": {
         "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-        "make-pot": "wp i18n make-pot . languages/_s.pot"
+        "make-pot": "wp i18n make-pot . languages/faces.pot"
     },
-    "support": {}
+    "support": {},
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }
