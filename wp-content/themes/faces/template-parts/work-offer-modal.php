@@ -52,11 +52,34 @@
                       name="mess"
                       id="mess"></textarea>
         </div>
-
+        <div class="modal-window__form_field radio flex align-center">
+            <label class="pointer pos-r"
+                   for="blogger">
+                <input type="radio" name="kind" id="blogger">
+                <span class="nowrap block">
+                    <?php esc_html_e('Я блогер', 'faces'); ?>
+                </span>
+            </label>
+            <label class="pointer pos-r"
+                   for="brand">
+                <input type="radio" name="kind" id="brand">
+                <span class="nowrap block">
+                    <?php esc_html_e('Я бренд', 'faces'); ?>
+                </span>
+            </label>
+            <label class="pointer pos-r"
+                   for="anyone">
+                <input type="radio" name="kind" id="anyone">
+                <span class="nowrap block">
+                    <?php esc_html_e('Не блогер и не бренд', 'faces'); ?>
+                </span>
+            </label>
+        </div>
         <span class="block pos-r pointer mx-auto purple-button md-none">
             <span class="z-1 block transition pos-r text-center purple-button_inner">
                 <?php esc_html_e('Отправить запрос', 'faces'); ?>
             </span>
         </span>
+        <p class="mx-auto text-center modal-window__form_note"><?php esc_html_e('Нажимая на кнопку “Отправить” вы соглашаетесь с Политикой конфиденциальности', 'faces'); ?></p>
     </form>
 </div>
