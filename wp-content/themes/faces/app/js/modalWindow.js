@@ -5,7 +5,8 @@ export const modalWindow = function ($, settings, elem) {
     this.element = elem || null;
     this.mainSettings = settings;
     this.modalType = $(this.element).data('modal');
-    this.modalWrap = $('.modal');
+    this.postId = $(this.element).data('case') || 0;
+    this.modalWrap = $(`.modal.${this.modalType}`);
     this.currentModal = null;
 
     this.showModal = async () => {
@@ -26,6 +27,9 @@ export const modalWindow = function ($, settings, elem) {
         if (self.modalWrap.hasClass('active')) {
             self.modalWrap.removeClass('active');
         }
+        if (self.modalType === 'case') {
+            self.removeModalContent();
+        }
         if ($('body').hasClass('no-scrolling')) {
             $('body').removeClass('no-scrolling');
         }
@@ -38,6 +42,7 @@ export const modalWindow = function ($, settings, elem) {
                 data : {
                     action: 'ajax_modal',
                     modal: self.modalType,
+                    case_: self.postId,
                 },
                 type : 'POST',
                 beforeSend : function( xhr ){
@@ -54,6 +59,11 @@ export const modalWindow = function ($, settings, elem) {
         } catch (e) {
             return false;
         }
+    }
+
+    this.removeModalContent = () => {
+        self.modalWrap.html('');
+        self.currentModal = null
     }
 
     this.init = () => {

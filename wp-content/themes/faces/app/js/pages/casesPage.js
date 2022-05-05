@@ -1,5 +1,7 @@
 'use strict';
 
+import {modalWindow} from "../modalWindow";
+
 export const casesPage = function ($, settings) {
     const self = this;
     this.mainSettings = settings;
@@ -68,10 +70,22 @@ export const casesPage = function ($, settings) {
             success : function( data ) {
                 if (data) {
                     self.contentWrap.html(data);
+                    self.modals();
                 }
                 self.blockFilters = false;
             }
         });
+    }
+
+    this.modals = () => {
+        const modalBtns = $('[data-modal="case"]');
+
+        if (modalBtns.length) {
+            modalBtns.each(function () {
+                const modals = new modalWindow($, settings, $(this));
+                modals.init();
+            })
+        }
     }
 
     this.init = () => {

@@ -35,7 +35,8 @@ if ($category != '') {
 
             $category_img_url = get_field('img', 'cases_cat_' . $category_id)['url']; ?>
 
-            <div class="hidden case pos-r">
+            <div class="hidden case pos-r pointer"
+                 data-modal="case" data-case="<?php esc_attr_e($post_id, 'faces'); ?>">
                 <div class="pos-a z-2 case__cat">
                     <div class="pos-r z-2 full-width h-100 case__cat_img"
                          style="background-image:url('<?php esc_attr_e($category_img_url, 'faces'); ?>');"></div>
