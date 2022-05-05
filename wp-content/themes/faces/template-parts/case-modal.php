@@ -44,5 +44,6 @@ $img_url = get_field('modal-img', $case_id)['url']
     </p>
     <?php get_template_part('/template-parts/feedback-form', null, array(
         'type' => 'case',
+        'case_id' => $case_id,
     )); ?>
 </div>

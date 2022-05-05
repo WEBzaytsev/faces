@@ -1,5 +1,6 @@
 <?php
 $type = $args['type'];
+$case_id = $args['case_id'] ?? null;
 ?>
 
 <form action="" class="full-width mx-auto modal-window__form">
@@ -71,6 +72,9 @@ $type = $args['type'];
                 </span>
             </label>
         </div>
+    <?php endif;
+    if ($type == 'case') : ?>
+        <input type="hidden" name="case-id" value="<?php esc_attr_e($case_id, 'faces'); ?>">
     <?php endif; ?>
     <span class="block pos-r pointer mx-auto purple-button md-none">
             <span class="z-1 block transition pos-r text-center purple-button_inner">
