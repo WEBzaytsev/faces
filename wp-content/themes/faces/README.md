@@ -1,56 +1,29 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+=== cannab ===
 
-_s
-===
+== Description ==
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Buy any CBD cannabis products with fastest UK | DE | USA shipping: vape oil, e liquid, vape pen, gummies, tea, coffee, weed pipe, weed grinders and spliffs, shatter, psoriasis cream and medical cannabis.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+== Installation ==
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+1. Download and extract theme's .zip file to themes folder.
+2. In your admin panel, go to Appearance > Themes and activate 'Cannab' theme
 
-Installation
----------------
+= Maintain/develop =
 
-### Requirements
+Backend
+1. Run `composer install`
 
-`_s` requires the following dependencies:
+Frontend
+1. Run `npm i` in the theme folder (If gulp is installed via npm install gulp, then try installing gulp globally - npm install -g gulp.)
+2. After npm installed use cmd `gulp dev` - for development
+4. All settings and tasks you can find within gulpfile.js
+5. All assets you need to use in the ./app folder but compiled files for production will be in ./dist folder
+6. For complete production bundle use `gulp build`
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
+= Does this theme support any plugins? =
 
-### Quick Start
-
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
-
-1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `_s_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
-
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
-
-### Setup
-
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
-
-```sh
-$ composer install
-$ npm install
-```
-
+cannab includes support for WooCommerce and for Infinite Scroll in Jetpack.
 ### Available CLI commands
 
 `_s` comes packed with CLI commands tailored for WordPress theme development :
