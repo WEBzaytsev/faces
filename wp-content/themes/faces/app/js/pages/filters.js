@@ -41,13 +41,13 @@ export const FiltersClass = function ($, settings, parent, action) {
 
     this.getCases = (cat) => {
         $.ajax({
-            url : self.mainSettings.ajax_url,
-            data : {
+            url: self.mainSettings.ajax_url,
+            data: {
                 action: action,
                 cat: cat || 'all',
             },
-            type : 'POST',
-            beforeSend : function( xhr ){
+            type: 'POST',
+            beforeSend: function( xhr ){
                 self.blockFilters = true;
                 self.contentWrap.html(`<div class="loader active">
                             <div class="loader-inner">
@@ -67,7 +67,7 @@ export const FiltersClass = function ($, settings, parent, action) {
                             </div>
                         </div>`)
             },
-            success : function( data ) {
+            success: function( data ) {
                 if (data) {
                     self.contentWrap.html(data);
                     if (typeof parent.modals === 'function') {
@@ -77,17 +77,6 @@ export const FiltersClass = function ($, settings, parent, action) {
                 self.blockFilters = false;
             }
         });
-    }
-
-    this.modals = () => {
-        const modalBtns = $('[data-modal="case"]');
-
-        if (modalBtns.length) {
-            modalBtns.each(function () {
-                const modals = new modalWindow($, settings, $(this));
-                modals.init();
-            })
-        }
     }
 
     this.init = () => {
