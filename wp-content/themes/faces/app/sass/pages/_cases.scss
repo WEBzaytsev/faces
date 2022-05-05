@@ -3,10 +3,28 @@
   &-page {
     padding-bottom: 84px;
 
+    @include response-to(large) {
+      padding-bottom: 135px;
+    }
+
     .case {
       border-radius: 70px 70px 0 0;
       flex: 0 0 31%;
       margin-bottom: 200px;
+
+      @include response-to(large) {
+        margin-bottom: 130px;
+      }
+
+      @include response-to(medium) {
+        flex: 0 0 49%;
+        margin-bottom: 57px;
+      }
+
+      @include response-to(small) {
+        flex: 0 0 100%;
+        border-radius: 45px 45px 0 0;
+      }
 
       &__img {
         background-repeat: no-repeat;
@@ -14,6 +32,16 @@
         background-size: cover;
         height: 563px;
         margin-bottom: 30px;
+
+        @include response-to(large) {
+          height: 315px;
+          margin-bottom: 25px;
+        }
+
+        @include response-to(small) {
+          height: 362px;
+          margin-bottom: 20px;
+        }
       }
 
       &__cat {
@@ -21,6 +49,11 @@
         height: 128px;
         top: 27px;
         left: 43px;
+
+        @include response-to(large) {
+          width: 75px;
+          height: 75px;
+        }
 
         &:before {
           position: absolute;
@@ -32,6 +65,13 @@
           height: 417px;
           background-color: rgba($primary-color, .5);
           display: block;
+
+          @include response-to(large) {
+            width: 217px;
+            height: 217px;
+            right: -52px;
+            bottom: -39px;
+          }
         }
 
         &_img {
@@ -48,6 +88,16 @@
 
       @include response-to(huge) {
         right: 0;
+      }
+
+      @include response-to(large) {
+        right: 150px;
+      }
+
+      @include response-to(small) {
+        bottom: unset;
+        top: 445px;
+        right: 16px;
       }
     }
   }
