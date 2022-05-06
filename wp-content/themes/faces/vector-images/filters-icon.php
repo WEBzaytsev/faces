@@ -2,7 +2,7 @@
      height="50"
      viewBox="0 0 50 50"
      fill="none"
-     class="filter-icon transition none sm-opacity-0 sm-z--100 pos-a pointer right-0 absolute-center-y"
+     class="filter-icon transition none sm-block pos-a pointer right-0 absolute-center-y"
      xmlns="http://www.w3.org/2000/svg">
     <circle cx="25"
             cy="25"

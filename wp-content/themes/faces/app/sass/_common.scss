@@ -200,6 +200,14 @@ figure img {
   justify-content: center;
 }
 
+.z--100 {
+  z-index: -100;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
 .order-1 {
   order: 1;
 }
@@ -659,6 +667,10 @@ figure img {
 
     &-none {
       display: none;
+    }
+
+    &-full-width {
+      width: 100%;
     }
 
     &-opacity-0 {

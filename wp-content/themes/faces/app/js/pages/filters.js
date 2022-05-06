@@ -5,15 +5,17 @@ import {checkWidth} from "../commonFunctions";
 export const FiltersClass = function ($, settings, parent, action) {
     const self = this;
     this.mainSettings = settings;
-    this.filters = $('.filters__item');
     this.filtersWrap = $('.filters');
-    this.activeFilter = $('.filters__item.active');
+    this.filters = this.filtersWrap.find('.filters__item');
+    this.activeFilter = this.filtersWrap.find('.filters__item.active');
     this.blockFilters = false;
     this.contentWrap = $('.posts-content');
     this.currentWidth = checkWidth();
+    this.filtersShowBtn = $('.filter-icon');
+    this.selectField = this.filtersWrap.find('.filters-select');
 
     this.filterSlider = () => {
-        if (self.currentWidth !== 'desktop' || self.filters.length < 4) {
+        if (self.currentWidth === 'mobile' || self.filters.length < 4) {
             return;
         }
 
@@ -33,19 +35,19 @@ export const FiltersClass = function ($, settings, parent, action) {
         })
     }
 
-    this.filterHandler = function () {
+    this.filterHandler = function (currentCat = 'all', element = null) {
 
         if (self.blockFilters) {
             return;
         }
 
-        if ($(this).hasClass('active')) {
+        if (element && element.hasClass('active')) {
             return;
         }
 
-        const currentCat = $(this).data('cat') || 'all';
-
-        self.switchActiveFilter($(this));
+        if (self.currentWidth !== 'mobile') {
+            self.switchActiveFilter(element);
+        }
         self.getCases(currentCat);
         self.setCatUrl(currentCat);
     }
@@ -106,15 +108,65 @@ export const FiltersClass = function ($, settings, parent, action) {
         if (self.filtersWrap.hasClass('none')) {
             self.filtersWrap.removeClass('none');
         }
+
+        setTimeout(() => {
+            if (self.filtersWrap.hasClass('opacity-0')) {
+                self.filtersWrap.removeClass('opacity-0');
+            }
+            if (self.filtersWrap.hasClass('z--100')) {
+                self.filtersWrap.removeClass('z--100');
+            }
+        }, 100)
+    }
+
+    this.hideFilters = () => {
+        self.filtersWrap.addClass('opacity-0');
+        self.filtersWrap.addClass('z--100');
+
+        setTimeout(() => {
+            self.filtersWrap.addClass('none');
+        }, 350);
+    }
+
+    this.toggleFilters = () => {
+
+        if (self.filtersShowBtn.hasClass('active')) {
+            self.hideFilters();
+        } else {
+            self.showFilters();
+        }
+
+        self.filtersShowBtn.toggleClass('active');
+    }
+
+    this.select2Filters = () => {
+        if (self.currentWidth !== 'mobile') {
+            return;
+        }
+
+        $(self.selectField).select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: $(self.filtersWrap),
+        }).on('select2:select', function () {
+            self.filterHandler($(this).val());
+        });
     }
 
     this.init = () => {
         this.filterSlider();
+        this.select2Filters();
 
-        this.filters.each(function () {
-            $(this).on('click', self.filterHandler);
-        });
+        this.filtersShowBtn.on('click', this.toggleFilters);
 
-        this.showFilters();
+        if (this.currentWidth !== 'mobile') {
+            this.filters.each(function () {
+                $(this).on('click', function () {
+                    const currentCat = $(this).data('cat');
+                    self.filterHandler(currentCat, $(this));
+                });
+            });
+
+            this.showFilters();
+        }
     }
 }

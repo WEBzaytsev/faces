@@ -1,6 +1,14 @@
 .filters {
   margin-top: 115px;
 
+  @include response-to(large) {
+    margin-top: 80px;
+  }
+
+  @include response-to(small) {
+    margin-top: 40px;
+  }
+
   &:before,
   &:after {
     position: absolute;
@@ -23,14 +31,6 @@
 
   .slick-list {
     overflow: unset;
-  }
-
-  @include response-to(large) {
-    margin-top: 80px;
-  }
-
-  @include response-to(small) {
-    margin-top: 0;
   }
 
   &__item {
@@ -58,6 +58,13 @@
     &:hover {
       background-color: #fff;
       color: #000;
+    }
+  }
+
+  &-select {
+
+    @media(min-width: 767px) {
+      display: none!important;
     }
   }
 }
