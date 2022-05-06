@@ -655,6 +655,10 @@ figure img {
       display: none;
     }
 
+    &-mr-0 {
+      margin-right: 0;
+    }
+
     &-block {
       display: block;
     }
@@ -665,6 +669,18 @@ figure img {
 
     &-justify-between {
       justify-content: space-between;
+    }
+
+    &-align-start {
+      align-items: flex-start;
+    }
+
+    &-text-18 {
+      font-size: 18px;
+    }
+
+    &-line-height142 {
+      line-height: 142%;
     }
 
     &-ml-0 {

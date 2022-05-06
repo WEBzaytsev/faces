@@ -1,14 +1,30 @@
 .contacts-page {
   margin-bottom: 230px;
 
+  @include response-to(medium) {
+    margin-bottom: 118px;
+    display: flex;
+    flex-direction: column;
+  }
+
   &__info {
     margin-top: 84px;
     margin-bottom: 76px;
+
+    @include response-to(medium) {
+      margin-top: 20px;
+      margin-bottom: 47px;
+      order: 2;
+    }
 
     &_item {
 
       &:not(:last-of-type) {
         margin-bottom: 13px;
+
+        @include response-to(medium) {
+          margin-bottom: 14px;
+        }
       }
 
       a {
@@ -39,6 +55,10 @@
       width: 27px;
       height: 25px;
       margin-right: 20px;
+
+      @include response-to(medium) {
+        padding-top: 4px;
+      }
     }
   }
 
@@ -49,6 +69,16 @@
       height: 619px;
     }
 
+    @include response-to(medium) {
+      order: 1;
+      margin-top: 50px;
+      margin-bottom: 0;
+
+      iframe {
+        height: 287px;
+      }
+    }
+
     .round-animate-btn {
       right: -64px;
       bottom: -141px;
@@ -57,7 +87,18 @@
 
   &__socials {
 
+    @include response-to(medium) {
+      order: 3;
+    }
+
     &_item {
+
+      &:not(:last-of-type) {
+
+        @include response-to(medium) {
+          margin-bottom: 30px;
+        }
+      }
 
       &:before {
         position: absolute;
