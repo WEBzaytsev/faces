@@ -5,6 +5,21 @@
     flex: 0 0 31%;
     margin-bottom: 250px;
 
+    @include response-to(large) {
+      margin-bottom: 200px;
+    }
+
+    @include response-to(medium) {
+      flex: 0 0 45%;
+      margin-bottom: 120px;
+    }
+
+    @include response-to(small) {
+      flex: 0 0 100%;
+      max-width: 350px;
+      margin: 0 auto 60px;
+    }
+
     &__inner {
       transform: scale(1);
       cursor: pointer;
@@ -14,6 +29,7 @@
 
         .blogger__inner_btn {
           opacity: 1;
+          z-index: 2;
         }
 
         .blogger__inner_bottom {
@@ -41,10 +57,24 @@
             fill: #fff;
           }
         }
+
+        @include response-to(large) {
+          width: 31px;
+          height: 31px;
+        }
+
+        @include response-to(small) {
+          width: 39px;
+          height: 39px;
+        }
       }
 
       &_top {
-        height: 443px;
+        height: 94%;
+
+        @include response-to(large) {
+          height: 101%;
+        }
       }
 
       &_img {
@@ -59,20 +89,40 @@
       }
 
       &_nickname {
-        transform: rotate(-90deg) translate(264px, -190px);
+        transform: rotate(-90deg);
+        top: 41%;
+        left: -42%;
         letter-spacing: 0.07em;
         color: #FFF4F4;
         font-weight: 700;
         font-size: 39.0046px;
         line-height: 46px;
         font-family: 'Roboto', sans-serif;
+
+        @include response-to(large) {
+          font-size: 24px;
+          line-height: 28px;
+          top: 46%;
+          left: -44%;
+        }
+
+        @include response-to(small) {
+          font-size: 20px;
+          line-height: 23px;
+        }
       }
 
       &_name {
         font-family: 'Roboto', sans-serif;
-        font-size: 40.9548px;
-        line-height: 48px;
         margin-bottom: 30px;
+
+        @include response-to(large) {
+          margin-bottom: 20px;
+        }
+
+        @include response-to(small) {
+          margin-bottom: 18px;
+        }
       }
 
       &_bg {
@@ -81,12 +131,17 @@
       }
 
       &_btn {
-        opacity: 0;
+        transition: opacity ease .3s;
         font-family: 'Roboto', sans-serif;
-        top: 422px;
+        bottom: -25px;
         padding: 11px 23px 15px;
         background: #000000;
         border-radius: 43px;
+
+        @include response-to(large) {
+          bottom: -16px;
+          padding: 5px 23px 5px;
+        }
       }
 
       &_bottom {
@@ -94,6 +149,14 @@
         background: linear-gradient(180deg, rgba(176, 0, 219, 0.2) 0%, rgba(176, 0, 219, 0) 66.38%);
         border-radius: 0 0 70px 70px;
         border: 1px solid transparent;
+
+        @include response-to(large) {
+          padding: 15px 12px 47px;
+        }
+
+        @include response-to(small) {
+          padding: 15px 5px 41px;
+        }
       }
 
       &_socials {
@@ -106,6 +169,14 @@
 
         &:not(:last-of-type) {
           margin-right: 45px;
+
+          @include response-to(large) {
+            margin-right: 20px;
+          }
+
+          @include response-to(small) {
+            margin-right: 25px;
+          }
         }
       }
     }
@@ -138,6 +209,16 @@
 
     @include response-to(huge) {
       right: 0;
+    }
+
+    @include response-to(large) {
+      right: 150px;
+    }
+
+    @include response-to(small) {
+      bottom: unset;
+      top: 345px;
+      right: 16px;
     }
   }
 }

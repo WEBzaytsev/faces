@@ -288,6 +288,10 @@ figure img {
   font-size: 36px;
 }
 
+.text-40 {
+  font-size: 40px;
+}
+
 .text-45 {
   font-size: 45px;
 }
@@ -326,6 +330,10 @@ figure img {
 
 .line-height-30 {
   line-height: 30px;
+}
+
+.line-height-48 {
+  line-height: 48px;
 }
 
 .line-height-49 {
@@ -524,6 +532,10 @@ figure img {
       font-size: 22px;
     }
 
+    &-text-24 {
+      font-size: 24px;
+    }
+
     &-text-25 {
       font-size: 25px;
     }
@@ -570,6 +582,10 @@ figure img {
 
     &-line-height-25 {
       line-height: 25px;
+    }
+
+    &-line-height-28 {
+      line-height: 28px;
     }
 
     &-mx-auto {
@@ -754,6 +770,14 @@ figure img {
       line-height: 19px;
     }
 
+    &-line-height-23 {
+      line-height: 23px;
+    }
+
+    &-line-height144 {
+      line-height: 144%;
+    }
+
     &-line-height-1 {
       line-height: 1;
     }
@@ -785,7 +809,6 @@ figure img {
 .round-animate-btn {
   width: 304px;
   height: 304px;
-  border: 1.34118px solid $primary-color;
   filter: drop-shadow(0px 3.57647px 3.57647px rgba(0, 0, 0, 0.25));
   transform: rotate(345deg);
   cursor: pointer;
@@ -794,6 +817,11 @@ figure img {
   @include response-to(large) {
     width: 185px;
     height: 185px;
+  }
+
+  @include response-to(small) {
+    width: 134px;
+    height: 134px;
   }
 
   &:before,
@@ -821,6 +849,11 @@ figure img {
       width: 140px;
       height: 140px;
     }
+
+    @include response-to(small) {
+      width: 104px;
+      height: 104px;
+    }
   }
 
   &:after {
@@ -833,6 +866,11 @@ figure img {
     @include response-to(large) {
       width: 160px;
       height: 160px;
+    }
+
+    @include response-to(small) {
+      width: 120px;
+      height: 120px;
     }
   }
 
@@ -866,6 +904,11 @@ figure img {
         width: 126px;
         height: 126px;
       }
+
+      @include response-to(small) {
+        width: 138px;
+        height: 138px;
+      }
     }
 
     @include response-to(large) {
@@ -873,6 +916,11 @@ figure img {
       height: 126px;
       line-height: 144%;
       box-shadow: 3.28646px 31.2214px 50.9402px rgba(0, 0, 0, 0.5);
+    }
+
+    @include response-to(small) {
+      width: 94px;
+      height: 94px;
     }
   }
 }

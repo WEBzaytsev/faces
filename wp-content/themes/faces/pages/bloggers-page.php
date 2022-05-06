@@ -8,7 +8,10 @@ $cat = $_GET['cat'] ?? 'all';
 get_header(); ?>
 
     <div class="container bloggers-page pos-r">
-        <h1 class="uppercase text-center sm-text-left font-tenor page-title"><?php esc_html_e(get_the_title(), 'faces'); ?></h1>
+        <h1 class="uppercase text-center pos-r sm-text-left font-tenor page-title">
+            <?php esc_html_e(get_the_title(), 'faces'); ?>
+            <?php get_template_part('/vector-images/filters-icon'); ?>
+        </h1>
 
         <div class="cases__wrap">
             <?php get_template_part('/template-parts/filters', null, array('slug' => 'bloggers')); ?>
@@ -18,8 +21,8 @@ get_header(); ?>
         </div>
 
         <?php get_template_part('/template-parts/work-offer-btn', null, array(
-            'classes' => 'text-55',
-            'text' => 'мы',
+            'classes' => '',
+            'text' => 'Хочу <br>в вашу <br>команду',
         )); ?>
     </div>
 

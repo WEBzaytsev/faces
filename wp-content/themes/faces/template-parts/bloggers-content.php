@@ -22,20 +22,12 @@ $posts = query_posts($options); ?>
             $description = get_field('description');
             $socials = get_field('socials');
             $bg_color = '';
-            /*switch ($i) {
-                case $i % 3 == 0:
-                    $bg_color = 'pink';
-                    break;
-                case $i % 2 == 0:
-                    $bg_color = 'pink';
-                    break;
-            }*/
             ?>
 
             <div class="transition blogger">
                 <div class="pos-r transition blogger__inner">
-                    <span class="pos-a z-2 transition text-18 line-height-21 absolute-center-x blogger__inner_btn"><?php esc_html_e('хочу этого блогера', 'faces'); ?></span>
-                    <div class="pos-r z-1 blogger__inner_top">
+                    <div class="pos-r z-2 blogger__inner_top">
+                        <span class="pos-a z-2 ws-nowrap text-18 line-height-21 absolute-center-x opacity-0 z--100 blogger__inner_btn"><?php esc_html_e('хочу этого блогера', 'faces'); ?></span>
                         <div class="<?php esc_attr_e(sprintf('pos-a full-width bottom-0 z-0 blogger__inner_bg %s', $bg_color), 'faces'); ?>"></div>
                         <figure class="pos-r z-1 blogger__inner_img">
                             <img src="<?php esc_attr_e($img_url, 'faces'); ?>"
@@ -51,12 +43,12 @@ $posts = query_posts($options); ?>
                     </div>
                     <div class="pos-r z-1 transition blogger__inner_bottom">
                         <?php if (isset($blogger_name)) : ?>
-                            <p class="text-center color-primary blogger__inner_name">
+                            <p class="text-center color-primary blogger__inner_name text-40 line-height-48 large-text-24 sm-text-20 large-line-height-28 sm-line-height-23">
                                 <?php esc_html_e($blogger_name, 'faces'); ?>
                             </p>
                         <?php endif;
                         if (isset($description)) : ?>
-                            <p class="text-center text-18 line-height-21 blogger__inner_desc">
+                            <p class="text-center text-18 sm-text-14 line-height-21 sm-line-height-16 blogger__inner_desc">
                                 <?php esc_html_e($description, 'faces'); ?>
                             </p>
                         <?php endif;
