@@ -680,6 +680,12 @@
       max-width: calc(100% - 514px);
       width: 100%;
 
+      @include response-to(large) {
+        min-width: 100%;
+        cursor: default;
+        margin-left: 0;
+      }
+
       .slick-track {
         display: flex;
         align-items: center;

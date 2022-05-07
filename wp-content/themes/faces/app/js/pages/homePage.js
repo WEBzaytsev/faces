@@ -85,12 +85,20 @@ export const homePage = function ($) {
             return;
         }
 
+        if (document.documentElement.clientWidth < 1250) {
+            return;
+        }
+
         if (self.currentWidth !== 'mobile') {
             self.partners.slick({
                 variableWidth: true,
-                infinite: false,
-                swipeToSlide: true,
+                infinite: true,
+                pauseOnHover: false,
+                pauseOnFocus: false,
                 cssEase: 'linear',
+                autoplay: true,
+                speed: 4000,
+                autoplaySpeed: 0,
                 prevArrow: '',
                 nextArrow: '',
             });
