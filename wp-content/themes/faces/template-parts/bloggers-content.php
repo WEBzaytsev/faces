@@ -52,20 +52,12 @@ $posts = query_posts($options); ?>
                                 <?php esc_html_e($description, 'faces'); ?>
                             </p>
                         <?php endif;
-                        if (isset($socials)) : ?>
+                        if ($socials) : ?>
                             <div class="flex-center pos-a blogger__inner_socials">
-                                <?php if ($socials['tiktok'] != '') : ?>
-                                    <a href="<?php echo esc_url($socials['tiktok'], 'faces'); ?>"
-                                       class="blogger__inner_social"><?php get_template_part('/vector-images/tiktok-icon'); ?></a>
-                                <?php endif;
-                                if ($socials['telegram'] != '') : ?>
-                                    <a href="<?php echo esc_url($socials['telegram'], 'faces'); ?>"
-                                       class="blogger__inner_social"><?php get_template_part('/vector-images/telegram-icon'); ?></a>
-                                <?php endif;
-                                if ($socials['vk'] != '') : ?>
-                                    <a href="<?php echo esc_url($socials['vk'], 'faces'); ?>"
-                                       class="blogger__inner_social"><?php get_template_part('/vector-images/vk-icon'); ?></a>
-                                <?php endif; ?>
+                                <?php foreach ($socials as $social) : ?>
+                                    <a href="<?php echo esc_url($social['link'], 'faces'); ?>"
+                                       class="blogger__inner_social"><?php get_template_part('/vector-images/' . $social['kind'] . '-icon'); ?></a>
+                                <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
                     </div>
