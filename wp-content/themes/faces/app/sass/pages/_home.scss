@@ -338,6 +338,7 @@
         }
 
         &:hover {
+          color: $primary-color;
 
           &:before {
             max-width: 0;
@@ -632,13 +633,24 @@
 
       &:before {
         width: 100%;
+        max-width: 100%;
         display: block;
         content: '';
         position: absolute;
-        left: 0;
+        transition: all ease .3s;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: $primary-color;
         height: 3px;
         bottom: -13px;
+      }
+
+      &:hover {
+        color: $primary-color;
+
+        &:before {
+          max-width: 0;
+        }
       }
     }
   }

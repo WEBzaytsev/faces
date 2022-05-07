@@ -89,7 +89,7 @@
             <?php endforeach; ?>
             <div class="cases__item cases__item-last">
                 <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
-                   class="font-tenor block pos-r line-height-1 text-45 large-text-25 cases__item_link">Смотреть все кейсы</a>
+                   class="font-tenor transition block pos-r line-height-1 text-45 large-text-25 cases__item_link">Смотреть все кейсы</a>
             </div>
         </div>
     <?php endif; ?>
@@ -139,7 +139,7 @@
             </div>
         <?php endif; ?>
         <a href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
-           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content bottom-0 sm-none our-bloggers__all">Все блогеры</a>
+           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content transition bottom-0 sm-none our-bloggers__all">Все блогеры</a>
     </div>
 
     <?php
