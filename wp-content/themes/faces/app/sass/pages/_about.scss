@@ -197,16 +197,17 @@
       margin-bottom: 113px;
     }
 
-    &_wrap {
+    .slick-list {
+      overflow: unset;
+    }
 
-      p {
+    p {
 
-        &:not(:last-of-type) {
-          margin-right: 64px;
+      &:not(:last-of-type) {
+        margin-right: 64px;
 
-          @include response-to(small) {
-            margin-right: 22px;
-          }
+        @include response-to(small) {
+          margin-right: 22px;
         }
       }
     }

@@ -8,6 +8,7 @@ $top_text = get_field('text-top') ?? null;
 $quote = get_field('quote') ?? null;
 $side_text = get_field('text-side') ?? null;
 $bottom_text = get_field('text-bottom') ?? null;
+$runline = get_field('run-line') ?? null;
 
 $photos = get_field('photos') ?? null;
 
@@ -50,15 +51,15 @@ get_header(); ?>
             </div>
         <?php endif; ?>
 
-        <div class="pos-r full-width about-page__virtual-tour">
-            <div class="absolute-center-x top-0 flex about-page__virtual-tour_wrap">
-                <p class="font-tenor unselect ws-nowrap text-70 line-height-82 sm-text-24 sm-line-height-29">virtual <span class="color-primary">tour</span></p>
-                <p class="font-tenor unselect ws-nowrap text-70 line-height-82 sm-text-24 sm-line-height-29">virtual <span class="color-primary">tour</span></p>
-                <p class="font-tenor unselect ws-nowrap text-70 line-height-82 sm-text-24 sm-line-height-29">virtual <span class="color-primary">tour</span></p>
-                <p class="font-tenor unselect ws-nowrap text-70 line-height-82 sm-text-24 sm-line-height-29">virtual <span class="color-primary">tour</span></p>
-                <p class="font-tenor unselect ws-nowrap text-70 line-height-82 sm-text-24 sm-line-height-29">virtual <span class="color-primary">tour</span></p>
+        <?php if ($runline) : ?>
+            <div class="pos-r full-width about-page__virtual-tour">
+                <?php for ($i = 0; $i < 6; $i++) : ?>
+                    <p class="font-tenor unselect ws-nowrap text-70 line-height-82 sm-text-24 sm-line-height-29">
+                        <?php echo __($runline, 'faces'); ?>
+                    </p>
+                <?php endfor; ?>
             </div>
-        </div>
+        <?php endif; ?>
 
         <div class="pos-r z-2 about-page__frame">
 
@@ -66,7 +67,7 @@ get_header(); ?>
 
             <?php get_template_part('/template-parts/work-offer-btn', null, array(
                 'classes' => '',
-                'text' => 'Хочу <br>в вашу <br>команду',
+                'text' => __('Хочу <br>в вашу <br>команду', 'faces'),
             )); ?>
         </div>
     </div>
