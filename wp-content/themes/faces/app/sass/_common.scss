@@ -859,9 +859,14 @@ figure img {
     height: 185px;
   }
 
-  @include response-to(small) {
+  @include response-to(medium) {
     width: 134px;
     height: 134px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    left: unset;
+    top: unset;
   }
 
   &:before,

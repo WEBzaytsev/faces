@@ -36,7 +36,7 @@
             </p>
 
             <?php get_template_part('/template-parts/work-offer-btn', null, array(
-                'classes' => 'text-26 large-text-16',
+                'classes' => '',
                 'text' => 'обсудить проект',
             )); ?>
             <a href="#"

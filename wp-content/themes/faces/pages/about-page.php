@@ -34,7 +34,7 @@ get_header(); ?>
         </div>
 
         <?php if (isset($photos)) : ?>
-            <div class="full-width flex-center pos-r about-page__photos">
+            <div class="full-width z-1 flex-center pos-r about-page__photos">
                 <?php
                 $i = 0;
                 foreach ($photos as $img) :
@@ -44,7 +44,6 @@ get_header(); ?>
                             <img src="<?php echo esc_url($img_url, 'faces'); ?>"
                                  alt="img">
                         </figure>
-
                     <?php endif;
                     $i++;
                 endforeach; ?>
@@ -61,7 +60,7 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="pos-r about-page__frame">
+        <div class="pos-r z-2 about-page__frame">
 
             <div class="full-width about-page__frame_window"></div>
 

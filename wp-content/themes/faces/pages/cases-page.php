@@ -21,7 +21,7 @@ get_header(); ?>
         </div>
 
         <?php get_template_part('/template-parts/work-offer-btn', null, array(
-            'classes' => 'text-26 large-text-16',
+            'classes' => '',
             'text' => 'Хочу <br>в вашу <br>команду',
         )); ?>
     </div>

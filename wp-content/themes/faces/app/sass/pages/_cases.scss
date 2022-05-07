@@ -88,21 +88,17 @@
     }
 
     .round-animate-btn {
-      bottom: -68px;
-      right: -50px;
+      @media(min-width: 992px) {
+        bottom: -68px;
+        right: -50px;
 
-      @include response-to(huge) {
-        right: 0;
-      }
+        @include response-to(huge) {
+          right: 0;
+        }
 
-      @include response-to(large) {
-        right: 150px;
-      }
-
-      @include response-to(small) {
-        bottom: unset;
-        top: 445px;
-        right: 16px;
+        @include response-to(large) {
+          right: 150px;
+        }
       }
     }
   }

@@ -152,13 +152,9 @@
     }
 
     .round-animate-btn {
-      top: -35px;
-      left: -4px;
-
-      @include response-to(small) {
-        top: 245px;
-        left: unset;
-        right: -20px;
+      @media(min-width: 992px) {
+        top: -35px;
+        left: -4px;
       }
     }
 

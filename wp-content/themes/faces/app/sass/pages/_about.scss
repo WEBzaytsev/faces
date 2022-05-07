@@ -226,11 +226,13 @@
     }
 
     .round-animate-btn {
-      right: -50px;
-      bottom: -114px;
+      @media(min-width: 992px) {
+        right: -50px;
+        bottom: -114px;
 
-      @include response-to(huge) {
-        right: 0;
+        @include response-to(huge) {
+          right: 0;
+        }
       }
     }
   }

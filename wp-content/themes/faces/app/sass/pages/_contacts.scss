@@ -80,8 +80,10 @@
     }
 
     .round-animate-btn {
-      right: -64px;
-      bottom: -141px;
+      @media(min-width: 992px) {
+        right: -64px;
+        bottom: -141px;
+      }
     }
   }
 
