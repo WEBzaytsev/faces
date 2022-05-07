@@ -580,12 +580,20 @@ figure img {
       line-height: 115%;
     }
 
+    &-line-height144 {
+      line-height: 144%;
+    }
+
     &-line-height-25 {
       line-height: 25px;
     }
 
     &-line-height-28 {
       line-height: 28px;
+    }
+
+    &-line-height-33 {
+      line-height: 33px;
     }
 
     &-mx-auto {
@@ -762,6 +770,10 @@ figure img {
       font-size: 30px;
     }
 
+    &-text-24 {
+      font-size: 24px;
+    }
+
     &-text-20 {
       font-size: 20px;
     }
@@ -790,6 +802,14 @@ figure img {
       line-height: 23px;
     }
 
+    &-line-height-27 {
+      line-height: 27px;
+    }
+
+    &-line-height-29 {
+      line-height: 29px;
+    }
+
     &-line-height144 {
       line-height: 144%;
     }
@@ -800,6 +820,10 @@ figure img {
 
     &-unset-max-width {
       max-width: unset;
+    }
+
+    &-border-30 {
+      border-radius: 30px;
     }
   }
 }
