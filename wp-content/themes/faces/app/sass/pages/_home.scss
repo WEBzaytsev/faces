@@ -125,6 +125,17 @@
           min-height: 100% !important;
         }
       }
+
+      &_play {
+
+        @include response-to(medium) {
+
+          svg {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
     }
 
     &__round-text {
