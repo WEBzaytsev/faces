@@ -14,6 +14,8 @@ export const homePage = function ($) {
     this.casesTop = this.cases.offset().top;
     this.casesBottom = this.cases.offset().top + this.cases.outerHeight();
     this.toCasesButton = $('.first-section__cases');
+    this.videoPlayBtn = $('.first-section__circle_play');
+    this.video = $('.first-section__circle_image video') || $('.first-section__circle_image iframe');
 
     this.lastBlockAnimation = () => {
         if (window.pageYOffset > this.lastBlockTop - 200
@@ -95,11 +97,33 @@ export const homePage = function ($) {
         }
     }
 
+    this.videoPlayTrigger = () => {
+        if (!self.video.length || !self.videoPlayBtn.length) {
+            return;
+        }
+
+        self.videoPlayBtn.on('click', () => {
+            self.video.get(0).play();
+            self.videoPlayBtn.addClass('opacity-0 z--100');
+        });
+
+        self.video.on('pause', () => {
+            if (self.videoPlayBtn.hasClass('opacity-0')) {
+                self.videoPlayBtn.removeClass('opacity-0');
+            }
+
+            if (self.videoPlayBtn.hasClass('z--100')) {
+                self.videoPlayBtn.removeClass('z--100');
+            }
+        })
+    }
+
     this.init = () => {
         this.partnersSlider();
         this.casesSlider();
         this.bloggersSlider();
         this.lastBlockAnimation();
+        this.videoPlayTrigger();
 
         this.toCasesButton.on('click', function () {
             $([document.documentElement, document.body]).animate({

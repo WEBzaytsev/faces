@@ -13,7 +13,7 @@
             $video_source = $video_source_type == 'frame' ? $video_settings['frame'] : $video_settings['link']; ?>
             <div class="mx-auto pos-r first-section__circle">
                 <div class="hidden border50 hidden pos-a z-2 first-section__circle_wrap">
-                    <div class="first-section__circle_image">
+                    <div class="pos-r first-section__circle_image">
                         <?php if ($video_source_type == 'frame') : ?>
                             <?php echo $video_source ?? ''; ?>
                         <?php endif; ?>
@@ -21,10 +21,22 @@
                         <?php if ($video_source_type == 'link') : ?>
                             <video controls
                                    width="100%"
+                                   class="pos-r z-1"
                                    poster="<?php esc_attr_e($video_poster, 'faces'); ?>">
                                 <source src="<?php esc_attr_e($video_source, 'faces'); ?>"
                                         type="video/mp4">
                             </video>
+                            <div class="pos-a absolute-center flex-center z-2 pointer first-section__circle_play">
+                                <svg width="252"
+                                     height="252"
+                                     viewBox="0 0 252 252"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M184.5 113.01C194.5 118.783 194.5 133.217 184.5 138.99L94.5 190.952C84.5 196.725 72 189.509 72 177.962L72 74.0384C72 62.4914 84.5 55.2746 94.5 61.0481L184.5 113.01Z"
+                                          fill="#B000DB"/>
+                                </svg>
+
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -89,7 +101,7 @@
             <?php endforeach; ?>
             <div class="cases__item cases__item-last">
                 <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
-                   class="font-tenor transition block pos-r line-height-1 text-45 large-text-25 cases__item_link">Смотреть все кейсы</a>
+                   class="font-tenor ws-nowrap transition block pos-r line-height-1 text-45 large-text-25 cases__item_link"><?php esc_html_e('Смотреть все кейсы', 'faces'); ?></a>
             </div>
         </div>
     <?php endif; ?>
@@ -139,7 +151,8 @@
             </div>
         <?php endif; ?>
         <a href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
-           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content transition bottom-0 sm-none our-bloggers__all">Все блогеры</a>
+           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content transition bottom-0 sm-none our-bloggers__all">Все
+            блогеры</a>
     </div>
 
     <?php
