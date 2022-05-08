@@ -1,18 +1,5 @@
 'use strict';
 
-/*(function ($) {
-    const langs = [...document.querySelectorAll('.header__langs_item')];
-
-    langs.forEach(l => l.addEventListener('click', switchLangs));
-
-    function switchLangs(e) {
-        e.preventDefault();
-        langs.forEach(l => {
-            l.classList.toggle('active');
-        })
-    }
-})(jQuery);*/
-
 export function checkWidth() {
     const mobileWidth = 767;
     const tabletWidth = 1023;
