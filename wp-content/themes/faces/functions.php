@@ -228,13 +228,15 @@ require get_template_directory() . '/includes/acf-json-settings.php';
  * Get current page
  */
 function getPage() {
+    $page_id = get_the_ID();
+
     if (is_front_page()) {
         return 'home';
-    } elseif (get_the_ID() == 47) {
+    } elseif ($page_id == 47 || $page_id == 427) {
         return  'cases';
-    } elseif (get_the_ID() == 43) {
+    } elseif ($page_id == 43 || $page_id == 430) {
         return  'bloggers';
-    } elseif (get_the_ID() == 45) {
+    } elseif ($page_id == 45 || $page_id == 432) {
         return  'about';
     }
 

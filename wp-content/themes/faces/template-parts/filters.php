@@ -7,7 +7,7 @@ $categories = get_terms($category_slug . '_cat', [
     'order' => 'DESC',
 ]);
 
-$all_cats = $category_slug == 'cases' ? 'кейсы' : 'блогеры';
+$all_cats = $category_slug == 'cases' ? __('кейсы', 'faces') : __('блогеры', 'faces');
 
 if (isset($categories)) : ?>
 
