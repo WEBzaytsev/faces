@@ -70,19 +70,14 @@
                         }, ARRAY_FILTER_USE_BOTH);
                         $active_lang = reset($active_lang); ?>
                         <div class="flex-center ml-auto huge-m-0 header__langs">
-                            <a href="<?php echo esc_url($active_lang['url']); ?>"
-                               class="text-20 large-text-16 mr-16 large-mr-8 line-height-27 huge-line-height-22 pointer transition pos-r capitalize header__langs_item active">
-                                <?php esc_html_e($active_lang['code']); ?>
+                            <a href="<?php echo esc_url($languages_list['ru']['url']); ?>"
+                               class="text-20 large-text-16 mr-16 large-mr-8 line-height-27 huge-line-height-22 pointer transition pos-r capitalize header__langs_item<?php echo $active_lang['code'] == $languages_list['ru']['code'] ? ' active' : ''; ?>">
+                                <?php esc_html_e($languages_list['ru']['code']); ?>
                             </a>
-                            <?php foreach ($languages_list as $item) :
-                                if (!$item['active']) : ?>
-                                    <a href="<?php echo esc_url(($item['url'])); ?>"
-                                       class="text-20 large-text-16 line-height-27 large-line-height-22 pointer transition pos-r capitalize header__langs_item">
-                                        <?php esc_html_e($item['code']); ?>
-                                    </a>
-                                <?php endif;
-                            endforeach; ?>
-
+                            <a href="<?php echo esc_url(($languages_list['en']['url']), 'faces'); ?>"
+                               class="text-20 large-text-16 line-height-27 large-line-height-22 pointer transition pos-r capitalize header__langs_item<?php echo $active_lang['code'] == $languages_list['en']['code'] ? ' active' : ''; ?>">
+                                <?php esc_html_e($languages_list['en']['code']); ?>
+                            </a>
                         </div>
 
                     <?php endif;
