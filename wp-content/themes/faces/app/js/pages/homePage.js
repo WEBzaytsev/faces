@@ -52,9 +52,12 @@ export const homePage = function ($) {
         self.cases.slick({
             slidesToShow: 2,
             infinite: false,
-            slidesToScroll: 1,
+            variableWidth: true,
             prevArrow: '',
             nextArrow: '',
+
+            outerEdgeLimit: false,
+
             responsive: [
                 {
                     breakpoint: 1000,
@@ -63,6 +66,10 @@ export const homePage = function ($) {
                     }
                 },
             ]
+        });
+
+        self.cases.on('afterChange', function(event, slick, currentSlide, nextSlide){
+
         });
 
         $(window).on('scroll', function () {

@@ -89,7 +89,6 @@
         margin-bottom: 135px;
         width: 323px;
         height: 323px;
-        margin-left: -12px;
       }
 
       &_wrap {
@@ -257,6 +256,15 @@
     &__item {
       border-left: 1px solid #fff;
       height: auto;
+      width: 700px;
+
+      @include response-to(huge) {
+        width: calc((100vw - 250px) / 2);
+      }
+
+      @include response-to(medium) {
+        width: calc(100vw - 150px);
+      }
 
       &_inner {
         padding: 51px 59px 24px;
@@ -354,6 +362,14 @@
           &:before {
             max-width: 0;
           }
+        }
+      }
+
+      &-last {
+        width: 200px;
+
+        @include response-to(medium) {
+          width: 100px;
         }
       }
     }
