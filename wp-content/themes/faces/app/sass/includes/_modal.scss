@@ -171,6 +171,17 @@
             span {
               padding-left: 30px;
 
+              &.error {
+                padding-left: 0;
+                white-space: nowrap;
+                top: 110%;
+
+                &:before,
+                &:after {
+                  content: none;
+                }
+              }
+
               &:after,
               &:before {
                 position: absolute;
@@ -197,6 +208,15 @@
             }
           }
         }
+
+        span.error {
+          position: absolute;
+          left: 20px;
+          bottom: 2px;
+          font-size: 14px;
+          line-height: 120%;
+          color: red;
+        }
       }
 
       &_input {
@@ -204,6 +224,14 @@
         padding: 18px 20px;
         margin-top: 7px;
         resize: vertical;
+
+        &.error {
+          border-color: red;
+        }
+
+        &.success {
+          border-color: green;
+        }
 
         @include response-to(small) {
           margin-top: 5px;

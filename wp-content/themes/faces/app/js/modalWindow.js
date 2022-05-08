@@ -1,5 +1,7 @@
 'use strict';
 
+import {formClass} from "./formClass";
+
 export const modalWindow = function ($, settings, elem) {
     const self = this;
     this.element = elem || null;
@@ -8,11 +10,20 @@ export const modalWindow = function ($, settings, elem) {
     this.postId = $(this.element).data('case') || 0;
     this.modalWrap = $(`.modal.${this.modalType}`);
     this.currentModal = null;
+    this.form = null;
 
-    this.showModal = async () => {
+    this.showModal = () => {
 
         if (!self.currentModal) {
-            await self.getModal();
+            self.getModal()
+                .then(() => {
+                    if (self.form) {
+                        return;
+                    }
+
+                    self.form = new formClass($, settings, self);
+                    self.form.init();
+                });
         }
 
         self.modalWrap.addClass('active');
