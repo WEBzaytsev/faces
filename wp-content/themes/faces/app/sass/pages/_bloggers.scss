@@ -35,6 +35,10 @@
         .blogger__inner_bottom {
           border-color: $primary-color;
         }
+
+        .blogger__inner_bg:before {
+          opacity: 1;
+        }
       }
 
       &_soc-icon {
@@ -128,6 +132,20 @@
       &_bg {
         height: 68.5%;
         border-radius: 70px 70px 0 0;
+
+        &:before {
+          transition: all ease .3s;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          content: '';
+          border-radius: inherit;
+          border: 36px solid;
+          filter: blur(61px);
+          opacity: 0;
+        }
       }
 
       &_btn {
@@ -185,6 +203,10 @@
 
       .blogger__inner_bg {
         background-color: #6000DB;
+
+        &:before {
+          border-color: #6000DB;
+        }
       }
     }
 
@@ -192,6 +214,10 @@
 
       .blogger__inner_bg {
         background-color: #D93EFF;
+
+        &:before {
+          border-color: #D93EFF;
+        }
       }
     }
 
@@ -199,6 +225,10 @@
 
       .blogger__inner_bg {
         background-color: #ED1F69;
+
+        &:before {
+          border-color: #ED1F69;
+        }
       }
     }
   }
