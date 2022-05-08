@@ -316,6 +316,10 @@ figure img {
   font-size: 70px;
 }
 
+.line-height-19 {
+  line-height: 19px;
+}
+
 .line-height-21 {
   line-height: 21px;
 }
@@ -687,8 +691,32 @@ figure img {
       font-size: 18px;
     }
 
+    &-text-25 {
+      font-size: 25px;
+    }
+
     &-line-height142 {
       line-height: 142%;
+    }
+
+    &-line-height144 {
+      line-height: 144%;
+    }
+
+    &-line-height-21 {
+      line-height: 21px;
+    }
+
+    &-line-height-23 {
+      line-height: 23px;
+    }
+
+    &-line-height-25 {
+      line-height: 25px;
+    }
+
+    &-line-height-29 {
+      line-height: 29px;
     }
 
     &-ml-0 {
@@ -715,6 +743,10 @@ figure img {
 
     &-opacity-0 {
       opacity: 0;
+    }
+
+    &-flex-wrap {
+      flex-wrap: wrap;
     }
 
     &-z--100 {
@@ -770,12 +802,20 @@ figure img {
       font-size: 30px;
     }
 
+    &-text-25 {
+      font-size: 25px;
+    }
+
     &-text-24 {
       font-size: 24px;
     }
 
     &-text-20 {
       font-size: 20px;
+    }
+
+    &-text-18 {
+      font-size: 18px;
     }
 
     &-text-14 {
@@ -798,8 +838,16 @@ figure img {
       line-height: 19px;
     }
 
+    &-line-height-21 {
+      line-height: 21px;
+    }
+
     &-line-height-23 {
       line-height: 23px;
+    }
+
+    &-line-height-25 {
+      line-height: 25px;
     }
 
     &-line-height-27 {

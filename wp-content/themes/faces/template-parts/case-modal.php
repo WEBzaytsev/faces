@@ -7,10 +7,10 @@ $img_url = get_field('modal-img', $case_id)['url']
 
 <div class="pos-r modal-window bg-white color-black case-modal">
     <span class="block pointer pos-a close" data-close="true"></span>
-    <p class="text-60 text-center font-tenor line-height-70 modal-window__title">
+    <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29 modal-window__title">
         <?php esc_html_e($case->post_title, 'faces'); ?>
     </p>
-    <p class="text-center text-20  modal-window__text">
+    <p class="text-center text-20 sm-text-14 sm-line-height144 modal-window__text">
         <?php esc_html_e(get_field('description', $case_id), 'faces'); ?>
     </p>
 
@@ -20,7 +20,7 @@ $img_url = get_field('modal-img', $case_id)['url']
     <?php endif; ?>
 
     <?php if (isset($stats)) : ?>
-        <div class="pos-r z-2 full-width flex align-start justify-between stats">
+        <div class="pos-r z-2 full-width flex sm-block align-start justify-between stats">
             <?php foreach ($stats as $stat) : ?>
             <div class="full-width stats__item">
                 <div class="flex-center border50 bg-white mx-auto stats__item_num">
@@ -28,7 +28,7 @@ $img_url = get_field('modal-img', $case_id)['url']
                         <?php esc_html_e(sprintf('%g%%', $stat['value']), 'faces'); ?>
                     </span>
                 </div>
-                <p class="text-center text-20 line-height-27 stats__item_desc">
+                <p class="text-center text-20 line-height-27 md-text-18 md-line-height-25 stats__item_desc">
                     <?php esc_html_e($stat['desc'], 'faces'); ?>
                 </p>
             </div>
@@ -36,10 +36,10 @@ $img_url = get_field('modal-img', $case_id)['url']
         </div>
     <?php endif; ?>
 
-    <p class="text-60 text-center font-tenor line-height-70 modal-window__title">
+    <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29  modal-window__title">
         <?php esc_html_e('Хочу также', 'faces'); ?>
     </p>
-    <p class="text-center text-20">
+    <p class="text-center text-20 md-text-18 md-line-height-21">
         <?php esc_html_e('Оставьте заявку и мы свяжемся с вами', 'faces'); ?>
     </p>
     <?php get_template_part('/template-parts/feedback-form', null, array(

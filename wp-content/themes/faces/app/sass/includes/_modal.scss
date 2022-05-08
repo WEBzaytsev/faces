@@ -18,6 +18,13 @@
     width: 35px;
     height: 35px;
 
+    @include response-to(medium) {
+      width: 21px;
+      height: 21px;
+      top: 30px;
+      right: 35px;
+    }
+
     &:before,
     &:after {
       position: absolute;
@@ -46,8 +53,17 @@
       max-width: 760px;
       padding: 100px 66px 129px;
 
+      @include response-to(small) {
+        max-width: 95vw;
+        padding: 60px 37px 18px;
+      }
+
       .modal-window__title {
         margin-bottom: 40px;
+
+        @include response-to(medium) {
+          margin-bottom: 30px;
+        }
       }
     }
 
@@ -55,8 +71,58 @@
       max-width: 1040px;
       padding: 66px 60px 65px;
 
+      @include response-to(large) {
+        max-width: 95vw;
+      }
+
+      @include response-to(medium) {
+        padding: 60px 37px 80px;
+      }
+
       .modal-window__title {
         margin-bottom: 50px;
+
+        @include response-to(medium) {
+          margin-bottom: 40px;
+        }
+      }
+
+      .modal-window__text {
+
+        @include response-to(medium) {
+          margin-bottom: 60px;
+        }
+      }
+
+      @include response-to(small) {
+
+        .modal-window__form {
+          margin-top: 46px;
+
+          &_field {
+            margin-bottom: 31px;
+
+            &:last-of-type {
+              margin-bottom: 60px;
+            }
+          }
+
+          &_label {
+            display: none;
+          }
+
+          &_input {
+            background-color: transparent;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            padding: 9px 0;
+            
+            &::placeholder {
+              color: #8F8F8F;
+            }
+          }
+        }
       }
     }
 
@@ -70,8 +136,16 @@
       &_field {
         margin-bottom: 20px;
 
+        @include response-to(small) {
+          margin-bottom: 18px;
+        }
+
         &.radio {
           margin-bottom: 50px;
+
+          @include response-to(small) {
+            margin-bottom: 10px;
+          }
 
           input {
             display: none;
@@ -88,6 +162,10 @@
 
             &:not(:last-of-type) {
               margin-right: 30px;
+            }
+
+            @include response-to(small) {
+              margin-bottom: 20px;
             }
 
             span {
@@ -127,12 +205,17 @@
         margin-top: 7px;
         resize: vertical;
 
+        @include response-to(small) {
+          margin-top: 5px;
+          padding: 12px 13px 11px;
+        }
+
         &::placeholder {
           font-family: 'Manrope', sans-serif;
           color: #D8D8D8;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 25px;
+          font-size: inherit;
+          line-height: inherit;
         }
       }
 
@@ -156,6 +239,11 @@
       height: 330px;
       background-size: cover;
       background-position: center;
+
+      @include response-to(medium) {
+        height: 300px;
+        border-radius: 23.5px;
+      }
     }
   }
 }
@@ -165,14 +253,39 @@
   margin-top: -97px;
   margin-bottom: 80px;
 
+  @include response-to(small) {
+    margin-top: -89px;
+    padding: 0;
+  }
+
   &__item {
     max-width: 245px;
+
+    @include response-to(medium) {
+      max-width: 223px;
+    }
+
+    @include response-to(small) {
+      margin-left: auto;
+      margin-right: auto;
+
+      &:not(:last-of-type) {
+        margin-bottom: 78px;
+      }
+    }
 
     &_num {
       width: 170px;
       height: 170px;
       margin-bottom: 25px;
       box-shadow: -6px 43px 17px rgba(80, 0, 102, 0.01), -3px 24px 15px rgba(80, 0, 102, 0.05), -1px 11px 11px rgba(80, 0, 102, 0.09), 0px 3px 6px rgba(80, 0, 102, 0.1), 0px 0px 0px rgba(80, 0, 102, 0.1);
+
+      @include response-to(medium) {
+        width: 155px;
+        height: 155px;
+        font-size: 60px;
+        margin-bottom: 22px;
+      }
     }
   }
 }
