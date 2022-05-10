@@ -163,7 +163,7 @@
         ?>
         <div class="pos-r large-block flex align-center container partners">
             <?php if ($caption) : ?>
-                <div class="flex-center large-mx-auto border50 partners__title">
+                <div class="flex-center pos-r large-mx-auto border50 partners__title">
                     <p class="uppercase text-center line-height-1 text-60 large-text-22 partners__title_text">
                         <?php echo __($caption, 'faces'); ?>
                     </p>
