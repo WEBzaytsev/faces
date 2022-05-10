@@ -37,7 +37,6 @@
                      width="159"
                      alt="img">
             </a>
-
             <div class="pos-r full-width md-width-fit-content md-block header__mob-wrap">
 
                 <div class="flex md-none full-width justify-between header__mob-container">
@@ -109,4 +108,5 @@
             </div>
         </div>
     </header>
+    <div class="pos-f transition top-0 bottom-0 left-0 right-0 mob-menu-bg"></div>
 <?php endif;

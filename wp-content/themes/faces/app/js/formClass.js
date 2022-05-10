@@ -32,10 +32,15 @@ export const formClass = function ($, settings, parentClass) {
             errorElement : 'span',
             errorPlacement: function(error, element) {
                 const placement = $(element).data('error');
+
                 if (placement) {
                     $(placement).append(error);
                 } else {
-                    error.insertBefore(element);
+                    if (element.attr('type') === 'checkbox') {
+                        element.parent().parent().append(error);
+                    } else {
+                        error.insertBefore(element);
+                    }
                 }
             },
             beforeSend: function () {

@@ -18,6 +18,22 @@
     margin-bottom: 60px;
   }
 
+  &.active {
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      display: block;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, .01);
+      z-index: 99;
+    }
+  }
+
   &__logo {
 
     @include response-to(large) {
@@ -130,8 +146,6 @@
         overflow-y: scroll;
         top: 0;
         z-index: 100;
-        backdrop-filter: blur(8px);
-        background: rgba(255, 255, 255, .01);
 
         .header__mob-container {
           display: flex;
@@ -230,5 +244,14 @@
     &:after {
       bottom: 0;
     }
+  }
+}
+
+.mob-menu-bg {
+
+  &.active {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, .01);
+    z-index: 99;
   }
 }

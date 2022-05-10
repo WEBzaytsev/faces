@@ -171,17 +171,6 @@
             span {
               padding-left: 30px;
 
-              &.error {
-                padding-left: 0;
-                white-space: nowrap;
-                top: 110%;
-
-                &:before,
-                &:after {
-                  content: none;
-                }
-              }
-
               &:after,
               &:before {
                 position: absolute;
@@ -207,15 +196,32 @@
               }
             }
           }
+
+          span.error {
+            padding-left: 0;
+            white-space: nowrap;
+            top: 110%;
+
+            @include response-to(small) {
+              top: 85%;
+            }
+          }
         }
 
         span.error {
           position: absolute;
-          left: 20px;
-          bottom: 2px;
+          right: 0;
+          top: 7px;
           font-size: 14px;
           line-height: 120%;
           color: red;
+
+          @include response-to(small) {
+            font-size: 12px;
+            top: 101.5%;
+            left: 0;
+            right: unset;
+          }
         }
       }
 
