@@ -114,7 +114,6 @@
       &:nth-of-type(2) {
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0 5px 103px #000000;
 
         @include response-to(large) {
           max-width: 590px;
@@ -124,6 +123,12 @@
           width: 100%;
           max-width: 400px;
           transform: rotate(7.2deg);
+        }
+
+        .about-page__photos_img {
+          box-shadow: 0 5px 103px #000000;
+          animation-name: about-soaring-2;
+          animation-duration: 60s;
         }
       }
 
@@ -137,15 +142,18 @@
           height: 160px;
         }
 
-        &:before {
-          position: absolute;
-          content: '';
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          filter: blur(4px);
-          background: linear-gradient(0deg, rgba(62, 3, 77, 0.3), rgba(62, 3, 77, 0.3));
+        .about-page__photos_img {
+
+          &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            filter: blur(4px);
+            background: linear-gradient(0deg, rgba(62, 3, 77, 0.3), rgba(62, 3, 77, 0.3));
+          }
         }
       }
 
@@ -165,6 +173,11 @@
           top: unset;
           bottom: calc(100% - 24px);
         }
+
+        .about-page__photos_img {
+          animation-name: about-soaring-1;
+          animation-duration: 60s;
+        }
       }
 
       &:last-of-type {
@@ -180,6 +193,11 @@
           left: 0;
           transform: rotate(23deg);
           top: calc(100% - 27px);
+        }
+
+        .about-page__photos_img {
+          animation-name: about-soaring-3;
+          animation-duration: 60s;
         }
       }
     }
@@ -239,5 +257,95 @@
         }
       }
     }
+  }
+}
+
+@keyframes about-soaring-1 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(-1%) translateX(1%);
+  }
+
+  20% {
+    transform: translateY(4%) translateX(-2%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(2%);
+  }
+
+  60% {
+    transform: translateY(6%) translateX(-1%);
+  }
+
+  90% {
+    transform: translateY(-3%) translateX(1%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes about-soaring-2 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(-2%) translateX(3%);
+  }
+
+  20% {
+    transform: translateY(-5%) translateX(1%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(-2%);
+  }
+
+  60% {
+    transform: translateY(3%) translateX(-5%);
+  }
+
+  90% {
+    transform: translateY(7%) translateX(2%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes about-soaring-3 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(2%) translateX(-3%);
+  }
+
+  20% {
+    transform: translateY(4%) translateX(-1%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(2%);
+  }
+
+  60% {
+    transform: translateY(-2%) translateX(5%);
+  }
+
+  90% {
+    transform: translateY(-5%) translateX(1%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
   }
 }
