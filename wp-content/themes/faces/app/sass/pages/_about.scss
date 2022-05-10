@@ -214,8 +214,11 @@
   }
 
   &__frame {
-    width: 100vw;
-    margin-left: -37px;
+
+    @include response-to(medium) {
+      width: 100vw;
+      margin-left: -37px;
+    }
 
     &_window {
       height: 696px;
