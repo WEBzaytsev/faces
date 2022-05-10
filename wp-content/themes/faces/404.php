@@ -9,52 +9,20 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'faces' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'faces' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'faces' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$faces_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'faces' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$faces_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+<div class="err-404">
+    <main class="container flex flex-col align-center justify-center">
+        <p class="color-primary pos-r text-center font-tenor mx-auto width-fit-content err-404__caption">
+            <?php esc_html_e('oops!', 'faces'); ?>
+        </p>
+        <p class="font-tenor err-404__text">
+            <span class="color-primary">404. </span>
+            <?php esc_html_e('Страница не найдена', 'faces'); ?>
+        </p>
+        <p class="text-center text-22 line-height144 sm-text-12 err-404__note">
+            <?php echo __('Проверьте, правильно ли вы ввели адрес. Правильно?<br>Тогда, возможно, на сайте идут технические работы. Обновите страницу через пару минут.'); ?>
+        </p>
+        <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>" class="pos-r font-tenor err-404__link">
+            <?php esc_html_e('Перейти на главную', 'faces'); ?>
+        </a>
+    </main>
+</div>

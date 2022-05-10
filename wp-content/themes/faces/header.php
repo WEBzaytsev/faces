@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/mstile-144x144.png">
+    <meta name="msapplication-TileImage"
+          content="<?php echo get_template_directory_uri(); ?>/dist/img/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <?php wp_head(); ?>
@@ -20,6 +25,8 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<?php if (!is_404()) : ?>
 <div class="full-width page">
     <header class="pos-f full-width z-modal header-grey-bg border-bottom-white-1 header">
         <div class="container flex align-center md-justify-between full-width">
@@ -102,3 +109,4 @@
             </div>
         </div>
     </header>
+<?php endif;

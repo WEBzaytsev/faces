@@ -1,0 +1,118 @@
+.err-404 {
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 120px;
+
+  &__caption {
+    font-size: 214px;
+    line-height: 1;
+
+    @include response-to(large) {
+      font-size: 150px;
+    }
+
+    @include response-to(small) {
+      font-size: 70px;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 77px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('../../img/404-decor.svg');
+
+      @include response-to(small) {
+        width: 30px;
+      }
+    }
+
+    &:before {
+      height: 126px;
+      top: 5px;
+      right: calc(100% + 26px);
+
+      @include response-to(small) {
+        top: -35px;
+        right: calc(100% + 6px);
+      }
+    }
+
+    &:after {
+      height: 118px;
+      left: 100%;
+      top: -16px;
+      transform: rotate(165deg);
+
+      @include response-to(small) {
+        top: -40px;
+      }
+    }
+  }
+
+  &__text {
+    margin: 70px 0;
+    font-size: 100px;
+    line-height: 117px;
+
+    @include response-to(huge) {
+      font-size: 70px;
+      line-height: 1;
+    }
+
+    @include response-to(large) {
+      margin: 50px 0;
+    }
+
+    @include response-to(medium) {
+      font-size: 50px;
+      margin: 40px 0;
+    }
+
+    @include response-to(small) {
+      font-size: 24px;
+    }
+  }
+
+  &__link {
+    margin-top: 93px;
+    font-size: 50px;
+    line-height: 100.5%;
+
+    @include response-to(large) {
+      font-size: 30px;
+      margin-top: 50px;
+    }
+
+    @include response-to(small) {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 3px;
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      background-color: $primary-color;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include transition-ease;
+    }
+
+    &:hover {
+      color: $primary-color;
+
+      &:before {
+        max-width: 0;
+      }
+    }
+  }
+}
