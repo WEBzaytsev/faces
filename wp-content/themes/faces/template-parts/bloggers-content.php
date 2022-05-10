@@ -3,7 +3,7 @@ $category = $args['cat'] == 'all' ? '' : $args['cat'];
 
 $options = array(
     'post_type' => 'bloggers',
-    'posts_per_page' => -1,
+    'posts_per_page' => 6,
     'orderby' => 'date',
     'bloggers_cat' => $category,
 );
@@ -65,6 +65,12 @@ $posts = query_posts($options); ?>
             </div>
             <?php $i++;
         endwhile; ?>
+
+        <?php if (count($posts) == 6) : ?>
+        <div class="full-width">
+            <a href="#" class="font-tenor width-fit-content mx-auto ws-nowrap transition block pos-r line-height-1 text-45 large-text-25 more-btn"><?php esc_html_e('Больше блогеров', 'faves'); ?></a>
+        </div>
+        <?php endif; ?>
     </div>
 <?php else : ?>
     <p class="empty">Ничего не найдено</p>

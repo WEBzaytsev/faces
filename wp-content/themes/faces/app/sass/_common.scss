@@ -35,6 +35,31 @@ div.page {
   }
 }
 
+.more-btn {
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    background-color: $primary-color;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include transition-ease;
+  }
+
+  &:hover {
+    color: $primary-color;
+
+    &:before {
+      max-width: 0;
+    }
+  }
+}
+
 .p-0 {
   padding: 0;
 }
