@@ -131,7 +131,7 @@
                         break;
                     }
 
-                    $css_class = sprintf('block border-70 pos-a hidden our-bloggers__item our-bloggers__%s', $key + 1);
+                    $css_class = sprintf('block border-70 soaring soaring-%s pos-a hidden our-bloggers__item our-bloggers__%s', $key + 1, $key + 1);
                     $post_object = $blogger['blogger'];
                     $blogger_id = $post_object->ID;
                     $blogger_name = $post_object->post_title;

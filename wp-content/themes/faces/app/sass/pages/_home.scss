@@ -512,6 +512,13 @@
       }
     }
 
+    .soaring {
+
+      @include response-to(small) {
+        animation-name: unset;
+      }
+    }
+
     &__caption {
       top: 347px;
 

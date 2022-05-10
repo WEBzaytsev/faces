@@ -1078,3 +1078,153 @@ figure img {
     }
   }
 }
+
+.soaring-1 {
+  animation-name: soaring-1;
+  animation-duration: 30s;
+}
+
+.soaring-2 {
+  animation-name: soaring-2;
+  animation-duration: 25s;
+}
+
+.soaring-3 {
+  animation-name: soaring-3;
+  animation-duration: 20s;
+}
+
+.soaring-4 {
+  animation-name: soaring-4;
+  animation-duration: 35s;
+}
+
+.soaring {
+  transform-origin: center;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  @include response-to(small) {
+    animation-name: unset;
+  }
+}
+
+@keyframes soaring-1 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(-3%) translateX(1%);
+  }
+
+  20% {
+    transform: translateY(6%) translateX(-2%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(2%);
+  }
+
+  60% {
+    transform: translateY(9%) translateX(-1%);
+  }
+
+  90% {
+    transform: translateY(-6%) translateX(2%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes soaring-2 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(6%) translateX(-2%);
+  }
+
+  20% {
+    transform: translateY(3%) translateX(1%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(3%);
+  }
+
+  60% {
+    transform: translateY(5%) translateX(-1%);
+  }
+
+  90% {
+    transform: translateY(-1%) translateX(2%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes soaring-3 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(2%) translateX(-3%);
+  }
+
+  20% {
+    transform: translateY(4%) translateX(-1%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(2%);
+  }
+
+  60% {
+    transform: translateY(-2%) translateX(5%);
+  }
+
+  90% {
+    transform: translateY(-5%) translateX(1%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes soaring-4 {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(-2%) translateX(3%);
+  }
+
+  20% {
+    transform: translateY(-5%) translateX(1%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(-2%);
+  }
+
+  60% {
+    transform: translateY(3%) translateX(-5%);
+  }
+
+  90% {
+    transform: translateY(7%) translateX(2%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
