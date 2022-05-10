@@ -33,6 +33,7 @@ export function switchClass(element, cssClass) {
 export function mobileMenu(menuBtn) {
     menuBtn.on('click', () => {
         menuBtn.parent().toggleClass('active');
+        jQuery('.mob-menu-bg').toggleClass('active');
         jQuery('body').toggleClass('no-scrolling');
     });
 }

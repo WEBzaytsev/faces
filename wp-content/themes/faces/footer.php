@@ -13,7 +13,7 @@
 
 <footer class="footer">
     <div class="container">
-        <div class="full-width flex flex-wrap align-start justify-between">
+        <div class="full-width flex flex-wrap align-start justify-between footer__top">
             <div class="footer__item">
                 <p class="color-primary line-height-25 text-18 footer__item_caption">Карта сайта</p>
                 <?php if (has_nav_menu('footer-menu')) :
@@ -82,9 +82,9 @@
     </div>
 </footer>
 </div>
-<div class="pos-f flex justify-center top-0 bottom-0 left-0 right-0 modal case"
+<div class="pos-f flex justify-center transition top-0 bottom-0 left-0 right-0 modal case"
      data-close="true"></div>
-<div class="pos-f flex justify-center top-0 bottom-0 left-0 right-0 modal work-offer"
+<div class="pos-f flex justify-center transition top-0 bottom-0 left-0 right-0 modal work-offer"
      data-close="true"></div>
 <?php wp_footer(); ?>
 
