@@ -6,7 +6,7 @@
   }
 
   @include response-to(small) {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   &:before,
@@ -27,10 +27,6 @@
   &:after {
     right: calc((100vw - 100%) / -2);
     background-image: linear-gradient(270deg, rgba(#000, .9) 35%, rgba(#000, 0));
-  }
-
-  .slick-list {
-    overflow: unset;
   }
 
   &__item {

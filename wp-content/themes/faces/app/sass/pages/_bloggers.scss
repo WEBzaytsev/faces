@@ -1,6 +1,101 @@
 .bloggers-page {
   padding-bottom: 163px;
 
+  .bloggers__filters {
+    margin-top: 115px;
+
+    @include response-to(large) {
+      margin-top: 80px;
+    }
+
+    @include response-to(small) {
+      margin-top: 32px;
+    }
+
+    &_wrap {
+      max-width: 100%;
+    }
+
+    &_bottom {
+      margin-top: 55px;
+      max-width: calc(100% - 121px);
+
+      @include response-to(small) {
+        width: 100%;
+        max-width: unset;
+        margin-top: 30px;
+      }
+
+      .select__wrap {
+        flex: 0 0 31%;
+
+        &:not(:last-of-type) {
+          margin-right: 3%;
+
+          @include response-to(small) {
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+        }
+
+        .select2-container {
+          width: unset!important;
+        }
+      }
+    }
+
+    .filter-icon {
+      flex: 0 0 76px;
+      width: 76px;
+      height: 76px;
+      margin-right: 45px;
+
+      @include response-to(medium) {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        position: absolute;
+        right: 0;
+        top: -35px;
+        transform: translateY(-100%);
+      }
+
+      &.active {
+        transform: translateY(106px);
+
+        @include response-to(small) {
+          transform: translateY(-100%);
+        }
+      }
+    }
+
+    .filters {
+      margin-top: 14px;
+      width: calc(100vw - ((100vw - 1514px) / 2) - 121px);
+
+      @include response-to(large) {
+        width: calc(100vw - 180px);
+      }
+
+      @include response-to(small) {
+        width: 100%;
+      }
+
+      &:before,
+      &:after {
+        content: none;
+      }
+
+      @include response-to(large) {
+        margin-top: 14px;
+      }
+
+      @include response-to(small) {
+        margin-top: 0;
+      }
+    }
+  }
+
   .blogger {
     flex: 0 0 31%;
     margin-bottom: 250px;

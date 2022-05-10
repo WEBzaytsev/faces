@@ -218,6 +218,8 @@ add_action( 'init', 'cases_create_post_type');
 require get_template_directory() . '/includes/custom-taxonomy.php';
 
 add_action( 'init', 'bloggers_register_taxonomy');
+add_action( 'init', 'bloggers_register_taxonomy_activity');
+add_action( 'init', 'bloggers_register_taxonomy_business');
 add_action( 'init', 'cases_register_taxonomy');
 
 /**

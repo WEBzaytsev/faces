@@ -1,5 +1,6 @@
 <?php
 $category_slug = $args['slug'];
+$is_display = $args['is_display'] ?? false;
 $current_cat = $_GET['cat'] ?? 'all';
 
 $categories = get_terms($category_slug . '_cat', [
@@ -11,7 +12,7 @@ $all_cats = $category_slug == 'cases' ? __('кейсы', 'faces') : __('блог
 
 if (isset($categories)) : ?>
 
-    <div class="flex align-center pos-r filters transition none opacity-0 z--100 sm-full-width">
+    <div class="flex align-center pos-r filters transition<?php echo $is_display ? '' : ' none opacity-0 z--100' ?> sm-full-width">
         <?php if (wp_is_mobile()) : ?>
             <select class="none sm-block filters-select">
                 <option value="all">

@@ -10,11 +10,17 @@ get_header(); ?>
     <div class="container pos-r cases-page">
         <h1 class="pos-r uppercase text-center sm-text-left font-tenor page-title">
             <?php esc_html_e(get_the_title(), 'faces'); ?>
-            <?php get_template_part('/vector-images/filters-icon'); ?>
+            <?php get_template_part('/vector-images/filters-icon', null, array(
+                'is_display' => false,
+                'is_absolute' => true,
+            )); ?>
         </h1>
 
         <div class="cases__wrap">
-            <?php get_template_part('/template-parts/filters', null, array('slug' => 'cases')); ?>
+            <?php get_template_part('/template-parts/filters', null, array(
+                'slug' => 'cases',
+                'is_display' => false,
+            )); ?>
             <div class="full-width posts-content pos-r">
                 <?php get_template_part('/template-parts/cases-content', null, array('cat' => $cat)); ?>
             </div>

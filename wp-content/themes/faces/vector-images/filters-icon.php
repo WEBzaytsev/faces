@@ -1,8 +1,13 @@
+<?php
+$is_display = $args['is_display'] ?? false;
+$is_absolute = $args['is_absolute'] ?? false;
+?>
+
 <svg width="50"
      height="50"
      viewBox="0 0 50 50"
      fill="none"
-     class="filter-icon transition none sm-block pos-a pointer right-0 absolute-center-y"
+     class="filter-icon transition <?php echo $is_absolute ? ' pos-a absolute-center-y' : ' pos-r' ?> pointer right-0 <?php echo $is_display ? '' : ' none' ?> sm-block"
      xmlns="http://www.w3.org/2000/svg">
     <circle cx="25"
             cy="25"
