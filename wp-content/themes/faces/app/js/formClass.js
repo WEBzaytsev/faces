@@ -7,9 +7,27 @@ export const formClass = function ($, settings, parentClass) {
     this.form = parentClass.modalWrap.find('form');
     this.lang = document.documentElement.lang.includes('en') ? 'en' : 'ru';
     this.thankYouModal = $('.thank-you');
+    this.checkboxes = this.form.find('input[type="checkbox"]');
+
+    this.checkboxHandler = function () {
+        if (!$(this).prop('checked')) {
+            return;
+        }
+
+        self.checkboxes.each(function () {
+            if ($(this).prop('checked')) {
+                $(this).prop('checked', false);
+            }
+        });
+
+        $(this).prop('checked', true);
+    }
 
     this.init = () => {
         mask();
+        this.checkboxes.each(function () {
+            $(this).on('change', self.checkboxHandler);
+        })
 
         this.thankYouModal.on('click', function (e) {
             const target = e.target;
