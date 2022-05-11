@@ -89,7 +89,7 @@
 
 <div class="pos-f flex justify-center transition top-0 bottom-0 left-0 right-0 modal thank-you"
      data-close="true">
-    <div class="pos-r modal-window bg-white color-black work-offer">
+    <div class="pos-r modal-window bg-white color-black">
         <span class="block pointer pos-a close" data-close="true"></span>
         <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29 modal-window__title">
             <?php esc_html_e('Спасибо!', 'faces'); ?>
