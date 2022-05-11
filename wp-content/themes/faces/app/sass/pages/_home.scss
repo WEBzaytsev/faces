@@ -720,7 +720,7 @@
     }
 
     &__list {
-      margin-left: 108px;
+      margin-left: 10px;
       cursor: grab;
       max-width: calc(100% - 514px);
       width: 100%;
@@ -729,6 +729,31 @@
         min-width: 100%;
         cursor: default;
         margin-left: 0;
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        display: block;
+        z-index: 10;
+
+        @include response-to(medium) {
+          content: none;
+        }
+      }
+
+      &:before {
+        left: 0;
+        background-image: linear-gradient(90deg, rgba(#000, 1) 40%, rgba(#000, 0));
+      }
+
+      &:after {
+        right: 0;
+        background-image: linear-gradient(270deg, rgba(#000, 1) 40%, rgba(#000, 0));
       }
 
       .slick-track {

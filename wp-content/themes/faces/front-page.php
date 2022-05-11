@@ -170,7 +170,7 @@
                 </div>
             <?php endif; ?>
             <?php if (isset($partners_list)) : ?>
-                <div class="flex align-center large-justify-between large-flex large-flex-wrap partners__list">
+                <div class="flex pos-r align-center large-justify-between large-flex large-flex-wrap partners__list">
                     <?php foreach ($partners_list as $partner) : ?>
                         <a href="<?php echo esc_url($partner['link'], 'faces'); ?>"
                            class="flex-center partners__item">
