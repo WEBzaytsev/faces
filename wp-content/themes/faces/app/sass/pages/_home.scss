@@ -182,15 +182,11 @@
         height: 100%;
         border-radius: 50%;
         background: linear-gradient(56.89deg, rgba(176, 0, 219, 0.7) -33.86%, rgba(176, 0, 219, 0) 64.18%);
-        transition: linear .7s;
-        transform: rotate(0deg);
-      }
-
-      &:hover {
-
-        &:before {
-          transform: rotate(180deg);
-        }
+        animation-name: round-text;
+        transform-origin: center;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 5s;
       }
 
       @include response-to(large) {
@@ -707,15 +703,11 @@
         height: 100%;
         border-radius: 50%;
         background: linear-gradient(56.89deg, rgba(176, 0, 219, 0.7) -33.86%, rgba(176, 0, 219, 0) 64.18%);
-        transition: linear .7s;
-        transform: rotate(0deg);
-      }
-
-      &:hover {
-
-        &:before {
-          transform: rotate(180deg);
-        }
+        animation-name: round-text;
+        transform-origin: center;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 5s;
       }
 
       @include response-to(large) {
