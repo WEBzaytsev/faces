@@ -9,10 +9,11 @@ export const FiltersClass = function ($, settings, parent, action) {
     this.filters = this.filtersWrap.find('.filters__item');
     this.activeFilter = this.filtersWrap.find('.filters__item.active');
     this.blockFilters = false;
-    this.contentWrap = $('.posts-content');
+    this.contentWrap = $('.posts-content__inner');
     this.currentWidth = checkWidth();
     this.filtersShowBtn = $('.filter-icon');
     this.selectField = this.filtersWrap.find('.filters-select');
+    this.loadMoreBtn = this.contentWrap.find('.more-btn');
 
     this.filterSlider = () => {
         if (self.currentWidth === 'mobile' || self.filters.length < 4) {
@@ -50,11 +51,18 @@ export const FiltersClass = function ($, settings, parent, action) {
         }
         self.getCases(currentCat);
         self.setCatUrl(currentCat);
+        self.setPageUrl(1);
     }
 
     this.setCatUrl = (cat) => {
         const url = new URL(window.location);
         url.searchParams.set('cat', cat);
+        window.history.pushState(null, document.title, url);
+    }
+
+    this.setPageUrl = (page) => {
+        const url = new URL(window.location);
+        url.searchParams.set('page', page);
         window.history.pushState(null, document.title, url);
     }
 
@@ -72,7 +80,7 @@ export const FiltersClass = function ($, settings, parent, action) {
                 cat: cat || 'all',
             },
             type: 'POST',
-            beforeSend: function(){
+            beforeSend: function() {
                 self.blockFilters = true;
                 self.contentWrap.html(`<div class="loader active">
                             <div class="loader-inner">
@@ -98,6 +106,7 @@ export const FiltersClass = function ($, settings, parent, action) {
                     if (typeof parent.modals === 'function') {
                         parent.modals();
                     }
+                    self.setLoadMoreBtn();
                 }
                 self.blockFilters = false;
             }
@@ -152,9 +161,54 @@ export const FiltersClass = function ($, settings, parent, action) {
         });
     }
 
+    this.setLoadMoreBtn = () => {
+        self.loadMoreBtn = self.contentWrap.find('.more-btn');
+
+        if (!self.loadMoreBtn.length) {
+            return;
+        }
+
+        self.loadMoreBtn.on('click', self.loadMore);
+    }
+
+    this.loadMore = (e) => {
+        e.preventDefault();
+        const url = new URL(window.location);
+        const page = parseInt(url.searchParams.get('page')) || 1;
+        const cat = url.searchParams.get('cat') || 'all';
+
+        $.ajax({
+            url: self.mainSettings.ajax_url,
+            data: {
+                action: action,
+                cat: cat || 'all',
+                page: page + 1,
+            },
+            type: 'POST',
+            beforeSend: function(){
+
+            },
+            success: function( data ) {
+                if (data) {
+                    self.loadMoreBtn.remove();
+                    self.loadMoreBtn = null;
+                    self.contentWrap.append(data);
+                    if (typeof parent.modals === 'function') {
+                        parent.modals();
+                    }
+
+                    self.setPageUrl(page + 1);
+                }
+                self.loadMoreBtn = self.filtersWrap.find('.more-btn');
+                self.setLoadMoreBtn();
+            }
+        });
+    }
+
     this.init = () => {
         this.filterSlider();
         this.select2Filters();
+        this.setLoadMoreBtn();
 
         this.filtersShowBtn.on('click', this.toggleFilters);
 

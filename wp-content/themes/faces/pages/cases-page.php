@@ -22,7 +22,11 @@ get_header(); ?>
                 'is_display' => false,
             )); ?>
             <div class="full-width posts-content pos-r">
-                <?php get_template_part('/template-parts/cases-content', null, array('cat' => $cat)); ?>
+                <div class="flex flex-wrap justify-between posts-content__inner">
+                    <?php get_template_part('/template-parts/cases-content', null, array(
+                        'cat' => $cat
+                    )); ?>
+                </div>
             </div>
         </div>
 
