@@ -6,9 +6,18 @@ export const formClass = function ($, settings, parentClass) {
     const self = this;
     this.form = parentClass.modalWrap.find('form');
     this.lang = document.documentElement.lang.includes('en') ? 'en' : 'ru';
+    this.thankYouModal = $('.thank-you');
 
     this.init = () => {
         mask();
+
+        this.thankYouModal.on('click', function (e) {
+            const target = e.target;
+
+            if ($(target).data('close') === true) {
+                $(this).removeClass('active');
+            }
+        })
 
         this.form.validate({
             ignore: [],
@@ -62,6 +71,7 @@ export const formClass = function ($, settings, parentClass) {
                             $form.reset();
                             parentClass.modalWrap.find('[data-close]')
                                 .trigger('click');
+                            self.thankYouModal.addClass('active');
                         }
                     })
             }

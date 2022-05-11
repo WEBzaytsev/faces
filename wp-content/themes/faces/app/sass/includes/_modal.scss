@@ -12,6 +12,26 @@
     opacity: 1;
   }
 
+  &.thank-you {
+
+    .modal-window {
+      background-image: linear-gradient(180deg, rgba(176, 0, 219, 0) 39.58%, rgba(176, 0, 219, 0.12) 100%);
+      background-color: #fff;
+      padding-top: 98px;
+      padding-bottom: 100px;
+      width: 100%;
+
+      @include response-to(small) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .modal-window__title {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
   .close {
     top: 46px;
     right: 33px;
