@@ -1,6 +1,7 @@
 'use strict';
 
 import {checkWidth} from "../commonFunctions";
+import {getCoords} from "../commonFunctions";
 
 export const homePage = function ($) {
     const self = this;
@@ -23,32 +24,11 @@ export const homePage = function ($) {
             return;
         }
 
-        const coords = self.getCoords((self.sLetter).get(0));
+        const coords = getCoords((self.sLetter).get(0));
         const mewSLetter = self.sLetter.clone().appendTo('.wrapper');
         const offset = self.currentWidth === 'mobile' ? 91 : 121;
         mewSLetter.css('top', coords.top - offset);
         mewSLetter.css('left', coords.left);
-    }
-
-    this.getCoords = (elem) => { 
-        const box = elem.getBoundingClientRect();
-
-        const body = document.body;
-        const docEl = document.documentElement;
-
-        const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-        const scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-        const clientTop = docEl.clientTop || body.clientTop || 0;
-        const clientLeft = docEl.clientLeft || body.clientLeft || 0;
-
-        const top  = box.top +  scrollTop - clientTop;
-        const left = box.left + scrollLeft - clientLeft;
-
-        return {
-            top: Math.round(top),
-            left: Math.round(left)
-        };
     }
 
     this.lastBlockAnimation = () => {
