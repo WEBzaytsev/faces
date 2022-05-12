@@ -11,7 +11,7 @@
 
 ?>
 
-<footer class="footer">
+<footer class="footer pos-r z-2">
     <div class="container">
         <div class="full-width flex flex-wrap align-start justify-between footer__top">
             <div class="footer__item">
@@ -100,6 +100,7 @@
     </div>
 </div>
 <?php wp_footer(); ?>
+</div>
 
 </body>
 </html>

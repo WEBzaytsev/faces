@@ -16,6 +16,40 @@ export const homePage = function ($) {
     this.toCasesButton = $('.first-section__cases');
     this.videoPlayBtn = $('.first-section__circle_play');
     this.video = $('.first-section__circle_image video') || $('.first-section__circle_image iframe');
+    this.sLetter = $('.home-page .first-section .page-title_s span.s');
+
+    this.sLetterAnimation = () => {
+        if (!self.sLetter.length) {
+            return;
+        }
+
+        const coords = self.getCoords((self.sLetter).get(0));
+        const mewSLetter = self.sLetter.clone().appendTo('.wrapper');
+        const offset = self.currentWidth === 'mobile' ? 91 : 121;
+        mewSLetter.css('top', coords.top - offset);
+        mewSLetter.css('left', coords.left);
+    }
+
+    this.getCoords = (elem) => { 
+        const box = elem.getBoundingClientRect();
+
+        const body = document.body;
+        const docEl = document.documentElement;
+
+        const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+        const scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+        const clientTop = docEl.clientTop || body.clientTop || 0;
+        const clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+        const top  = box.top +  scrollTop - clientTop;
+        const left = box.left + scrollLeft - clientLeft;
+
+        return {
+            top: Math.round(top),
+            left: Math.round(left)
+        };
+    }
 
     this.lastBlockAnimation = () => {
         if (window.pageYOffset > this.lastBlockTop - 200
@@ -139,6 +173,7 @@ export const homePage = function ($) {
         this.bloggersSlider();
         this.lastBlockAnimation();
         this.videoPlayTrigger();
+        this.sLetterAnimation();
 
         this.toCasesButton.on('click', function () {
             $([document.documentElement, document.body]).animate({

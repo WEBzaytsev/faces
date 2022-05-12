@@ -841,3 +841,52 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper > span.s {
+  width: 53px;
+  height: 66px;
+  display: block;
+  background-image: url('../../img/page-title-s.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  @include transition-ease;
+  z-index: 0;
+  transform-origin: center;
+  //animation-iteration-count: ;
+  animation-timing-function: linear;
+  animation-name: s-animation;
+  animation-duration: 120s;
+  opacity: 0;
+
+  @include response-to(small) {
+    width: 27px;
+    height: 33px;
+    animation-duration: 220s;
+  }
+}
+
+@keyframes s-animation {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  10% {
+    opacity: .1;
+    transform: scale(40) translateY(150px);
+
+    @include response-to(small) {
+      transform: scale(25) translateY(80px);
+    }
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(40) translateY(700px);
+
+    @include response-to(small) {
+      transform: scale(40) translateY(2700px);
+    }
+  }
+}
