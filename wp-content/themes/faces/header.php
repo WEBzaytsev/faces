@@ -28,7 +28,7 @@
 
 <?php if (!is_404()) : ?>
 <div class="wrapper pos-r">
-    <div class="full-width page">
+    <div class="full-width page pos-r z-1">
         <header class="pos-f full-width z-modal header-grey-bg border-bottom-white-1 header">
             <div class="container flex align-center md-justify-between full-width">
                 <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"

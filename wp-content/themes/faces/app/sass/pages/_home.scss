@@ -884,13 +884,23 @@
 
 @keyframes s-animation {
   0% {
-    opacity: 1;
+    opacity: .5;
     transform: scale(1) translateY(0);
   }
 
-  10% {
+  2% {
+    opacity: .2;
+    transform: scale(10) translateY(50px);
+  }
+
+  3% {
     opacity: .1;
-    transform: scale(40) translateY(150px);
+    transform: scale(15) translateY(70px);
+  }
+
+  10% {
+    opacity: .01;
+    transform: scale(50) translateY(100px);
 
     @include response-to(small) {
       transform: scale(25) translateY(80px);
@@ -899,10 +909,10 @@
 
   100% {
     opacity: 0;
-    transform: scale(40) translateY(700px);
+    transform: scale(60) translateY(700px);
 
     @include response-to(small) {
-      transform: scale(40) translateY(2700px);
+      transform: scale(40) translateY(8000px);
     }
   }
 }
