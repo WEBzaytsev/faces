@@ -36,11 +36,11 @@ $img_url = get_field('modal-img', $case_id)['url']
         </div>
     <?php endif; ?>
 
-    <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29  modal-window__title">
+    <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29  modal-window__title modal-window__title-form">
         <?php esc_html_e('Хочу также', 'faces'); ?>
     </p>
-    <p class="text-center text-20 md-text-18 md-line-height-21">
-        <?php esc_html_e('Оставьте заявку и мы свяжемся с вами', 'faces'); ?>
+    <p class="text-center text-20 md-text-18 md-line-height-21 modal-window__text-form">
+        <?php echo __('Оставьте заявку <br class="none sm-block">и мы свяжемся с вами', 'faces'); ?>
     </p>
     <?php get_template_part('/template-parts/feedback-form', null, array(
         'type' => 'case',

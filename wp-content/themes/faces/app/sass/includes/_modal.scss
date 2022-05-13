@@ -146,8 +146,31 @@
       }
     }
 
+    &__title {
+
+      &-form {
+        margin-top: 42px;
+        margin-bottom: 21px!important;
+
+        @include response-to(medium) {
+          margin-top: 84px;
+          margin-bottom: 27px!important;
+          font-size: 40px!important;
+          line-height: 47px!important;
+        }
+      }
+    }
+
     &__text {
       margin-bottom: 32px;
+
+      &-form {
+        margin-bottom: 49px;
+
+        @include response-to(small) {
+          margin-bottom: 55px;
+        }
+      }
     }
 
     &__form {
@@ -274,8 +297,6 @@
       }
 
       &_note {
-        font-size: 14px;
-        line-height: 19px;
         margin-top: 23px;
         max-width: 340px;
       }
@@ -296,7 +317,7 @@
 
       @include response-to(medium) {
         height: 300px;
-        border-radius: 23.5px;
+        border-radius: 23.5px!important;
       }
     }
   }
@@ -305,7 +326,6 @@
 .stats {
   padding: 0 26px;
   margin-top: -97px;
-  margin-bottom: 80px;
 
   @include response-to(small) {
     margin-top: -89px;
