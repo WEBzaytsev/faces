@@ -29,24 +29,8 @@
 
       a {
 
-        &:before {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          content: '';
-          bottom: 0;
-          height: 1px;
-          background-color: #fff;
-          transition: all ease .3s;
-          max-width: 0;
-          width: 100%;
-        }
-
         &:hover {
-
-          &:before {
-            max-width: 100%;
-          }
+          //color: $primary-color;
         }
       }
     }
