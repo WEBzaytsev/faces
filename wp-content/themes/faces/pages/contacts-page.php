@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-    <div class="container pos-r contacts-page">
+    <div class="container pos-r contacts-page z-3">
         <h1 class="uppercase text-center font-tenor page-title"><?php esc_html_e(get_the_title(), 'faces'); ?></h1>
 
         <div class="contacts-page__info">

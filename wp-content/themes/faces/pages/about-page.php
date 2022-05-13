@@ -14,7 +14,7 @@ $photos = get_field('photos') ?? null;
 
 get_header(); ?>
 
-    <div class="container pos-r about-page">
+    <div class="container pos-r about-page z-3">
         <h1 class="uppercase text-center sm-text-left font-tenor page-title"><?php echo __($page_title, 'faces'); ?></h1>
 
         <div class="mx-auto about-page__content">

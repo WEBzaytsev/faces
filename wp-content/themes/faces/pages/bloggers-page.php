@@ -7,7 +7,7 @@ $cat = $_GET['cat'] ?? 'all';
 
 get_header(); ?>
 
-    <div class="container bloggers-page pos-r">
+    <div class="container bloggers-page pos-r z-3">
         <h1 class="uppercase text-center pos-r sm-text-left font-tenor page-title">
             <?php esc_html_e(get_the_title(), 'faces'); ?>
             <!--            --><?php //get_template_part('/vector-images/filters-icon'); ?>

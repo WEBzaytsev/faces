@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="home-page pos-r z-2">
+<main class="home-page pos-r z-3">
     <div class="container pos-r first-section">
         <h1 class="uppercase huge-text-center sm-text-left font-tenor page-title"><?php echo __(get_field('page-caption'), 'faces'); ?></h1>
 
