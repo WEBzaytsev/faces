@@ -10,14 +10,14 @@
 @import "base/typography";
 @import "base/base";
 
+@import "common";
+
 @import "includes/header";
 @import "includes/footer";
 @import "includes/menu";
 @import "includes/filters";
 @import "includes/loader";
 @import "includes/modal";
-
-@import "common";
 
 @import "pages/home";
 @import "pages/cases";
