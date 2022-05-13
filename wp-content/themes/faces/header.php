@@ -43,8 +43,8 @@
                     <div class="flex md-none full-width justify-between header__mob-container">
                         <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"
                            class="none md-block header__logo">
-                            <?php $logo = get_field('logo', 'option'); ?>
-                            <img src="<?php esc_attr_e($logo['url'], 'faces'); ?>"
+                            <?php $mobile_logo = get_field('mob-logo', 'option'); ?>
+                            <img src="<?php esc_attr_e($mobile_logo['url'], 'faces'); ?>"
                                  width="79"
                                  alt="img">
                         </a>
