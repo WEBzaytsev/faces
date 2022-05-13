@@ -123,7 +123,7 @@
         <p class="font-tenor pos-a text-center uppercase text-60 large-text-48 line-height-1 absolute-center-x width-fit-content mx-auto sm-none our-bloggers__caption">
             <?php esc_html_e('наши', 'faces'); ?> <br><?php esc_html_e('блогеры', 'faces'); ?></p>
         <a href="#"
-           class="pos-r sm-text-35 line-height115 uppercase text-center none transition border50 sm-mx-auto sm-flex our-bloggers__scroll-btn">
+           class="pos-r sm-text-35 line-height115 uppercase text-center none transition border50 sm-mx-auto sm-flex align-center justify-center our-bloggers__scroll-btn">
                 <span class="pos-r z-2 font-tenor our-bloggers__scroll-btn_text"><?php esc_html_e('наши', 'faces'); ?>
                 <br><?php esc_html_e('блогеры', 'faces'); ?></span>
                 <span class="pos-a our-bloggers__scroll-btn_arr">
