@@ -630,6 +630,12 @@
       left: -37px;
       top: 0;
 
+      @include response-to(huge) {
+        width: 420px;
+        height: 528px;
+        left: 0;
+      }
+
       @include response-to(large) {
         width: 369px;
         left: 100px;
@@ -642,6 +648,13 @@
       height: 570px;
       bottom: 150px;
       left: 275px;
+
+      @include response-to(huge) {
+        width: 385px;
+        height: 484px;
+        left: 190px;
+        bottom: 230px;
+      }
 
       @include response-to(large) {
         width: 310px;
@@ -658,20 +671,33 @@
       right: 174px;
       z-index: 2;
 
+      @include response-to(huge) {
+        width: 385px;
+        height: 484px;
+        bottom: 415px;
+        right: 300px;
+      }
+
       @include response-to(large) {
         width: 271px;
         right: 120px;
         height: 340px;
-        bottom: 415px;
       }
     }
 
     &__4 {
       z-index: 1;
       width: 341px;
-      right: 0;
       height: 430px;
+      right: 0;
       top: 153px;
+
+      @include response-to(huge) {
+        width: 289px;
+        height: 365px;
+        top: 200px;
+        right: 150px;
+      }
 
       @include response-to(large) {
         width: 200px;
