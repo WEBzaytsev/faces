@@ -53,8 +53,8 @@
             )); ?>
             <a href="#"
                class="pos-a text-34 sm-text-35 line-height115 large-text-22 right-0 uppercase text-center flex-center transition border50 sm-pos-r sm-mx-auto first-section__cases">
-                <span class="pos-r z-2">наши
-                <br>кейсы</span>
+                <span class="pos-r z-2 font-tenor first-section__cases_text"><?php esc_html_e('наши', 'faces'); ?>
+                <br><?php esc_html_e('кейсы', 'faces'); ?></span>
                 <span class="pos-a first-section__cases_arr">
                     <?php get_template_part('/vector-images/cases-arr'); ?>
                 </span>
@@ -121,7 +121,15 @@
 
     <div class="pos-r full-width container our-bloggers">
         <p class="font-tenor pos-a text-center uppercase text-60 large-text-48 line-height-1 absolute-center-x width-fit-content mx-auto sm-none our-bloggers__caption">
-            наши <br>блогеры</p>
+            <?php esc_html_e('наши', 'faces'); ?> <br><?php esc_html_e('блогеры', 'faces'); ?></p>
+        <a href="#"
+           class="pos-r sm-text-35 line-height115 uppercase text-center none transition border50 sm-mx-auto sm-flex our-bloggers__scroll-btn">
+                <span class="pos-r z-2 font-tenor our-bloggers__scroll-btn_text"><?php esc_html_e('наши', 'faces'); ?>
+                <br><?php esc_html_e('блогеры', 'faces'); ?></span>
+                <span class="pos-a our-bloggers__scroll-btn_arr">
+                    <?php get_template_part('/vector-images/cases-arr'); ?>
+                </span>
+        </a>
         <?php $bloggers = get_field('bloggers');
         if (isset($bloggers)) : ?>
             <div class="pos-r full-width our-bloggers__wrap">
@@ -141,9 +149,12 @@
                         <div class="<?php esc_attr_e($css_class, 'faces'); ?>"
                              style="background-image: url('<?php esc_attr_e($img_src, 'faces'); ?>');">
                             <div class="flex flex-col justify-end full-width h-100 transition our-bloggers__item_info">
-                                <p class="pos-r text-30 sm-text-20 line-height-1 our-bloggers__item_name"><span
-                                            class="pos-r z-1"><?php esc_html_e($blogger_name, 'faces'); ?></span></p>
-                                <p class="pos-r z-1 line-height-25 text-18 sm-text-12 sm-line-height-16 our-bloggers__item_desc"><?php esc_html_e($blogger_description, 'faces'); ?></p>
+                                <p class="pos-r text-30 sm-text-20 line-height-1 our-bloggers__item_name">
+                                    <span class="pos-r z-1"><?php esc_html_e($blogger_name, 'faces'); ?></span>
+                                </p>
+                                <p class="pos-r z-1 line-height-25 text-18 sm-text-12 sm-line-height-16 our-bloggers__item_desc">
+                                    <?php esc_html_e($blogger_description, 'faces'); ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -151,8 +162,7 @@
             </div>
         <?php endif; ?>
         <a href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
-           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content transition bottom-0 sm-none our-bloggers__all">Все
-            блогеры</a>
+           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content transition bottom-0 sm-none our-bloggers__all"><?php esc_html_e('Все блогеры', 'faces'); ?></a>
     </div>
 
     <?php
@@ -164,9 +174,12 @@
         <div class="pos-r large-block flex align-center container partners">
             <?php if ($caption) : ?>
                 <div class="flex-center pos-r large-mx-auto border50 partners__title">
-                    <p class="uppercase text-center pos-r z-1 line-height-1 text-60 large-text-22 partners__title_text">
+                    <p class="uppercase text-center pos-r z-1 line-height-1 text-60 large-text-22 sm-text-35 sm-line-height115 font-tenor partners__title_text">
                         <?php echo __($caption, 'faces'); ?>
                     </p>
+                    <span class="pos-a partners__title_arr none sm-block">
+                        <?php get_template_part('/vector-images/cases-arr'); ?>
+                    </span>
                 </div>
             <?php endif; ?>
             <?php if (isset($partners_list)) : ?>

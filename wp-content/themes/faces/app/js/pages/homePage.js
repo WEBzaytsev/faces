@@ -6,15 +6,17 @@ import {getCoords} from "../commonFunctions";
 export const homePage = function ($) {
     const self = this;
     this.currentWidth = checkWidth();
-    this.bloggers = $('.our-bloggers__wrap');
-    this.partners = $('.partners__list');
     this.lastBlock = $('.last-block');
+    this.cases = $('.cases');
+    this.partners = $('.partners__list');
+    this.bloggers = $('.our-bloggers__wrap');
     this.lastBlockTop = this.lastBlock.offset().top - this.lastBlock.outerHeight(false);
     this.lastBlockBottom = this.lastBlock.offset().top;
-    this.cases = $('.cases');
     this.casesTop = this.cases.offset().top;
     this.casesBottom = this.cases.offset().top + this.cases.outerHeight();
     this.toCasesButton = $('.first-section__cases');
+    this.toBloggersButton = $('.our-bloggers__scroll-btn');
+    this.toPartnersButton = $('.partners__title');
     this.videoPlayBtn = $('.first-section__circle_play');
     this.video = $('.first-section__circle_image video') || $('.first-section__circle_image iframe');
     this.sLetter = $('.home-page .first-section .page-title_s span.s');
@@ -160,6 +162,20 @@ export const homePage = function ($) {
                 scrollTop: self.cases.offset().top,
             });
         });
+
+        if (this.currentWidth === 'mobile') {
+            this.toBloggersButton.on('click', function () {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: self.bloggers.offset().top - 120,
+                });
+            });
+
+            this.toPartnersButton.on('click', function () {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: self.partners.offset().top - 120,
+                });
+            });
+        }
 
         $(window).on('scroll', this.lastBlockAnimation);
     }
