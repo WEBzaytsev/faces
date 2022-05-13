@@ -2,12 +2,15 @@
     "name": "automattic/faces",
     "type": "wordpress-theme",
     "description": "",
-    "keywords": [],
+    "keywords": [
+      "WordPress",
+      "Themes"
+  ],
     "homepage": "https://faces.com",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Contributors",
+            "name": "Faces",
             "homepage": "https://faces.com"
         }
     ],
@@ -26,7 +29,6 @@
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
         "make-pot": "wp i18n make-pot . languages/faces.pot"
     },
-    "support": {},
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true

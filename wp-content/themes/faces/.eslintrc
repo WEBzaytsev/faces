@@ -1,8 +1,21 @@
 {
-    "extends": [
-        "plugin:@wordpress/eslint-plugin/esnext"
-    ],
-    "env": {
-        "browser": true
-    }
+  "plugins": ["prettier"],
+  "rules": {
+    "camelcase": 1,
+    "comma-dangle": 2,
+    "quotes": 1,
+    "prettier/prettier": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "jQuery": true,
+    "$": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  }
 }
