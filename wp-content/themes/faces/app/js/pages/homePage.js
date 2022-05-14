@@ -1,17 +1,19 @@
 'use strict';
 
-import {checkWidth} from "../commonFunctions";
-import {getCoords} from "../commonFunctions";
+import {checkWidth, getCoords} from "../commonFunctions";
 
 export const homePage = function ($) {
     const self = this;
     this.currentWidth = checkWidth();
     this.lastBlock = $('.last-block');
+    this.lastBlockContent = $('.last-block__wrap');
+    this.lastBlockContentTop = null;
+    this.lastBlockContentBottom = null;
+    this.lastBlockAnimationOffsetTop = self.currentWidth === 'mobile' ? 0 : 200;
+    this.lastBlockAnimationOffsetBottom = self.currentWidth === 'mobile' ? 90 : 121;
     this.cases = $('.cases');
     this.partners = $('.partners__list');
     this.bloggers = $('.our-bloggers__wrap');
-    this.lastBlockTop = this.lastBlock.offset().top - this.lastBlock.outerHeight(false);
-    this.lastBlockBottom = this.lastBlock.offset().top;
     this.casesTop = this.cases.offset().top;
     this.casesBottom = this.cases.offset().top + this.cases.outerHeight();
     this.toCasesButton = $('.first-section__cases');
@@ -20,6 +22,11 @@ export const homePage = function ($) {
     this.videoPlayBtn = $('.first-section__circle_play');
     this.video = $('.first-section__circle_image video') || $('.first-section__circle_image iframe');
     this.sLetter = $('.home-page .first-section .page-title_s span.s');
+
+    this.setCoords = () => {
+        self.lastBlockContentTop = self.lastBlockContent.offset().top;
+        self.lastBlockContentBottom = self.lastBlockContent.offset().top + self.lastBlockContent.outerHeight(false);
+    }
 
     this.sLetterAnimation = () => {
         if (!self.sLetter.length) {
@@ -34,11 +41,16 @@ export const homePage = function ($) {
     }
 
     this.lastBlockAnimation = () => {
-        if (window.pageYOffset > this.lastBlockTop - 200
-            && window.pageYOffset < this.lastBlockBottom - 600) {
-            this.lastBlock.addClass('active');
+        const windowTop = window.pageYOffset;
+        const windowBottom = windowTop + window.innerHeight;
+
+        if (windowBottom > self.lastBlockContentTop - 200
+            && windowTop < self.lastBlockContentBottom - 121) {
+            self.lastBlock.addClass('active');
         } else {
-            this.lastBlock.removeClass('active');
+            if (self.lastBlock.hasClass('active')) {
+                self.lastBlock.removeClass('active');
+            }
         }
     }
 
@@ -84,7 +96,7 @@ export const homePage = function ($) {
             ]
         });
 
-        self.cases.on('afterChange', function(event, slick, currentSlide, nextSlide){
+        self.cases.on('afterChange', function (event, slick, currentSlide, nextSlide) {
 
         });
 
@@ -156,6 +168,9 @@ export const homePage = function ($) {
         this.lastBlockAnimation();
         this.videoPlayTrigger();
         this.sLetterAnimation();
+
+        const delay = this.currentWidth === 'mobile' ? 1500 : 500;
+        setTimeout(this.setCoords, delay);
 
         this.toCasesButton.on('click', function () {
             $([document.documentElement, document.body]).animate({

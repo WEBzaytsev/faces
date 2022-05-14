@@ -126,7 +126,7 @@
            class="pos-r sm-text-35 line-height115 uppercase text-center none transition border50 sm-mx-auto sm-flex align-center justify-center our-bloggers__scroll-btn">
                 <span class="pos-r z-2 font-tenor our-bloggers__scroll-btn_text"><?php esc_html_e('наши', 'faces'); ?>
                 <br><?php esc_html_e('блогеры', 'faces'); ?></span>
-                <span class="pos-a our-bloggers__scroll-btn_arr">
+            <span class="pos-a our-bloggers__scroll-btn_arr">
                     <?php get_template_part('/vector-images/cases-arr'); ?>
                 </span>
         </a>
@@ -203,16 +203,18 @@
         $bottom_block_text = $bottom_block['text']; ?>
         <div class="mx-auto pos-r last-block">
             <span class="absolute-center block border50 z-0 last-block__circle"></span>
-            <?php if ($bottom_block_caption) : ?>
-                <p class="pos-r z-1 text-center uppercase text-60 line-height-1 sm-text-30 last-block__caption">
-                    <?php echo __($bottom_block_caption, 'faces'); ?>
-                </p>
-            <?php endif; ?>
-            <?php if ($bottom_block_text) : ?>
-                <p class="pos-r z-1 text-center line-height-30 text-22 sm-text-12 sm-line-height-16 last-block__text">
-                    <?php echo __($bottom_block_text, 'faces'); ?>
-                </p>
-            <?php endif; ?>
+            <div class="last-block__wrap">
+                <?php if ($bottom_block_caption) : ?>
+                    <p class="pos-r z-1 text-center uppercase text-60 line-height-1 sm-text-30 last-block__caption">
+                        <?php echo __($bottom_block_caption, 'faces'); ?>
+                    </p>
+                <?php endif; ?>
+                <?php if ($bottom_block_text) : ?>
+                    <p class="pos-r z-1 text-center line-height-30 text-22 sm-text-12 sm-line-height-16 last-block__text">
+                        <?php echo __($bottom_block_text, 'faces'); ?>
+                    </p>
+                <?php endif; ?>
+            </div>
         </div>
     <?php endif; ?>
 </main>
