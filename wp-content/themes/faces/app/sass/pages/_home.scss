@@ -822,7 +822,7 @@
         display: block;
         z-index: 10;
 
-        @include response-to(medium) {
+        @include response-to(large) {
           content: none;
         }
       }

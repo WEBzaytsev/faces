@@ -19,7 +19,6 @@ get_header(); ?>
         <div class="cases__wrap">
             <?php get_template_part('/template-parts/filters', null, array(
                 'slug' => 'cases',
-                'is_display' => false,
             )); ?>
             <div class="full-width posts-content pos-r">
                 <div class="flex flex-wrap justify-between posts-content__inner">

@@ -44,8 +44,8 @@ export const homePage = function ($) {
         const windowTop = window.pageYOffset;
         const windowBottom = windowTop + window.innerHeight;
 
-        if (windowBottom > self.lastBlockContentTop - 200
-            && windowTop < self.lastBlockContentBottom - 121) {
+        if (windowBottom > self.lastBlockContentTop - self.lastBlockAnimationOffsetTop
+            && windowTop < self.lastBlockContentBottom - self.lastBlockAnimationOffsetBottom) {
             self.lastBlock.addClass('active');
         } else {
             if (self.lastBlock.hasClass('active')) {

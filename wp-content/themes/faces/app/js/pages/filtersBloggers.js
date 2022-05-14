@@ -52,7 +52,7 @@ export const FiltersBloggersClass = function ($, settings, parent, action) {
         if (self.currentWidth !== 'mobile') {
             self.switchActiveFilter(element);
         }
-        self.getCases(currentCat);
+        self.getBloggers(currentCat);
         self.setCatUrl(currentCat);
         self.setPageUrl(1);
     }
@@ -75,7 +75,7 @@ export const FiltersBloggersClass = function ($, settings, parent, action) {
         self.activeFilter.addClass('active');
     }
 
-    this.getCases = (cat) => {
+    this.getBloggers = (cat) => {
         $.ajax({
             url: self.mainSettings.ajax_url,
             data: {
@@ -242,5 +242,6 @@ export const FiltersBloggersClass = function ($, settings, parent, action) {
         }
 
         this.showFilters($(this.filtersWrap));
+        this.showFilters($(this.categoriesWrap));
     }
 }

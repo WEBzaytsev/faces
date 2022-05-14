@@ -955,16 +955,16 @@ figure img {
   @include response-to(large) {
     width: 185px;
     height: 185px;
-  }
-
-  @include response-to(medium) {
-    width: 134px;
-    height: 134px;
     position: fixed;
     right: 16px;
     bottom: 16px;
     left: unset;
     top: unset;
+  }
+
+  @include response-to(medium) {
+    width: 134px;
+    height: 134px;
   }
 
   &:before,
@@ -1044,8 +1044,8 @@ figure img {
       transition: ease all .2s;
 
       @include response-to(large) {
-        width: 126px;
-        height: 126px;
+        width: 180px;
+        height: 180px;
       }
 
       @include response-to(small) {

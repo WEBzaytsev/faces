@@ -80,6 +80,10 @@
         right: 120px;
         bottom: -220px;
 
+        @include response-to(large) {
+          right: 50px;
+        }
+
         @include response-to(small) {
           right: -4px;
           top: calc(100% - 4px);
@@ -201,6 +205,10 @@
         }
       }
     }
+
+    &_img {
+      height: 100%;
+    }
   }
 
   &__virtual-tour {
@@ -248,9 +256,8 @@
     }
 
     .round-animate-btn {
+
       @media(min-width: 992px) {
-        right: -50px;
-        bottom: -114px;
 
         @include response-to(huge) {
           right: 0;

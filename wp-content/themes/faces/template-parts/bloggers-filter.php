@@ -21,7 +21,6 @@ $businesses = get_terms([
     <div class="full-width bloggers__filters_wrap">
         <?php get_template_part('/template-parts/filters', null, array(
             'slug' => $category_slug,
-            'is_display' => !$is_mobile,
         )); ?>
 
         <div class="none transition opacity-0 z--100 bloggers__filters_bottom">

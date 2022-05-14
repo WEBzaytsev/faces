@@ -2,7 +2,8 @@
 
 export function checkWidth() {
     const mobileWidth = 767;
-    const tabletWidth = 1023;
+    const tabletWidth = 992;
+    const largeWidth = 1250;
     const windowWidth = document.documentElement.clientWidth
 
     if (mobileWidth > windowWidth ) {
@@ -10,6 +11,10 @@ export function checkWidth() {
     }
 
     if (tabletWidth > windowWidth ) {
+        return 'tablet';
+    }
+
+    if (tabletWidth > largeWidth ) {
         return 'tablet';
     }
 
