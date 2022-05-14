@@ -955,6 +955,9 @@ figure img {
   @include response-to(large) {
     width: 185px;
     height: 185px;
+  }
+
+  @media(max-width: 1050px) {
     position: fixed;
     right: 16px;
     bottom: 16px;
