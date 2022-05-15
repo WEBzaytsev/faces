@@ -8,36 +8,23 @@
             <?php
             $video_settings = get_field('video') ?? null;
 
-            $video_poster = $video_settings['poster']['url'] ?? null;
-            $video_source_type = $video_settings['source'] ?? null;
-            $video_source = $video_source_type == 'frame' ? $video_settings['frame'] : $video_settings['link']; ?>
+            $video_poster = $video_settings['poster']['url'] ?? null; ?>
             <div class="mx-auto pos-r first-section__circle">
                 <div class="hidden border50 hidden pos-a z-2 first-section__circle_wrap">
-                    <div class="pos-r first-section__circle_image">
-                        <?php if ($video_source_type == 'frame') : ?>
-                            <?php echo $video_source ?? ''; ?>
-                        <?php endif; ?>
+                    <div class="pos-r first-section__circle_image" 
+                         style="background-image: url('<?php echo esc_url($video_poster, 'faces'); ?>');">
+                        <div class="pos-a absolute-center flex-center z--100 opacity-0 transition pointer first-section__circle_play"
+                             data-modal="video">
+                            <svg width="252"
+                                 height="252"
+                                 viewBox="0 0 252 252"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M184.5 113.01C194.5 118.783 194.5 133.217 184.5 138.99L94.5 190.952C84.5 196.725 72 189.509 72 177.962L72 74.0384C72 62.4914 84.5 55.2746 94.5 61.0481L184.5 113.01Z"
+                                      fill="#B000DB"/>
+                            </svg>
 
-                        <?php if ($video_source_type == 'link') : ?>
-                            <video controls
-                                   width="100%"
-                                   class="pos-r z-1"
-                                   poster="<?php esc_attr_e($video_poster, 'faces'); ?>">
-                                <source src="<?php esc_attr_e($video_source, 'faces'); ?>"
-                                        type="video/mp4">
-                            </video>
-                            <div class="pos-a absolute-center flex-center z-2 pointer first-section__circle_play">
-                                <svg width="252"
-                                     height="252"
-                                     viewBox="0 0 252 252"
-                                     fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M184.5 113.01C194.5 118.783 194.5 133.217 184.5 138.99L94.5 190.952C84.5 196.725 72 189.509 72 177.962L72 74.0384C72 62.4914 84.5 55.2746 94.5 61.0481L184.5 113.01Z"
-                                          fill="#B000DB"/>
-                                </svg>
-
-                            </div>
-                        <?php endif; ?>
+                        </div>
                     </div>
                 </div>
                 <?php get_template_part('/vector-images/round-text'); ?>

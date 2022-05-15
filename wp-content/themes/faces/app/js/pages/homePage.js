@@ -1,8 +1,9 @@
 'use strict';
 
 import {checkWidth, getCoords} from "../commonFunctions";
+import {modalWindow} from "../modalWindow";
 
-export const homePage = function ($) {
+export const homePage = function ($, settings) {
     const self = this;
     this.currentWidth = checkWidth();
     this.lastBlock = $('.last-block');
@@ -20,7 +21,7 @@ export const homePage = function ($) {
     this.toBloggersButton = $('.our-bloggers__scroll-btn');
     this.toPartnersButton = $('.partners__title');
     this.videoPlayBtn = $('.first-section__circle_play');
-    this.video = $('.first-section__circle_image video') || $('.first-section__circle_image iframe');
+    this.videoModal = new modalWindow($, settings, this.videoPlayBtn);
     this.sLetter = $('.home-page .first-section .page-title_s span.s');
 
     this.setCoords = () => {
@@ -140,25 +141,12 @@ export const homePage = function ($) {
         }
     }
 
-    this.videoPlayTrigger = () => {
-        if (!self.video.length || !self.videoPlayBtn.length) {
+    this.videoPlayModal = () => {
+        if (!self.videoPlayBtn.length) {
             return;
         }
 
-        self.videoPlayBtn.on('click', () => {
-            self.video.get(0).play();
-            self.videoPlayBtn.addClass('opacity-0 z--100');
-        });
-
-        self.video.on('pause', () => {
-            if (self.videoPlayBtn.hasClass('opacity-0')) {
-                self.videoPlayBtn.removeClass('opacity-0');
-            }
-
-            if (self.videoPlayBtn.hasClass('z--100')) {
-                self.videoPlayBtn.removeClass('z--100');
-            }
-        })
+        self.videoModal.init();
     }
 
     this.init = () => {
@@ -166,7 +154,7 @@ export const homePage = function ($) {
         this.casesSlider();
         this.bloggersSlider();
         this.lastBlockAnimation();
-        this.videoPlayTrigger();
+        this.videoPlayModal();
         this.sLetterAnimation();
 
         const delay = this.currentWidth === 'mobile' ? 1500 : 500;

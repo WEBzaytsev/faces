@@ -13,7 +13,6 @@ export const modalWindow = function ($, settings, elem) {
     this.form = null;
 
     this.showModal = () => {
-
         if (!self.currentModal) {
             self.getModal()
                 .then(() => {
@@ -27,6 +26,7 @@ export const modalWindow = function ($, settings, elem) {
         }
 
         self.modalWrap.addClass('active');
+        $('body').addClass('no-scrolling');
     }
 
     this.closeModal = (e) => {
@@ -80,6 +80,11 @@ export const modalWindow = function ($, settings, elem) {
     this.init = () => {
         if (!this.element) {
             return;
+        }
+
+        if (this.modalType === 'video') {
+            this.modalWrap.on('click', this.closeModal);
+            this.currentModal = $('.modal-window.video-modal');
         }
 
         this.element.on('click', this.showModal);

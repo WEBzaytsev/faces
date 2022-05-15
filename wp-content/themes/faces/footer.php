@@ -87,6 +87,30 @@
 <div class="pos-f flex justify-center transition top-0 bottom-0 left-0 right-0 modal work-offer"
      data-close="true"></div>
 
+<?php if (is_front_page()) :
+    $video_settings = get_field('video') ?? null;
+
+    $video_poster = $video_settings['poster']['url'] ?? null;
+    $video_source_type = $video_settings['source'] ?? null;
+    $video_source = $video_source_type == 'frame' ? $video_settings['frame'] : $video_settings['link']; ?>
+    <div class="pos-f flex justify-center transition top-0 bottom-0 left-0 right-0 modal video"
+         data-close="true">
+        <div class="modal-window video-modal">
+            <?php if ($video_source_type == 'frame') : ?>
+                <?php echo $video_source ?? ''; ?>
+            <?php elseif ($video_source_type == 'link') : ?>
+                <video controls
+                       width="100%"
+                       class="pos-r z-1"
+                       poster="<?php esc_attr_e($video_poster, 'faces'); ?>">
+                    <source src="<?php esc_attr_e($video_source, 'faces'); ?>"
+                            type="video/mp4">
+                </video>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div class="pos-f flex justify-center transition top-0 bottom-0 left-0 right-0 modal thank-you"
      data-close="true">
     <div class="pos-r modal-window bg-white color-black">

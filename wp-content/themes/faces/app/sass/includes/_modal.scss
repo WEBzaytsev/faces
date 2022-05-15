@@ -146,6 +146,16 @@
       }
     }
 
+    &.video-modal {
+      height: auto;
+
+      video,
+      iframe {
+        max-height: 100%;
+        width: auto;
+      }
+    }
+
     &__title {
 
       &-form {
