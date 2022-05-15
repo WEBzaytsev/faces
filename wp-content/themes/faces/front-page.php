@@ -11,7 +11,7 @@
             $video_poster = $video_settings['poster']['url'] ?? null; ?>
             <div class="mx-auto pos-r first-section__circle">
                 <div class="hidden border50 hidden pos-a z-2 first-section__circle_wrap">
-                    <div class="pos-r first-section__circle_image" 
+                    <div class="pos-r first-section__circle_image"
                          style="background-image: url('<?php echo esc_url($video_poster, 'faces'); ?>');">
                         <div class="pos-a absolute-center flex-center z--100 opacity-0 transition pointer first-section__circle_play"
                              data-modal="video">
@@ -56,7 +56,10 @@
 
     if (isset($cases)) : ?>
         <div class="container cases">
-            <?php foreach ($cases as $case) :
+            <?php
+            $cases_count = count($cases);
+            $i = 1;
+            foreach ($cases as $case) :
 
                 $post_object = $case['case'];
                 $case_id = $post_object->ID;
@@ -64,7 +67,7 @@
                 $case_description = get_field('description', $case_id);
                 $img_src = get_field('img', $case_id)['url']; ?>
                 <div class="cases__item">
-                    <div class="flex flex-col h-100 cases__item_inner">
+                    <div class="flex flex-col pos-r h-100 cases__item_inner">
                         <?php if (isset($img_src)) : ?>
                             <figure class="hidden border50 cases__item_img">
                                 <img src="<?php esc_attr_e($img_src, 'faces'); ?>"
@@ -83,13 +86,17 @@
                                 <?php esc_html_e($case_description, 'faces'); ?>
                             </p>
                         <?php endif; ?>
+
+                        <?php if ($cases_count == $i) : ?>
+                            <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces');  ?>"
+                               class="font-tenor ws-nowrap transition block pos-a line-height-1 text-45 large-text-25 cases__item_link">
+                                <?php esc_html_e('Смотреть все кейсы', 'faces');  ?>
+                            </a>
+                        <?php endif ?>
                     </div>
                 </div>
-            <?php endforeach; ?>
-            <div class="cases__item cases__item-last">
-                <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
-                   class="font-tenor ws-nowrap transition block pos-r line-height-1 text-45 large-text-25 cases__item_link"><?php esc_html_e('Смотреть все кейсы', 'faces'); ?></a>
-            </div>
+                <?php $i++;
+            endforeach; ?>
         </div>
     <?php endif; ?>
 
