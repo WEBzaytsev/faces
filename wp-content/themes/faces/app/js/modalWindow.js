@@ -11,6 +11,7 @@ export const modalWindow = function ($, settings, elem) {
     this.modalWrap = $(`.modal.${this.modalType}`);
     this.currentModal = null;
     this.form = null;
+    this.video = document.querySelector('video') || null;
 
     this.showModal = () => {
         if (!self.currentModal) {
@@ -27,6 +28,24 @@ export const modalWindow = function ($, settings, elem) {
 
         self.modalWrap.addClass('active');
         $('body').addClass('no-scrolling');
+
+        if (self.video) {
+            self.playVideo();
+        }
+    }
+
+    this.playVideo = () => {
+        if (self.video.paused) {
+            self.video.play();
+        }
+    }
+
+    this.pauseVideo = () => {
+        if (self.video.paused) {
+            return;
+        }
+
+        self.video.pause();
     }
 
     this.closeModal = (e) => {
@@ -40,6 +59,9 @@ export const modalWindow = function ($, settings, elem) {
         }
         if (self.modalType === 'case') {
             self.removeModalContent();
+        }
+        if (self.video) {
+            self.pauseVideo();
         }
         if ($('body').hasClass('no-scrolling')) {
             $('body').removeClass('no-scrolling');
