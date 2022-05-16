@@ -11,6 +11,7 @@ import {homePage} from "./pages/homePage";
 import {bloggersPage} from "./pages/bloggersPage";
 import {aboutPage} from "./pages/aboutPage";
 import {modalWindow} from "./modalWindow";
+import {contactsPage} from "./pages/contactsPage";
 
 $(document).ready(function () {
 
@@ -30,6 +31,9 @@ $(document).ready(function () {
             break;
         case 'about':
             pageClass = new aboutPage($, settings);
+            break;
+        case 'contacts':
+            pageClass = new contactsPage($, settings);
             break;
     }
 

@@ -38,12 +38,14 @@ get_header(); ?>
         </div>
 
         <div class="contacts-page__map full-width pos-r">
-            <iframe src="<?php esc_attr_e(get_field('map', 'option'), 'faces'); ?>"
+            <div class="map" id="map"></div>
+            <!--<iframe src="<?php /*esc_attr_e(get_field('map', 'option'), 'faces'); */?>"
                     style="border:0;"
                     class="block full-width"
+                    id="map"
                     allowfullscreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>-->
             <?php get_template_part('/template-parts/work-offer-btn', null, array(
                 'classes' => '',
                 'text' => 'Хочу <br>в вашу <br>команду',
