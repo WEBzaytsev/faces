@@ -125,6 +125,6 @@
 </div>
 <?php wp_footer(); ?>
 </div>
-
+<div class="pos-a top-0 bottom-0 left-0 full-width z-1 bg"></div>
 </body>
 </html>

@@ -27,7 +27,7 @@
 <?php wp_body_open(); ?>
 
 <?php if (!is_404()) : ?>
-<div class="wrapper pos-r">
+<div class="wrapper pos-r z-2">
     <div class="full-width page pos-r z-1">
         <header class="pos-f full-width z-modal header-grey-bg border-bottom-white-1 header">
             <div class="container flex align-center md-justify-between full-width">

@@ -18,7 +18,11 @@ html {
 body {
   padding-top: 121px;
   background-color: #000;
-  background-image: url('../img/bg.png');
+
+  & > .bg {
+    background-image: url('../img/noise.gif');
+    opacity: .04;
+  }
 
   @include response-to(medium) {
     padding-top: 91px;
