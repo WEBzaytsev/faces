@@ -270,6 +270,10 @@
 
       @include response-to(medium) {
         width: calc(100vw - 36px);
+
+        &:last-of-type {
+          width: 80vw;
+        }
       }
 
       &_inner {

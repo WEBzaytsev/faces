@@ -97,10 +97,6 @@ export const homePage = function ($, settings) {
             ]
         });
 
-        self.cases.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-
-        });
-
         $(window).on('scroll', function () {
             if (window.pageYOffset > self.casesTop - 500) {
                 if (!scrolled) {
