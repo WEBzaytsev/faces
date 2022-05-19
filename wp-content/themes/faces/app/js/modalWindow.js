@@ -11,7 +11,7 @@ export const modalWindow = function ($, settings, elem) {
     this.modalWrap = $(`.modal.${this.modalType}`);
     this.currentModal = null;
     this.form = null;
-    this.video = document.querySelector('video') || null;
+    this.video = this.modalWrap.find('video').get(0) || null;
 
     this.showModal = () => {
         if (!self.currentModal) {
