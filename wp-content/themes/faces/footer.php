@@ -15,7 +15,7 @@
     <div class="container">
         <div class="full-width flex flex-wrap align-start justify-between footer__top">
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">Карта сайта</p>
+                <p class="color-primary line-height-25 text-18 footer__item_caption"><?php esc_html_e('Карта сайта', 'faces'); ?></p>
                 <?php if (has_nav_menu('footer-menu')) :
                     wp_nav_menu(
                         array(
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="flex align-center justify-between full-width footer__bottom">
-            <a href="#" class="line-height-25 text-18">Политика конфиденциальности</a>
+            <a href="#" class="line-height-25 text-18"><?php esc_html_e('Политика конфиденциальности', 'faces'); ?></a>
             <?php $logo = get_field('logo', 'option'); ?>
             <?php if ($logo) : ?>
                 <figure class="flex-center">
