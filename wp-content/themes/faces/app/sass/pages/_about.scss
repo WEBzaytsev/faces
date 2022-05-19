@@ -258,6 +258,7 @@
     .round-animate-btn {
 
       @media(min-width: 992px) {
+        right: -60px;
 
         @include response-to(huge) {
           right: 0;
