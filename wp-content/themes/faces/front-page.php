@@ -107,7 +107,7 @@
             <?php foreach ($theses as $theses_item) : ?>
                 <div class="pos-r theses__item">
                     <p class="font-tenor text-50 large-text-40 sm-text-20 line-height-1 theses__item_caption"><?php esc_html_e($theses_item['caption'], 'faces'); ?></p>
-                    <p class="text-22 line-height-30 large-text-18 sm-text-12 large-line-height-25 sm-line-height-16 theses__item_text"><?php esc_html_e($theses_item['text'], 'faces'); ?></p>
+                    <p class="text-22 line-height-30 large-text-18 sm-text-12 large-line-height-25 sm-line-height-16 theses__item_text"><?php echo __($theses_item['text'], 'faces'); ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
