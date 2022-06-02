@@ -27,7 +27,7 @@ if ($category != '') {
 
         $post_id = $post->ID;
         $category_id = null;
-        if ($current_category) {
+        if (isset($current_category)) {
             $category_id = $current_category[0]->term_id;
         } else {
             $current_cat = get_the_terms($post, 'cases_cat');

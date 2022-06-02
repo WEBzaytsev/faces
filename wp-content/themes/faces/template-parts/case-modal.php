@@ -25,7 +25,7 @@ $img_url = get_field('modal-img', $case_id)['url']
             <div class="full-width stats__item">
                 <div class="flex-center border50 bg-white mx-auto stats__item_num">
                     <span class="color-primary text-62 line-height-73 font-tenor">
-                        <?php esc_html_e(sprintf('%g%%', $stat['value']), 'faces'); ?>
+                        <?php esc_html_e($stat['value'], 'faces'); ?>
                     </span>
                 </div>
                 <p class="text-center text-20 line-height-27 md-text-18 md-line-height-25 stats__item_desc">
