@@ -11,7 +11,7 @@ $img_url = get_field('modal-img', $case_id)['url']
         <?php esc_html_e($case->post_title, 'faces'); ?>
     </p>
     <p class="text-center text-20 sm-text-14 sm-line-height144 modal-window__text">
-        <?php esc_html_e(get_field('description', $case_id), 'faces'); ?>
+        <?php echo __(get_field('description', $case_id), 'faces'); ?>
     </p>
 
     <?php if (isset($img_url)) : ?>
@@ -29,7 +29,7 @@ $img_url = get_field('modal-img', $case_id)['url']
                     </span>
                 </div>
                 <p class="text-center text-20 line-height-27 md-text-18 md-line-height-25 stats__item_desc">
-                    <?php esc_html_e($stat['desc'], 'faces'); ?>
+                    <?php echo __($stat['desc'], 'faces'); ?>
                 </p>
             </div>
             <?php endforeach; ?>

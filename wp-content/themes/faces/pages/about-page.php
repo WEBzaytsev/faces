@@ -23,7 +23,7 @@ get_header(); ?>
             <?php endif; ?>
             <div class="flex md-block align-start justify-between about-page__content_center">
                 <?php if ($quote != '') : ?>
-                    <p class="pos-r text-36 line-height-49 large-text-24 large-line-height-33 sm-text-20 sm-line-height-27 about-page__content_quote"><?php echo __($quote, 'faces'); ?></p>
+                    <p class="pos-r text-36 line-height-49 large-text-24 large-line-height-33 mx-auto sm-text-20 sm-line-height-27 about-page__content_quote"><?php echo __($quote, 'faces'); ?></p>
                 <?php endif;
                 if ($side_text != '') : ?>
                     <p class="pos-r text-22 line-height-30 large-text-18 large-line-height144 sm-text-14 about-page__content_side-text"><?php echo __($side_text, 'faces'); ?></p>

@@ -50,7 +50,7 @@ if ($category != '') {
                      alt="img">
             </figure>
             <p class="text-center text-20 large-text-18 sm-text-12 pos-r z-2 line-height-21 sm-line-height-14 case__desc">
-                <?php esc_html_e(get_field('description')); ?>
+                <?php echo __(get_field('description')); ?>
             </p>
         </div>
     <?php endwhile; ?>
