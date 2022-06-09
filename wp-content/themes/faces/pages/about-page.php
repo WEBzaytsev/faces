@@ -41,7 +41,7 @@ get_header(); ?>
                 foreach ($photos as $img) :
                     $img_url = $img['img']['url'];
                     if ($img_url != '') : ?>
-                        <figure class="pos-<?php echo $i == 1 ? 'r z-2' : 'a z-1 absolute-center-y'; ?> about-page__photos_item">
+                        <figure class="pos-<?php echo $i == 1 ? 'r z-2' : 'a z-1'; ?> about-page__photos_item">
                             <div class="soaring pos-r hidden border-70 sm-border-30 about-page__photos_img">
                                 <img src="<?php echo esc_url($img_url, 'faces'); ?>"
                                      alt="img">

@@ -134,7 +134,7 @@
 
         @include response-to(small) {
           width: 100%;
-          max-width: 400px;
+          max-width: 280px;
           transform: rotate(7.2deg);
         }
 
@@ -142,6 +142,8 @@
           box-shadow: 0 5px 103px #000000;
           animation-name: about-soaring-2;
           animation-duration: 60s;
+          max-height: 820px;
+          max-width: 554px;
         }
       }
 
@@ -171,7 +173,8 @@
       }
 
       &:first-of-type {
-        left: 0;
+        left: 140px;
+        top: 250px;
 
         @include response-to(large) {
           margin-left: -102px;
@@ -190,11 +193,14 @@
         .about-page__photos_img {
           animation-name: about-soaring-1;
           animation-duration: 60s;
+          max-height: 464px;
+          max-width: 373px;
         }
       }
 
       &:last-of-type {
-        right: 0;
+        right: 150px;
+        top: 64px;
 
         @include response-to(large) {
           margin-right: -102px;
@@ -211,12 +217,19 @@
         .about-page__photos_img {
           animation-name: about-soaring-3;
           animation-duration: 60s;
+          max-height: 563px;
+          max-width: 432px;
         }
       }
     }
 
     &_img {
-      height: 100%;
+
+      img {
+        height: auto;
+        width: auto;
+        max-height: 100%;
+      }
     }
   }
 
