@@ -10,7 +10,7 @@ $img_url = get_field('modal-img', $case_id)['url']
     <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29 modal-window__title">
         <?php esc_html_e($case->post_title, 'faces'); ?>
     </p>
-    <p class="text-center text-20 sm-text-14 sm-line-height144 modal-window__text">
+    <p class="sm-text-center text-20 sm-text-14 sm-line-height144 modal-window__text">
         <?php echo __(get_field('description', $case_id), 'faces'); ?>
     </p>
 
@@ -24,7 +24,7 @@ $img_url = get_field('modal-img', $case_id)['url']
             <?php foreach ($stats as $stat) : ?>
             <div class="full-width stats__item">
                 <div class="flex-center border50 bg-white mx-auto stats__item_num">
-                    <span class="color-primary text-62 line-height-73 font-tenor">
+                    <span class="color-primary text-center text-62 line-height-73 font-tenor">
                         <?php esc_html_e($stat['value'], 'faces'); ?>
                     </span>
                 </div>
