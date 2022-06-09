@@ -49,7 +49,7 @@ if ($category != '') {
                      loading="lazy"
                      alt="img">
             </figure>
-            <p class="text-center text-20 large-text-18 sm-text-12 pos-r z-2 line-height-21 sm-line-height-14 case__desc">
+            <p class="text-center text-18 sm-text-12 pos-r z-2 line-height-21 sm-line-height-14 case__desc">
                 <?php echo __(get_field('description')); ?>
             </p>
         </div>

@@ -30,7 +30,7 @@
                 <?php get_template_part('/vector-images/round-text'); ?>
             </div>
 
-            <p class="pos-a right-0 text-22 line-height-30 large-text-18 large-line-height-25 sm-none first-section__left-top-text">
+            <p class="pos-a right-0 text-18 line-height-30 large-text-18 large-line-height-25 sm-none first-section__left-top-text">
                 <?php the_field('text-top-right'); ?>
             </p>
 
@@ -48,7 +48,7 @@
             </a>
         </div>
 
-        <p class="text-22 line-height-30 large-text-18 large-line-height-25 sm-unset-max-width sm-text-14 sm-line-height-19 first-section__bottom-text"><?php the_field('text-bottom-left'); ?></p>
+        <p class="text-18 line-height-30 large-line-height-25 sm-unset-max-width sm-text-14 sm-line-height-19 first-section__bottom-text"><?php the_field('text-bottom-left'); ?></p>
 
     </div>
 
@@ -77,12 +77,12 @@
                             </figure>
                         <?php endif;
                         if (isset($case_title)) : ?>
-                            <p class="text-50 line-height-1 large-text-30 large-text-25 font-tenor cases__item_title">
+                            <p class="text-40 line-height-1 large-text-30 large-text-25 font-tenor cases__item_title">
                                 <?php esc_html_e($case_title, 'faces'); ?>
                             </p>
                         <?php endif;
                         if (isset($case_description)) :?>
-                            <p class="text-22 line-height-30 large-text-12 large-line-height-16 cases__item_desc">
+                            <p class="text-18 line-height-30 large-text-12 large-line-height-16 cases__item_desc">
                                 <?php esc_html_e($case_description, 'faces'); ?>
                             </p>
                         <?php endif; ?>

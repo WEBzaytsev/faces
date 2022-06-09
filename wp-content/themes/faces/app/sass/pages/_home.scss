@@ -239,7 +239,7 @@
   }
 
   .cases {
-    margin-bottom: 359px;
+    margin-bottom: 312px;
     cursor: grab;
 
     @include response-to(large) {
@@ -308,7 +308,7 @@
       }
 
       &_title {
-        margin-bottom: 43px;
+        margin-bottom: 70px;
 
         @include response-to(large) {
           margin-bottom: 30px;
@@ -443,7 +443,7 @@
       }
 
       &:not(:last-of-type) {
-        margin-bottom: 118px;
+        margin-bottom: 124px;
 
         @include response-to(medium) {
           margin-bottom: 70px;
@@ -491,7 +491,7 @@
       }
 
       &_caption {
-        margin-bottom: 53px;
+        margin-bottom: 100px;
 
         @include response-to(large) {
           margin-bottom: 40px;
