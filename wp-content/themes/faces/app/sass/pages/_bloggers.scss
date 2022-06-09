@@ -180,6 +180,11 @@
         height: 100%;
         margin-left: auto;
         width: fit-content;
+        min-height: 350px;
+
+        @include response-to(small) {
+          min-height: 250px;
+        }
 
         img {
           width: auto;
@@ -187,8 +192,9 @@
       }
 
       &_nickname {
+        z-index: 1;
         transform: rotate(-90deg);
-        top: 41%;
+        bottom: 210px;
         left: -42%;
         letter-spacing: 0.07em;
         color: #FFF4F4;
@@ -200,7 +206,7 @@
         @include response-to(large) {
           font-size: 24px;
           line-height: 28px;
-          top: 46%;
+          bottom: 160px;
           left: -44%;
         }
 

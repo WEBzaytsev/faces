@@ -32,10 +32,12 @@ $posts = query_posts($options); ?>
                       data-modal="work-offer"><?php esc_html_e('хочу этого блогера', 'faces'); ?></span>
                 <div class="<?php esc_attr_e(sprintf('pos-a full-width bottom-0 z-0 blogger__inner_bg %s', $bg_color), 'faces'); ?>"></div>
                 <figure class="pos-r z-1 blogger__inner_img">
-                    <img src="<?php esc_attr_e($img_url, 'faces'); ?>"
-                         loading="lazy"
-                         class="block"
-                         alt="img">
+                    <?php if ($img_url) : ?>
+                        <img src="<?php esc_attr_e($img_url, 'faces'); ?>"
+                             loading="lazy"
+                             class="block"
+                             alt="img">
+                    <?php endif; ?>
                 </figure>
                 <?php if (isset($nickname)) : ?>
                     <span class="pos-a full-width blogger__inner_nickname">
