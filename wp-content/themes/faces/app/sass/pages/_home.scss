@@ -3,16 +3,16 @@
   background-size: 1725px;
   background-image: url('../../img/home-first-bg-img.svg'),
   url('../../img/home-four-bg-img.svg');
-  background-position: left 350px, right 4050px;
+  background-position: left 350px, right 3850px;
 
   @include response-to(large) {
     background-size: 1159px;
-    background-position: left 300px, right 4050px;
+    background-position: left 300px, right 3850px;
   }
 
   @include response-to(medium) {
     background-size: 901px;
-    background-position: -333px 590px, right 4050px;
+    background-position: -333px 590px, right 3850px;
   }
 
   .first-section {
@@ -345,19 +345,19 @@
       }
 
       &_link {
-        transform: rotate(270deg) translate(-420px, 1100%);
+        transform: rotate(270deg) translate(-300px, 1100%);
         width: fit-content;
 
         @include response-to(huge) {
-          transform: rotate(270deg) translate(-420px, 800%);
+          transform: rotate(270deg) translate(-300px, 800%);
         }
 
         @include response-to(large) {
-          transform: rotate(270deg) translate(-270px, 1100%);
+          transform: rotate(270deg) translate(-200px, 1100%);
         }
 
         @include response-to(medium) {
-          transform: rotate(270deg) translate(-270px, 650%);
+          transform: rotate(270deg) translate(-200px, 650%);
         }
 
         &:before {
@@ -394,7 +394,7 @@
   }
 
   .theses {
-    margin-bottom: 365px;
+    margin-bottom: 247px;
 
     @include response-to(large) {
       margin-bottom: 85px;
@@ -443,7 +443,7 @@
       }
 
       &:not(:last-of-type) {
-        margin-bottom: 124px;
+        margin-bottom: 160px;
 
         @include response-to(medium) {
           margin-bottom: 70px;
@@ -491,7 +491,7 @@
       }
 
       &_caption {
-        margin-bottom: 100px;
+        margin-bottom: 70px;
 
         @include response-to(large) {
           margin-bottom: 40px;
@@ -887,7 +887,7 @@
     }
 
     &__caption {
-      margin-bottom: 75px;
+      margin-bottom: 70px;
 
       @include response-to(small) {
         margin-bottom: 40px;

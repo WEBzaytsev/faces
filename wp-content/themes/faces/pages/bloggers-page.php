@@ -16,7 +16,7 @@ get_header(); ?>
         <div class="bloggers__wrap">
             <?php get_template_part('/template-parts/bloggers-filter', null, array('slug' => 'bloggers')); ?>
             <div class="full-width posts-content pos-r">
-                <div class="flex flex-wrap justify-between posts-content__inner">
+                <div class="posts-content__inner">
                     <?php get_template_part('/template-parts/bloggers-content', null, array('cat' => $cat)); ?>
                 </div>
             </div>

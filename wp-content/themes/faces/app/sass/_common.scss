@@ -303,7 +303,7 @@ figure img {
 }
 
 .text-16 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .letter-spacing-002 {
@@ -374,6 +374,10 @@ figure img {
   line-height: 21px;
 }
 
+.line-height-22 {
+  line-height: 22px;
+}
+
 .line-height-27 {
   line-height: 27px;
 }
@@ -412,6 +416,14 @@ figure img {
 
 .line-height-1 {
   line-height: 100%;
+}
+
+.line-height-120 {
+  line-height: 120%;
+}
+
+.line-height140 {
+  line-height: 140%;
 }
 
 .line-height144 {
@@ -1165,6 +1177,20 @@ figure img {
 
   @include response-to(small) {
     animation-name: unset;
+  }
+}
+
+.posts-content__inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 60px;
+
+  @include response-to(medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include response-to(small) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 

@@ -89,7 +89,7 @@
 
                         <?php if ($cases_count == $i) : ?>
                             <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces');  ?>"
-                               class="font-tenor ws-nowrap transition block pos-a line-height-1 text-45 large-text-25 cases__item_link">
+                               class="font-tenor ws-nowrap transition block pos-a line-height-1 text-40 large-text-25 cases__item_link">
                                 <?php esc_html_e('Смотреть все кейсы', 'faces');  ?>
                             </a>
                         <?php endif ?>
@@ -106,15 +106,15 @@
         <div class="container flex flex-col theses">
             <?php foreach ($theses as $theses_item) : ?>
                 <div class="pos-r theses__item">
-                    <p class="font-tenor text-50 large-text-40 sm-text-20 line-height-1 theses__item_caption"><?php esc_html_e($theses_item['caption'], 'faces'); ?></p>
-                    <p class="text-22 line-height-30 large-text-18 sm-text-12 large-line-height-25 sm-line-height-16 theses__item_text"><?php echo __($theses_item['text'], 'faces'); ?></p>
+                    <p class="font-tenor text-40 sm-text-20 line-height-1 theses__item_caption"><?php esc_html_e($theses_item['caption'], 'faces'); ?></p>
+                    <p class="text-18 line-height-25 sm-text-12 sm-line-height-16 theses__item_text"><?php echo __($theses_item['text'], 'faces'); ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
 
     <div class="pos-r full-width container our-bloggers">
-        <p class="font-tenor pos-a text-center uppercase text-60 large-text-48 line-height-1 absolute-center-x width-fit-content mx-auto sm-none our-bloggers__caption">
+        <p class="font-tenor pos-a text-center uppercase text-60 large-text-48 line-height-140 absolute-center-x width-fit-content mx-auto sm-none our-bloggers__caption">
             <?php esc_html_e('наши', 'faces'); ?> <br><?php esc_html_e('блогеры', 'faces'); ?></p>
         <a href="#"
            class="pos-r sm-text-35 line-height115 uppercase text-center none transition border50 sm-mx-auto sm-flex align-center justify-center our-bloggers__scroll-btn">
@@ -156,7 +156,7 @@
             </div>
         <?php endif; ?>
         <a href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
-           class="pos-a text-center line-height-1 font-tenor text-50 large-text-50 width-fit-content transition bottom-0 sm-none our-bloggers__all"><?php esc_html_e('Все блогеры', 'faces'); ?></a>
+           class="pos-a text-center line-height-1 font-tenor text-40 width-fit-content transition bottom-0 sm-none our-bloggers__all"><?php esc_html_e('Все блогеры', 'faces'); ?></a>
     </div>
 
     <?php
@@ -199,12 +199,12 @@
             <span class="absolute-center block border50 z-0 last-block__circle"></span>
             <div class="last-block__wrap">
                 <?php if ($bottom_block_caption) : ?>
-                    <p class="pos-r z-1 text-center uppercase text-60 line-height-1 sm-text-30 last-block__caption">
+                    <p class="pos-r z-1 text-center uppercase text-60 line-height-120 sm-text-30 last-block__caption">
                         <?php echo __($bottom_block_caption, 'faces'); ?>
                     </p>
                 <?php endif; ?>
                 <?php if ($bottom_block_text) : ?>
-                    <p class="pos-r z-1 text-center line-height-30 text-22 sm-text-12 sm-line-height-16 last-block__text">
+                    <p class="pos-r z-1 text-center line-height-25 text-18 sm-text-12 sm-line-height-16 last-block__text">
                         <?php echo __($bottom_block_text, 'faces'); ?>
                     </p>
                 <?php endif; ?>

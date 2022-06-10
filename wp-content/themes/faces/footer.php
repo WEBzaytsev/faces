@@ -15,7 +15,7 @@
     <div class="container">
         <div class="full-width flex flex-wrap align-start justify-between footer__top">
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption"><?php esc_html_e('Карта сайта', 'faces'); ?></p>
+                <p class="color-primary line-height-22 text-16 footer__item_caption"><?php esc_html_e('Карта сайта', 'faces'); ?></p>
                 <?php if (has_nav_menu('footer-menu')) :
                     wp_nav_menu(
                         array(
@@ -29,7 +29,7 @@
                 <?php endif; ?>
             </div>
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">
+                <p class="color-primary line-height-22 text-16 footer__item_caption">
                     <?php esc_html_e('Как с нами связаться', 'faces'); ?>
                 </p>
                 <a href="tel:<?php esc_attr_e(sprintf('+%s', get_field('phone', 'option')), 'faces'); ?>"
@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">
+                <p class="color-primary line-height-22 text-16 footer__item_caption">
                     <?php esc_html_e('Где нас найти', 'faces'); ?>
                 </p>
                 <p class="footer__item_link">
@@ -50,7 +50,7 @@
                 </p>
             </div>
             <div class="footer__item">
-                <p class="color-primary line-height-25 text-18 footer__item_caption">
+                <p class="color-primary line-height-22 text-16 footer__item_caption">
                     <?php esc_html_e('Мы в соцсетях', 'faces'); ?>
                 </p>
                 <?php
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="flex align-center justify-between full-width footer__bottom">
-            <a href="#" class="line-height-25 text-18"><?php esc_html_e('Политика конфиденциальности', 'faces'); ?></a>
+            <a href="#" class="line-height-19 text-14"><?php esc_html_e('Политика конфиденциальности', 'faces'); ?></a>
             <?php $logo = get_field('logo', 'option'); ?>
             <?php if ($logo) : ?>
                 <figure class="flex-center">
@@ -75,7 +75,7 @@
                          alt="img">
                 </figure>
             <?php endif; ?>
-            <p class="line-height-25 text-18">
+            <p class="line-height-19 text-14">
                 <?php esc_html_e('@FACES2022. Все права защищены', 'faces'); ?>
             </p>
         </div>
