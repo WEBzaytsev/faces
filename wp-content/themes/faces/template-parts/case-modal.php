@@ -24,7 +24,7 @@ $img_url = get_field('modal-img', $case_id)['url']
             <?php foreach ($stats as $stat) : ?>
             <div class="full-width stats__item">
                 <div class="flex-center border50 bg-white mx-auto stats__item_num">
-                    <span class="color-primary text-center text-62 line-height-73 font-tenor">
+                    <span class="color-primary text-center text-66 line-height-52 font-tenor">
                         <?php esc_html_e($stat['value'], 'faces'); ?>
                     </span>
                 </div>

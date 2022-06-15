@@ -47,7 +47,7 @@ $posts = query_posts($options); ?>
             </div>
             <div class="pos-r z-1 transition blogger__inner_bottom">
                 <?php if (isset($blogger_name)) : ?>
-                    <p class="text-center color-primary blogger__inner_name text-40 line-height-48 large-text-24 sm-text-20 large-line-height-28 sm-line-height-23">
+                    <p class="text-center color-primary blogger__inner_name text-36 line-height-42 large-text-24 sm-text-20 large-line-height-28 sm-line-height-23">
                         <?php esc_html_e($blogger_name, 'faces'); ?>
                     </p>
                 <?php endif;
@@ -71,9 +71,9 @@ $posts = query_posts($options); ?>
 endwhile; ?>
 
     <?php if (count($posts) == 6) : ?>
-    <div class="full-width">
+    <div class="grid-col-full-w">
         <a href="#"
-           class="font-tenor width-fit-content mx-auto ws-nowrap transition block pos-r line-height-1 text-45 md-text-25 more-btn"><?php esc_html_e('Больше блогеров', 'faves'); ?></a>
+           class="block font-tenor width-fit-content mx-auto ws-nowrap transition block pos-r line-height-1 text-45 md-text-25 more-btn"><?php esc_html_e('Больше блогеров', 'faves'); ?></a>
     </div>
 <?php endif; ?>
 <?php else : ?>

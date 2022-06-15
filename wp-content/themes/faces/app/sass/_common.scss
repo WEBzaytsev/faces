@@ -69,6 +69,10 @@ div.page {
   }
 }
 
+.grid-col-full-w {
+  grid-column: 1 / -1;
+}
+
 .p-0 {
   padding: 0;
 }
@@ -362,6 +366,10 @@ figure img {
   font-size: 62px;
 }
 
+.text-66 {
+  font-size: 66px;
+}
+
 .text-70 {
   font-size: 70px;
 }
@@ -390,12 +398,20 @@ figure img {
   line-height: 30px;
 }
 
+.line-height-42 {
+  line-height: 42px;
+}
+
 .line-height-48 {
   line-height: 48px;
 }
 
 .line-height-49 {
   line-height: 49px;
+}
+
+.line-height-52 {
+  line-height: 52px;
 }
 
 .line-height-70 {
@@ -1146,6 +1162,7 @@ figure img {
     .purple-button_inner {
       background: transparent;
       color: $primary-color;
+      text-shadow: 0.654167px 0.654167px 0.654167px rgba(0, 0, 0, 0);
     }
   }
 }

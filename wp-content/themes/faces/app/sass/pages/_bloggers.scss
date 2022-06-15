@@ -194,13 +194,13 @@
       &_nickname {
         z-index: 1;
         transform: rotate(-90deg);
-        bottom: 210px;
+        bottom: 195px;
         left: -42%;
         letter-spacing: 0.07em;
         color: #FFF4F4;
         font-weight: 700;
-        font-size: 39.0046px;
-        line-height: 46px;
+        font-size: 36px;
+        line-height: 42px;
         font-family: 'Roboto', sans-serif;
 
         @include response-to(large) {

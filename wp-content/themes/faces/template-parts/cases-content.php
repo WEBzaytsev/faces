@@ -61,7 +61,7 @@ $category_id = null;
     <?php endwhile;
     wp_reset_postdata(); ?>
     <?php if (count($posts) == 6) : ?>
-        <div class="full-width">
+        <div class="grid-col-full-w">
             <a href="#"
                class="font-tenor width-fit-content mx-auto ws-nowrap transition block pos-r line-height-1 text-45 md-text-25 more-btn"><?php esc_html_e('Больше кейсов', 'faves'); ?></a>
         </div>

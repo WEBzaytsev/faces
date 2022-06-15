@@ -407,7 +407,7 @@
     &__item {
       max-width: calc(50% + 25px);
       width: 100%;
-      padding-right: 70px;
+      padding-right: 120px;
 
       @include response-to(large) {
         max-width: 66%;
@@ -450,10 +450,13 @@
         }
       }
 
-      &:nth-of-type(odd) {
-        padding-left: 70px;
-        padding-right: 0;
+      &:nth-of-type(even) {
         text-align: right;
+      }
+
+      &:nth-of-type(odd) {
+        padding-left: 120px;
+        padding-right: 0;
         margin-left: auto;
 
         @include response-to(large) {
@@ -474,20 +477,6 @@
           left: 0;
           right: unset;
         }
-
-        .theses__item_text {
-          padding-left: 50px;
-          padding-right: unset;
-
-          @include response-to(large) {
-            padding-left: 32px;
-            padding-right: unset;
-          }
-
-          @include response-to(small) {
-            padding-left: 0;
-          }
-        }
       }
 
       &_caption {
@@ -503,17 +492,7 @@
         }
       }
 
-      &_text {
-        padding-right: 50px;
 
-        @include response-to(large) {
-          padding-right: 32px;
-        }
-
-        @include response-to(small) {
-          padding-right: 0;
-        }
-      }
     }
   }
 
