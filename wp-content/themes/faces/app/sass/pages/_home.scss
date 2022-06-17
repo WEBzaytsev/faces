@@ -598,7 +598,11 @@
       }
 
       &_name {
-        margin-bottom: 20px;
+        margin-bottom: 37px;
+
+        @include response-to(large) {
+          margin-bottom: 20px;
+        }
 
         @include response-to(small) {
           margin-bottom: 15px;

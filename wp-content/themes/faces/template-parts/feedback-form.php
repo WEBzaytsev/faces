@@ -8,10 +8,12 @@ $form_id = $type == 'case' ? 508 : 507;
     <?php wp_nonce_field() ?>
     <input type="hidden" name="_wpcf7" value="<?php esc_attr_e($form_id); ?>">
     <div class="pos-r modal-window__form_field">
-        <label for="user_name"
-               class="text-20 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
-            <?php esc_html_e('Ваше имя', 'faces'); ?>
-        </label>
+        <?php if ($type == 'work-offer') : ?>
+            <label for="user_name"
+                   class="text-16 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
+                <?php esc_html_e('Ваше имя', 'faces'); ?>
+            </label>
+        <?php endif; ?>
         <input type="text"
                placeholder="<?php esc_attr_e('Имя', 'faces'); ?>"
                class="block full-width bg-white text-18 line-height-25 sm-text-14 sm-line-height-16 modal-window__form_input"
@@ -19,10 +21,12 @@ $form_id = $type == 'case' ? 508 : 507;
                id="user_name">
     </div>
     <div class="pos-r modal-window__form_field">
-        <label for="user_phone"
-               class="text-20 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
-            <?php esc_html_e('Ваш телефон', 'faces'); ?>
-        </label>
+        <?php if ($type == 'work-offer') : ?>
+            <label for="user_phone"
+                   class="text-16 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
+                <?php esc_html_e('Ваш телефон', 'faces'); ?>
+            </label>
+        <?php endif; ?>
         <input type="text"
                placeholder="<?php esc_attr_e('Номер телефона', 'faces'); ?>"
                class="block full-width bg-white text-18 line-height-25 sm-text-14 sm-line-height-16 modal-window__form_input"
@@ -32,10 +36,12 @@ $form_id = $type == 'case' ? 508 : 507;
                id="user_phone">
     </div>
     <div class="pos-r modal-window__form_field">
-        <label for="user_email"
-               class="text-20 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
-            <?php esc_html_e('Ваша почта', 'faces'); ?>
-        </label>
+        <?php if ($type == 'work-offer') : ?>
+            <label for="user_email"
+                   class="text-16 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
+                <?php esc_html_e('Ваша почта', 'faces'); ?>
+            </label>
+        <?php endif; ?>
         <input type="text"
                placeholder="E-mail"
                class="block full-width bg-white text-18 line-height-25 sm-text-14 sm-line-height-16 modal-window__form_input"
@@ -45,7 +51,7 @@ $form_id = $type == 'case' ? 508 : 507;
     <?php if ($type == 'work-offer') : ?>
         <div class="modal-window__form_field">
             <label for="mess"
-                   class="text-20 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
+                   class="text-16 line-height144 sm-text-14 sm-line-height-16 modal-window__form_label">
                 <?php esc_html_e('Комментарий', 'faces'); ?>
             </label>
             <textarea type="text"
@@ -91,7 +97,7 @@ $form_id = $type == 'case' ? 508 : 507;
         <input type="hidden" name="case_title" value="<?php esc_attr_e(get_the_title($case_id), 'faces'); ?>">
     <?php endif; ?>
     <button type="submit" class="block pos-r pointer mx-auto p-0 b-0 purple-button">
-            <span class="z-1 block transition pos-r text-center purple-button_inner">
+            <span class="z-1 block transition pos-r font700 text-center purple-button_inner">
                 <?php esc_html_e('Отправить запрос', 'faces'); ?>
             </span>
     </button>

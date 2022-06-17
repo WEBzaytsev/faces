@@ -31,7 +31,7 @@ get_header(); ?>
 
         <?php get_template_part('/template-parts/work-offer-btn', null, array(
             'classes' => '',
-            'text' => 'Хочу <br>в вашу <br>команду',
+            'text' => __('Хочу <br>в вашу <br>команду', 'faces'),
         )); ?>
     </div>
 

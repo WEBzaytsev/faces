@@ -7,10 +7,10 @@ $img_url = get_field('modal-img', $case_id)['url']
 
 <div class="pos-r modal-window bg-white color-black case-modal">
     <span class="block pointer pos-a close" data-close="true"></span>
-    <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29 modal-window__title">
+    <p class="text-40 text-center font-tenor line-height-48 md-text-25 md-line-height-29 modal-window__title">
         <?php esc_html_e($case->post_title, 'faces'); ?>
     </p>
-    <p class="sm-text-center text-20 sm-text-14 sm-line-height144 modal-window__text">
+    <p class="sm-text-center text-18 sm-text-14 line-height144 mx-auto modal-window__text">
         <?php echo __(get_field('description', $case_id), 'faces'); ?>
     </p>
 
@@ -36,10 +36,10 @@ $img_url = get_field('modal-img', $case_id)['url']
         </div>
     <?php endif; ?>
 
-    <p class="text-60 text-center font-tenor line-height-70 md-text-25 md-line-height-29  modal-window__title modal-window__title-form">
+    <p class="text-40 text-center font-tenor line-height-48 md-text-25 md-line-height-29 modal-window__title modal-window__title-form">
         <?php esc_html_e('Хочу также', 'faces'); ?>
     </p>
-    <p class="text-center text-20 md-text-18 md-line-height-21 modal-window__text-form">
+    <p class="text-center text-18 line-height144 modal-window__text-form">
         <?php echo __('Оставьте заявку <br class="none sm-block">и мы свяжемся с вами', 'faces'); ?>
     </p>
     <?php get_template_part('/template-parts/feedback-form', null, array(

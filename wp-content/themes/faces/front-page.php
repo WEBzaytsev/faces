@@ -36,7 +36,7 @@
 
             <?php get_template_part('/template-parts/work-offer-btn', null, array(
                 'classes' => 'text-26 large-text-16 sm-text-12',
-                'text' => 'обсудить проект',
+                'text' => esc_html__('обсудить проект', 'condi'),
             )); ?>
             <a href="#"
                class="pos-a text-34 sm-text-35 line-height115 large-text-22 right-0 uppercase text-center flex-center transition border50 sm-pos-r sm-mx-auto first-section__cases">
@@ -144,7 +144,7 @@
                              style="background-image: url('<?php esc_attr_e($img_src, 'faces'); ?>');">
                             <div class="flex flex-col justify-end full-width h-100 transition our-bloggers__item_info">
                                 <p class="pos-r text-30 sm-text-20 line-height-1 our-bloggers__item_name">
-                                    <span class="pos-r z-1"><?php esc_html_e($blogger_name, 'faces'); ?></span>
+                                    <span class="pos-r z-1 font-tenor"><?php esc_html_e($blogger_name, 'faces'); ?></span>
                                 </p>
                                 <p class="pos-r z-1 line-height-25 text-18 sm-text-12 sm-line-height-16 our-bloggers__item_desc">
                                     <?php esc_html_e($blogger_description, 'faces'); ?>
@@ -156,7 +156,7 @@
             </div>
         <?php endif; ?>
         <a href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>"
-           class="pos-a text-center line-height-1 font-tenor text-40 width-fit-content transition bottom-0 sm-none our-bloggers__all"><?php esc_html_e('Все блогеры', 'faces'); ?></a>
+           class="pos-a text-center line-height-1 font-tenor text-40 md-text-25 width-fit-content transition bottom-0 sm-none our-bloggers__all"><?php esc_html_e('Все блогеры', 'faces'); ?></a>
     </div>
 
     <?php
@@ -199,7 +199,7 @@
             <span class="absolute-center block border50 z-0 last-block__circle"></span>
             <div class="last-block__wrap">
                 <?php if ($bottom_block_caption) : ?>
-                    <p class="pos-r z-1 text-center uppercase text-60 line-height-120 sm-text-30 last-block__caption">
+                    <p class="pos-r z-1 text-center uppercase font-tenor text-60 line-height-120 sm-text-30 last-block__caption">
                         <?php echo __($bottom_block_caption, 'faces'); ?>
                     </p>
                 <?php endif; ?>

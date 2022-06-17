@@ -73,7 +73,7 @@ endwhile; ?>
     <?php if (count($posts) == 6) : ?>
     <div class="grid-col-full-w">
         <a href="#"
-           class="block font-tenor width-fit-content mx-auto ws-nowrap transition block pos-r line-height-1 text-45 md-text-25 more-btn"><?php esc_html_e('Больше блогеров', 'faves'); ?></a>
+           class="font-tenor width-fit-content mx-auto ws-nowrap transition block pos-r line-height-1 text-40 md-text-25 more-btn"><?php esc_html_e('Больше блогеров', 'faves'); ?></a>
     </div>
 <?php endif; ?>
 <?php else : ?>

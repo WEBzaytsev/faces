@@ -13,7 +13,7 @@ get_header(); ?>
                 <figure class="flex-center contacts-page__info_icon">
                     <?php get_template_part('/vector-images/location-icon'); ?>
                 </figure>
-                <p class="text-22 line-height-25 md-text-18 md-line-height142">
+                <p class="text-18 line-height142">
                     <?php esc_html_e(get_field('address', 'option'), 'faces'); ?>
                 </p>
             </div>
@@ -22,7 +22,7 @@ get_header(); ?>
                     <?php get_template_part('/vector-images/phone-icon'); ?>
                 </figure>
                 <a href="tel:<?php esc_attr_e(sprintf('+%s', get_field('phone', 'option')), 'faces'); ?>"
-                   class="text-22 pos-r line-height-25 md-text-18 md-line-height142">
+                   class="text-18 pos-r line-height142">
                     <?php esc_html_e(sprintf('+%s', get_field('phone', 'option')), 'faces'); ?>
                 </a>
             </div>
@@ -30,7 +30,7 @@ get_header(); ?>
                 <figure class="flex-center contacts-page__info_icon">
                     <?php get_template_part('/vector-images/time-icon'); ?>
                 </figure>
-                <p class="text-22 line-height-25 md-text-18 md-line-height142">
+                <p class="text-18 line-height142">
                     <?php esc_html_e(sprintf('Режим работы: %s', get_field('schedule', 'option')), 'faces'); ?>
                 </p>
             </div>
@@ -48,7 +48,7 @@ get_header(); ?>
                     referrerpolicy="no-referrer-when-downgrade"></iframe>-->
             <?php get_template_part('/template-parts/work-offer-btn', null, array(
                 'classes' => '',
-                'text' => 'Хочу <br>в вашу <br>команду',
+                'text' => __('Хочу <br>в вашу <br>команду', 'faces'),
             )); ?>
         </div>
 

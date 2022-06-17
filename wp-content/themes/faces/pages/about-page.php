@@ -19,18 +19,18 @@ get_header(); ?>
 
         <div class="mx-auto about-page__content">
             <?php if ($top_text != '') : ?>
-                <p class="text-22 line-height-30 large-text-18 large-line-height144 sm-text-14"><?php echo __($top_text, 'faces'); ?></p>
+                <p class="text-18 line-height144 sm-text-14"><?php echo __($top_text, 'faces'); ?></p>
             <?php endif; ?>
             <div class="flex md-block align-start justify-between about-page__content_center">
                 <?php if ($quote != '') : ?>
-                    <p class="pos-r text-36 line-height-49 large-text-24 large-line-height-33 mx-auto sm-text-20 sm-line-height-27 about-page__content_quote"><?php echo __($quote, 'faces'); ?></p>
+                    <p class="pos-r text-34 line-height-46 large-text-24 large-line-height-33 mx-auto sm-text-20 sm-line-height-27 about-page__content_quote"><?php echo __($quote, 'faces'); ?></p>
                 <?php endif;
                 if ($side_text != '') : ?>
                     <p class="pos-r text-22 line-height-30 large-text-18 large-line-height144 sm-text-14 about-page__content_side-text"><?php echo __($side_text, 'faces'); ?></p>
                 <?php endif; ?>
             </div>
             <?php if ($bottom_text != '') : ?>
-                <p class="text-22 line-height-30 large-text-18 large-line-height144 sm-text-14"><?php echo __($bottom_text, 'faces'); ?></p>
+                <p class="text-18 line-height144 sm-text-14"><?php echo __($bottom_text, 'faces'); ?></p>
             <?php endif; ?>
         </div>
 
