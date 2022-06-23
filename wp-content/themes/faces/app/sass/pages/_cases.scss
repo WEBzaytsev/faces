@@ -27,12 +27,12 @@
 
       @include response-to(medium) {
         flex: 0 0 49%;
-        margin-bottom: 57px;
+        margin-bottom: 0;
       }
 
       @include response-to(small) {
         flex: 0 0 100%;
-        border-radius: 45px 45px 0 0;
+        border-radius: 60px 60px 0 0;
       }
 
       &__img {

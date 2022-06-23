@@ -190,7 +190,7 @@ export const FiltersClass = function ($, settings, parent, action) {
             },
             success: function( data ) {
                 if (data) {
-                    self.loadMoreBtn.remove();
+                    self.loadMoreBtn.parent().remove();
                     self.loadMoreBtn = null;
                     self.contentWrap.append(data);
                     if (typeof parent.modals === 'function') {

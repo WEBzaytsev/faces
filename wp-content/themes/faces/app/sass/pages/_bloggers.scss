@@ -112,7 +112,7 @@
     @include response-to(small) {
       flex: 0 0 100%;
       max-width: 350px;
-      margin: 0 auto 60px;
+      margin: 0 auto;
     }
 
     &__inner {

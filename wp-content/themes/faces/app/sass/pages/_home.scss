@@ -494,7 +494,6 @@
         @include response-to(small) {
           margin-bottom: 14px;
           padding-right: 35px;
-          min-height: 40px;
         }
       }
 
@@ -863,7 +862,7 @@
 
   .last-block {
     max-width: 850px;
-    padding-top: 890px;
+    padding-top: 650px;
     padding-bottom: 820px;
 
     @include response-to(large) {

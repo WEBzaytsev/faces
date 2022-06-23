@@ -53,6 +53,10 @@
 
       &:hover {
         color: $primary-color;
+        
+        @include response-to(small) {
+          color: #000;
+        }
       }
     }
   }
