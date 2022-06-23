@@ -71,11 +71,15 @@
 
     &.work-offer {
       max-width: 760px;
-      padding: 100px 66px 129px;
+      padding: 100px 100px 102px;
 
       @include response-to(small) {
         max-width: 95vw;
         padding: 60px 37px 18px;
+      }
+
+      .modal-window__text {
+        max-width: 560px;
       }
 
       .modal-window__title {
@@ -89,7 +93,7 @@
 
     &.case-modal {
       max-width: 1040px;
-      padding: 66px 60px 65px;
+      padding: 102px 40px 100px;
 
       @include response-to(large) {
         max-width: 95vw;
@@ -175,7 +179,6 @@
     }
 
     &__text {
-      max-width: 560px;
       margin-bottom: 32px;
 
       &-form {
