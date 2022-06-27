@@ -55,7 +55,7 @@ $category_id = null;
                      alt="img">
             </figure>
             <p class="text-center text-16 sm-text-12 pos-r z-2 line-height-21 sm-line-height-14 case__desc">
-                <?php echo __(get_field('description')); ?>
+                <?php the_title(); ?>
             </p>
         </div>
     <?php endwhile;
