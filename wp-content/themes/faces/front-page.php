@@ -36,7 +36,7 @@
 
             <?php get_template_part('/template-parts/work-offer-btn', null, array(
                 'classes' => 'text-26 large-text-16 sm-text-12',
-                'text' => esc_html__('обсудить проект', 'condi'),
+                'text' => esc_html__('обсудить проект', 'faces'),
             )); ?>
             <a href="#"
                class="pos-a text-34 sm-text-35 line-height115 large-text-22 right-0 uppercase text-center flex-center transition border50 sm-pos-r sm-mx-auto first-section__cases">
