@@ -54,7 +54,7 @@ $category_id = null;
                      loading="lazy"
                      alt="img">
             </figure>
-            <p class="text-center text-16 sm-text-12 pos-r z-2 line-height-21 sm-line-height-14 case__desc">
+            <p class="text-center text-36 large-text-30 md-text-25 pos-r z-2 line-height144 case__desc">
                 <?php the_title(); ?>
             </p>
         </div>
