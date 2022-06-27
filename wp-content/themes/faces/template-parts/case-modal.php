@@ -5,7 +5,7 @@ $stats = get_field('stats', $case_id);
 $img_url = get_field('modal-img', $case_id)['url']
     ?? get_field('modal-img', 'option')['url']; ?>
 
-<div class="pos-r modal-window bg-white color-black case-modal">
+<div class="pos-r full-width modal-window bg-white color-black case-modal">
     <span class="block pointer pos-a close" data-close="true"></span>
     <p class="text-40 text-center font-tenor line-height-48 md-text-25 md-line-height-29 modal-window__title">
         <?php esc_html_e($case->post_title, 'faces'); ?>
