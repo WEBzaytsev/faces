@@ -976,14 +976,6 @@ figure img {
   line-height: 100.5%;
   letter-spacing: -0.005em;
 
-  /*@include response-to(huge) {
-    font-size: 60px;
-  }
-
-  @include response-to(large) {
-    font-size: 48px;
-  }*/
-
   @include response-to(small) {
     font-size: 40px;
   }

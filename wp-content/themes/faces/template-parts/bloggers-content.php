@@ -29,7 +29,7 @@ $posts = query_posts($options); ?>
         <div class="pos-r transition blogger__inner">
             <div class="pos-r z-2 blogger__inner_top">
                 <span class="pos-a z-2 ws-nowrap text-18 line-height-21 absolute-center-x opacity-0 z--100 blogger__inner_btn"
-                      data-modal="work-offer"><?php esc_html_e('хочу этого блогера', 'faces'); ?></span>
+                      data-modal="work-offer"><?php esc_html_e('Хочу этого блогера', 'faces'); ?></span>
                 <div class="<?php esc_attr_e(sprintf('pos-a full-width bottom-0 z-0 blogger__inner_bg %s', $bg_color), 'faces'); ?>"></div>
                 <figure class="pos-r z-1 blogger__inner_img">
                     <?php if ($img_url) : ?>

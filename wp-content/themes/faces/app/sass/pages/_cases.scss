@@ -14,15 +14,11 @@
     .case {
       border-radius: 70px 70px 0 0;
       flex: 0 0 31%;
-      margin-bottom: 200px;
+      margin-bottom: 80px;
       transform: translateY(0);
 
       &:hover {
         transform: translateY(-40px);
-      }
-
-      @include response-to(large) {
-        margin-bottom: 130px;
       }
 
       @include response-to(medium) {

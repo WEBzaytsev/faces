@@ -98,15 +98,10 @@
 
   .blogger {
     flex: 0 0 31%;
-    margin-bottom: 250px;
-
-    @include response-to(large) {
-      margin-bottom: 200px;
-    }
+    margin-bottom: 30px;
 
     @include response-to(medium) {
       flex: 0 0 45%;
-      margin-bottom: 120px;
     }
 
     @include response-to(small) {
