@@ -40,7 +40,7 @@
                 </a>
                 <div class="pos-r full-width md-width-fit-content md-block header__mob-wrap">
 
-                    <div class="flex md-none full-width justify-between header__mob-container">
+                    <div class="flex md-none full-width justify-between sm-justify-start header__mob-container">
                         <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"
                            class="none md-block header__logo">
                             <?php $mobile_logo = get_field('mob-logo', 'option'); ?>

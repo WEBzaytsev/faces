@@ -2,7 +2,9 @@
 $case_id = $args['id'];
 $case = get_post($case_id);
 $stats = get_field('stats', $case_id);
-$img_url = get_field('modal-img', $case_id)['url']
+$img_url = $bg = wp_is_mobile() ?
+    get_field('img', $case_id)['url'] :
+    get_field('modal-img', $case_id)['url']
     ?? get_field('modal-img', 'option')['url']; ?>
 
 <div class="pos-r full-width modal-window bg-white color-black case-modal">

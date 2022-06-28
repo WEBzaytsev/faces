@@ -4,7 +4,7 @@
     <div class="container pos-r first-section">
         <h1 class="uppercase huge-text-center sm-text-left font-tenor page-title"><?php echo __(get_field('page-caption'), 'faces'); ?></h1>
 
-        <div class="pos-r full-width">
+        <div class="pos-r full-width first-section__content">
             <?php
             $video_settings = get_field('video') ?? null;
 
@@ -30,7 +30,7 @@
                 <?php get_template_part('/vector-images/round-text'); ?>
             </div>
 
-            <p class="pos-a right-0 text-18 line-height-30 large-text-18 large-line-height-25 sm-none first-section__left-top-text">
+            <p class="pos-a right-0 text-18 sm-text-14 sm-line-height-19 line-height-30 large-text-18 large-line-height-25 first-section__left-top-text">
                 <?php the_field('text-top-right'); ?>
             </p>
 
@@ -149,6 +149,11 @@
                                 <p class="pos-r z-1 line-height-25 text-18 sm-text-12 sm-line-height-16 our-bloggers__item_desc">
                                     <?php esc_html_e($blogger_description, 'faces'); ?>
                                 </p>
+                                <?php if (wp_is_mobile()) : ?>
+                                    <a class="pos-a none sm-block z-2 top-0 bottom-0 left-0 right-0"
+                                       href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces');  ?>">
+                                    </a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

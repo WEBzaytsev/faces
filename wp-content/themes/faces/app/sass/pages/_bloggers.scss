@@ -1,5 +1,16 @@
 .bloggers-page {
-  padding-bottom: 163px;
+  padding-bottom: 275px;
+
+  .page-title {
+
+    @include response-to(small) {
+      padding-right: 60px;
+    }
+  }
+
+  @include response-to(medium) {
+    padding-bottom: 135px;
+  }
 
   .bloggers__filters {
     margin-top: 115px;
@@ -334,7 +345,7 @@
 
   .round-animate-btn {
     @media(min-width: 992px) {
-      bottom: 100px;
+      bottom: -68px;
       right: -50px;
 
       @include response-to(huge) {

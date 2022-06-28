@@ -855,6 +855,10 @@ figure img {
       justify-content: space-between;
     }
 
+    &-justify-start {
+      justify-content: flex-start;
+    }
+
     &-pos-r {
       position: relative;
     }

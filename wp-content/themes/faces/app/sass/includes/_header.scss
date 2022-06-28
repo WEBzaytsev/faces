@@ -159,7 +159,10 @@
           top: 0;
           width: 310px;
           background-color: $primary-color;
-          padding: 38px 33px;
+          padding: 38px 33px 55px;
+          max-height: 100vh;
+          bottom: 0;
+          overflow-y: scroll;
         }
 
         .mob-menu-btn {
@@ -191,7 +194,7 @@
         .header__langs {
           order: 1;
           justify-content: flex-start;
-          margin-bottom: 68px;
+          margin-bottom: 48px;
 
           &_item {
             
@@ -203,7 +206,7 @@
 
         .header__menu {
           order: 2;
-          margin-bottom: 50px;
+          margin-bottom: 35px;
         }
       }
     }
