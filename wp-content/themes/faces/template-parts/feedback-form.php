@@ -102,6 +102,6 @@ $form_id = $type == 'case' ? 508 : 507;
             </span>
     </button>
     <p class="mx-auto text-center text-14 line-height-19 sm-text-12 sm-line-height-16 modal-window__form_note">
-        <?php esc_html_e('Нажимая на кнопку “Отправить” вы соглашаетесь с Политикой конфиденциальности', 'faces'); ?>
+        <?php esc_html_e('Нажимая на кнопку “Отправить запрос” вы соглашаетесь с Политикой конфиденциальности', 'faces'); ?>
     </p>
 </form>
