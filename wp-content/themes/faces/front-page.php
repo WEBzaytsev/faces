@@ -83,7 +83,7 @@
                         <?php endif;
                         if (isset($case_description)) :?>
                             <p class="text-18 line-height-30 large-text-12 large-line-height-16 cases__item_desc">
-                                <?php esc_html_e($case_description, 'faces'); ?>
+                                <?php echo __($case_description, 'faces'); ?>
                             </p>
                         <?php endif; ?>
 
