@@ -13,6 +13,16 @@
   background-color: #000;
 }
 
+.select2-container:focus-visible,
+.select2-container *:focus-visible {
+  outline: 0;
+}
+
+.select2-container:focus,
+.select2-container *:focus {
+  outline: 0;
+}
+
 .select2-container * {
   font-family: inherit;
 }
