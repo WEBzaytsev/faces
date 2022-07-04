@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-06-30T08:45:20+00:00\n"
+"POT-Creation-Date: 2022-07-04T11:12:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: faces\n"
@@ -209,6 +209,10 @@ msgstr ""
 msgid "Контакты"
 msgstr ""
 
+#: pages/contacts-page.php:34
+msgid "Режим работы: %s"
+msgstr ""
+
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
@@ -224,6 +228,10 @@ msgstr ""
 
 #: template-parts/bloggers-content.php:32
 msgid "Хочу этого блогера"
+msgstr ""
+
+#: template-parts/bloggers-content.php:76
+msgid "Больше блогеров"
 msgstr ""
 
 #: template-parts/case-modal.php:42
@@ -310,6 +318,11 @@ msgstr ""
 
 #: template-parts/feedback-form.php:105
 msgid "Нажимая на кнопку “Отправить запрос” вы соглашаетесь с Политикой конфиденциальности"
+msgstr ""
+
+#: template-parts/filters.php:17
+#: template-parts/filters.php:26
+msgid "Все %s"
 msgstr ""
 
 #: template-parts/work-offer-modal.php:7
