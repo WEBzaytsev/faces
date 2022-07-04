@@ -31,7 +31,7 @@ get_header(); ?>
                     <?php get_template_part('/vector-images/time-icon'); ?>
                 </figure>
                 <p class="text-18 line-height142">
-                    <?php esc_html_e(sprintf('Режим работы: %s', get_field('schedule', 'option')), 'faces'); ?>
+                    <?php esc_html_e(sprintf(__('Режим работы: %s', 'faces'), get_field('schedule', 'option')), 'faces'); ?>
                 </p>
             </div>
 
