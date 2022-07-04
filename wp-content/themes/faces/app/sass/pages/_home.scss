@@ -3,7 +3,7 @@
   background-size: 1725px;
   background-image: url('../../img/home-first-bg-img.svg'),
   url('../../img/home-four-bg-img.svg');
-  background-position: left 350px, right 3850px;
+  background-position: left 560px, right 3850px;
 
   @include response-to(large) {
     background-size: 1159px;
