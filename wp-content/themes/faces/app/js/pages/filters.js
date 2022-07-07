@@ -80,7 +80,7 @@ export const FiltersClass = function ($, settings, parent, action) {
                 cat: cat || 'all',
             },
             type: 'POST',
-            beforeSend: function() {
+            beforeSend: function () {
                 self.blockFilters = true;
                 self.contentWrap.html(`<div class="loader active">
                             <div class="loader-inner">
@@ -100,7 +100,7 @@ export const FiltersClass = function ($, settings, parent, action) {
                             </div>
                         </div>`)
             },
-            success: function( data ) {
+            success: function (data) {
                 if (data) {
                     self.contentWrap.html(data);
                     if (typeof parent.modals === 'function') {
@@ -185,10 +185,10 @@ export const FiltersClass = function ($, settings, parent, action) {
                 page: page + 1,
             },
             type: 'POST',
-            beforeSend: function(){
+            beforeSend: function () {
 
             },
-            success: function( data ) {
+            success: function (data) {
                 if (data) {
                     self.loadMoreBtn.parent().remove();
                     self.loadMoreBtn = null;
