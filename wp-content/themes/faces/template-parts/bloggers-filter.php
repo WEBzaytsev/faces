@@ -28,7 +28,7 @@ $businesses = get_terms([
                 <?php if (count($activities)) : ?>
                     <div class="select__wrap">
                         <select class="select">
-                            <option value="all">Вид деятельности</option>
+                            <option value="all"><?php esc_html_e('Вид деятельности', 'faces'); ?></option>
                             <?php foreach ($activities as $activity) : ?>
                                 <option value="<?php esc_attr_e($activity->slug, 'faces'); ?>">
                                     <?php esc_html_e($activity->name, 'faces'); ?>
@@ -40,7 +40,7 @@ $businesses = get_terms([
                 <?php if (count($businesses)) : ?>
                     <div class="select__wrap">
                         <select class="select">
-                            <option value="all">Сферы бизнеса</option>
+                            <option value="all"><?php esc_html_e('Сферы бизнеса', 'faces'); ?></option>
                             <?php foreach ($businesses as $business) : ?>
                                 <option value="<?php esc_attr_e($business->slug, 'faces'); ?>">
                                     <?php esc_html_e($business->name, 'faces'); ?>
