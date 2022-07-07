@@ -149,11 +149,9 @@
                                 <p class="pos-r z-1 line-height-25 text-18 sm-text-12 sm-line-height-16 our-bloggers__item_desc">
                                     <?php esc_html_e($blogger_description, 'faces'); ?>
                                 </p>
-                                <?php if (wp_is_mobile()) : ?>
-                                    <a class="pos-a none sm-block z-2 top-0 bottom-0 left-0 right-0"
-                                       href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces');  ?>">
-                                    </a>
-                                <?php endif; ?>
+                                <a class="pos-a z-2 top-0 bottom-0 left-0 right-0"
+                                   href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces');  ?>">
+                                </a>
                             </div>
                         </div>
                     </div>

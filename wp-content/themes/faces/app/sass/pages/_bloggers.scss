@@ -270,6 +270,11 @@
           bottom: -16px;
           padding: 5px 23px 5px;
         }
+
+        @include response-to(small) {
+          bottom: -14px;
+          padding: 6px 18px 7px;
+        }
       }
 
       &_bottom {
@@ -283,7 +288,7 @@
         }
 
         @include response-to(small) {
-          padding: 15px 5px 41px;
+          padding: 20px 5px 41px;
         }
       }
 

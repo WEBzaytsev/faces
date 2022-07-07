@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="pos-r">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,16 +38,9 @@
                          width="159"
                          alt="img">
                 </a>
-                <div class="pos-r full-width md-width-fit-content md-block header__mob-wrap">
+                <div class="pos-r full-width md-width-fit-content md-none">
 
-                    <div class="flex md-none full-width justify-between sm-justify-start header__mob-container">
-                        <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"
-                           class="none md-block header__logo">
-                            <?php $mobile_logo = get_field('mob-logo', 'option'); ?>
-                            <img src="<?php esc_attr_e($mobile_logo['url'], 'faces'); ?>"
-                                 width="79"
-                                 alt="img">
-                        </a>
+                    <div class="flex md-none full-width justify-between">
 
                         <?php if (has_nav_menu('header-menu')) :
                             wp_nav_menu(
@@ -102,12 +95,72 @@
                             </div>
                         <?php endif; ?>
                     </div>
-
-                    <span class="pos-r none md-block mob-menu-btn">
-                <span class="mob-menu-btn__inner"></span>
-            </span>
                 </div>
             </div>
         </header>
+
+
+        <div class="pos-r full-width md-width-fit-content none md-block header__mob-wrap">
+
+            <div class="flex md-none full-width justify-between header__mob-container">
+                <a href="<?php echo esc_url(get_home_url(), 'faces'); ?>"
+                   class="none md-block header__logo">
+                    <?php $mobile_logo = get_field('mob-logo', 'option'); ?>
+                    <img src="<?php esc_attr_e($mobile_logo['url'], 'faces'); ?>"
+                         width="79"
+                         alt="img">
+                </a>
+
+                <div class="">
+                    <?php $languages_list = apply_filters('wpml_active_languages', null);
+
+                    if ($languages_list) :
+
+                        $active_lang = array_filter($languages_list, function ($v, $k) {
+                            return $v['active'] == "1";
+                        }, ARRAY_FILTER_USE_BOTH);
+                        $active_lang = reset($active_lang); ?>
+                        <div class="flex-center ml-auto huge-m-0 header__langs">
+                            <a href="<?php echo esc_url($languages_list['ru']['url']); ?>"
+                               class="text-20 large-text-16 mr-16 large-mr-8 line-height-27 huge-line-height-22 pointer transition pos-r capitalize header__langs_item<?php echo $active_lang['code'] == $languages_list['ru']['code'] ? ' active' : ''; ?>">
+                                <?php esc_html_e($languages_list['ru']['code']); ?>
+                            </a>
+                            <a href="<?php echo esc_url(($languages_list['en']['url']), 'faces'); ?>"
+                               class="text-20 large-text-16 line-height-27 large-line-height-22 pointer transition pos-r capitalize header__langs_item<?php echo $active_lang['code'] == $languages_list['en']['code'] ? ' active' : ''; ?>">
+                                <?php esc_html_e($languages_list['en']['code']); ?>
+                            </a>
+                        </div>
+
+                    <?php endif; ?>
+
+                    <?php if (has_nav_menu('header-menu')) :
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'header-menu',
+                                'menu_id' => 'main-menu',
+                                'container' => 'nav',
+                                'container_class' => 'full-width flex justify-center header__menu',
+                                'menu_class' => 'flex align-center full-width justify-between menu md-block',
+                            )
+                        ); ?>
+                    <?php endif; ?>
+                </div>
+                <?php $socials = get_field('social', 'option');
+
+                if (isset($socials)) : ?>
+                    <div class="header__social none flex flex-wrap md-block">
+                        <?php foreach ($socials as $social) : ?>
+                            <a href="<?php echo esc_url($social['link'], 'faces'); ?>"
+                               class="text-18 line-height-25 header__social_item">
+                                <?php esc_html_e($social['title'], 'faces'); ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+        <span class="pos-f none md-block mob-menu-btn">
+                <span class="mob-menu-btn__inner"></span>
+            </span>
         <div class="pos-f transition top-0 bottom-0 left-0 right-0 mob-menu-bg"></div>
 <?php endif;

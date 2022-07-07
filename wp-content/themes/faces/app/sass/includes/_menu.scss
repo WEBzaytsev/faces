@@ -6,6 +6,13 @@
   }
 
   li {
+
+    @include response-to(small) {
+
+      &:not(:last-of-type) {
+        margin-bottom: 6.16vh;
+      }
+    }
     
     &.current-menu-item {
       
@@ -50,6 +57,11 @@
         line-height: 100%;
         display: block;
         margin-bottom: 50px;
+      }
+
+      @include response-to(small) {
+        font-size: 3.7vh;
+        margin-bottom: 0;
       }
 
       &:hover {
