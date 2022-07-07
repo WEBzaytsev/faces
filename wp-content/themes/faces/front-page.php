@@ -70,16 +70,19 @@
                     <div class="flex flex-col pos-r h-100 cases__item_inner">
                         <?php if (isset($img_src)) : ?>
                             <figure class="hidden border50 cases__item_img">
-                                <img src="<?php esc_attr_e($img_src, 'faces'); ?>"
-                                     loading="lazy"
-                                     class="block"
-                                     alt="img">
+                                <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>">
+                                    <img src="<?php esc_attr_e($img_src, 'faces'); ?>"
+                                         loading="lazy"
+                                         class="block"
+                                         alt="img">
+                                </a>
                             </figure>
                         <?php endif;
                         if (isset($case_title)) : ?>
-                            <p class="text-40 line-height-1 large-text-30 large-text-25 font-tenor cases__item_title">
+                            <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
+                               class="text-40 line-height-1 large-text-30 large-text-25 font-tenor cases__item_title">
                                 <?php esc_html_e($case_title, 'faces'); ?>
-                            </p>
+                            </a>
                         <?php endif;
                         if (isset($case_description)) :?>
                             <p class="text-18 line-height-30 large-text-12 large-line-height-16 cases__item_desc">
@@ -88,9 +91,9 @@
                         <?php endif; ?>
 
                         <?php if ($cases_count == $i) : ?>
-                            <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces');  ?>"
+                            <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
                                class="font-tenor ws-nowrap transition block pos-a line-height-1 text-40 large-text-25 cases__item_link">
-                                <?php esc_html_e('Смотреть все кейсы', 'faces');  ?>
+                                <?php esc_html_e('Смотреть все кейсы', 'faces'); ?>
                             </a>
                         <?php endif ?>
                     </div>
@@ -150,7 +153,7 @@
                                     <?php esc_html_e($blogger_description, 'faces'); ?>
                                 </p>
                                 <a class="pos-a z-2 top-0 bottom-0 left-0 right-0"
-                                   href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces');  ?>">
+                                   href="<?php echo esc_url(get_home_url() . '/nashi-blogery/', 'faces'); ?>">
                                 </a>
                             </div>
                         </div>
