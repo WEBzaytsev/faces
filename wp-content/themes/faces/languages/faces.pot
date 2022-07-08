@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-07-04T11:31:21+00:00\n"
+"POT-Creation-Date: 2022-07-07T18:17:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: faces\n"
@@ -97,8 +97,8 @@ msgid "обсудить проект"
 msgstr ""
 
 #: front-page.php:43
-#: front-page.php:118
 #: front-page.php:121
+#: front-page.php:124
 msgid "наши"
 msgstr ""
 
@@ -107,17 +107,17 @@ msgstr ""
 msgid "кейсы"
 msgstr ""
 
-#: front-page.php:93
+#: front-page.php:96
 msgid "Смотреть все кейсы"
 msgstr ""
 
-#: front-page.php:118
-#: front-page.php:122
+#: front-page.php:121
+#: front-page.php:125
 #: template-parts/filters.php:10
 msgid "блогеры"
 msgstr ""
 
-#: front-page.php:164
+#: front-page.php:165
 msgid "Все блогеры"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:67
+#: header.php:60
 #: template-parts/work-offer-modal.php:4
 msgid "Давайте поработаем"
 msgstr ""
@@ -232,6 +232,14 @@ msgstr ""
 
 #: template-parts/bloggers-content.php:76
 msgid "Больше блогеров"
+msgstr ""
+
+#: template-parts/bloggers-filter.php:31
+msgid "Вид деятельности"
+msgstr ""
+
+#: template-parts/bloggers-filter.php:43
+msgid "Сферы бизнеса"
 msgstr ""
 
 #: template-parts/case-modal.php:42
