@@ -91,8 +91,14 @@
                         <?php endif; ?>
 
                         <?php if ($cases_count == $i) : ?>
+                            <?php $languages_list = apply_filters('wpml_active_languages', null);
+
+                            $active_lang = array_filter($languages_list, function ($v, $k) {
+                                return $v['active'] == "1";
+                            }, ARRAY_FILTER_USE_BOTH);
+                            $active_lang = reset($active_lang); ?>
                             <a href="<?php echo esc_url(get_home_url() . '/kejsy/', 'faces'); ?>"
-                               class="font-tenor ws-nowrap transition block pos-a line-height-1 text-40 large-text-25 cases__item_link">
+                               class="font-tenor ws-nowrap transition block pos-a line-height-1 text-40 large-text-25 cases__item_link <?php echo $active_lang['code'] == $languages_list['ru']['code'] ? 'ru' : 'en'; ?>">
                                 <?php esc_html_e('Смотреть все кейсы', 'faces'); ?>
                             </a>
                         <?php endif ?>

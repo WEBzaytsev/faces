@@ -320,6 +320,10 @@
 
       .purple-button {
         width: 300px;
+
+        @media(max-width: 400px) {
+          width: 98%;
+        }
       }
 
       textarea {

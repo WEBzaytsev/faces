@@ -978,6 +978,15 @@ figure img {
   }
 }
 
+@media(max-width: 375px) {
+  .xs {
+
+    &-none {
+      display: none;
+    }
+  }
+}
+
 .page-title {
   font-weight: 400;
   font-size: 5.2vw;
