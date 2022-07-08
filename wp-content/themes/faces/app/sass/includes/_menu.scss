@@ -25,6 +25,10 @@
           border-bottom: 1px solid #fff;
         }
       }
+
+      & + .current-menu-item {
+        display: none;
+      }
     }
 
     &:first-of-type,

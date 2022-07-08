@@ -172,6 +172,10 @@
         justify-content: flex-start;
         margin-bottom: 48px;
 
+        @media(max-height: 630px) {
+          margin-bottom: 30px;
+        }
+
         &_item {
 
           &.active {
@@ -183,6 +187,10 @@
       .header__menu {
         order: 2;
         margin-bottom: 35px;
+
+        @media(max-height: 630px) {
+          margin-bottom: 10px;
+        }
       }
     }
   }
